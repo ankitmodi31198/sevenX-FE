@@ -32,13 +32,13 @@ export class ReviewsComponent implements OnInit {
       companyName: 'Manager'
     },
     {
-      blockquote: 'Great team, never had an issue getting a fast response and solution. Best for getting startup registrations done.',
+      blockquote: 'Never had an issue getting a fast response and solution. Best for getting startup registrations done.',
       img: '../../../../assets/IMG-0045.jpg',
       author: 'Parth Inani',
       companyName: 'IAS'
     },
     {
-      blockquote: 'To be honest, I don’t know how you manage to do such a good job in time. Very well done! You continue to exceed every expectation that I set. Great job.',
+      blockquote: 'Helped me with my startup valuatioin and pitch deck. Team is very much approachable.',
       img: '../../../../assets/reviews_05.jpeg',
       author: 'Kshonish Jain',
       companyName: 'Founder of Hotels Group'
