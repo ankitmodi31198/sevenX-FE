@@ -55,11 +55,11 @@
                             <span>
                                 {{package.planName}}
                             </span>
-                            <span
+                            <!-- <span
                                 *ngIf="order && order.orderStatus && (order.orderStatus.toUpperCase() === orderStatus.APPROVED.toUpperCase()) && (package.qty && (package.qty > 1))"
                                 class="sevenx-package-qty">
                                 X {{package.qty}}
-                            </span>
+                            </span> -->
                             <span *ngIf="(package.qty && (package.qty > 1))">
                                 <span>X </span>
                                 <span class="sevenx-package-qty">
