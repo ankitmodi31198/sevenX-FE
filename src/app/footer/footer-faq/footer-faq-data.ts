@@ -505,12 +505,12 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
                 "Every company shall file commencement of business with Registrar within 180 days from the date of incorporation. Before filing commencement of business, all subscribers shall bring subscription capital into companies' account."
             ]
         },
-        {
-            question: "What is the Corporate Tax application?",
-            answer: [
-                "In order to promote growth and investment, a new provision has been added to Income-tax Act with effect from FY 2019-20 which allows any domestic company an option to pay income-tax at the rate of 22% subject to condition that they will not avail any exemption/incentive. The effective tax rate for these companies shall be 25.17% inclusive of surcharge & cess. Also, such companies shall not be required to pay Minimum Alternate Tax."
-            ]
-        },
+        // {
+        //     question: "What is the Corporate Tax application?",
+        //     answer: [
+        //         "In order to promote growth and investment, a new provision has been added to Income-tax Act with effect from FY 2019-20 which allows any domestic company an option to pay income-tax at the rate of 22% subject to condition that they will not avail any exemption/incentive. The effective tax rate for these companies shall be 25.17% inclusive of surcharge & cess. Also, such companies shall not be required to pay Minimum Alternate Tax."
+        //     ]
+        // },
         {
             question: "Corporate Tax at 15%",
             answer: [
