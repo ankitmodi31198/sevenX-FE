@@ -120,18 +120,26 @@ export class HeaderComponent implements OnInit {
   }
 
   navigate(headerItem: HeaderNavigationInterface) {
-    const overlay = document.querySelector('.product-list-overlay-container');
+    const overlay = document.querySelectorAll('.product-list-overlay-container');
     if (headerItem) {
-      overlay['style'].display = 'none';
+      if (overlay && overlay.length) {
+        for (let i = 0; i < overlay.length; i++) {
+          const overlayElement = overlay[i];
+          overlayElement['style'].display = 'none';
+        }
+      }
       this.router.navigate(headerItem.routerLink, { queryParams: headerItem.queryParams })
         .then(() => {
           setTimeout(() => {
-            if (overlay) {
-              overlay['style'].display = '';
+            if (overlay && overlay.length) {
+              for (let i = 0; i < overlay.length; i++) {
+                const overlayElement = overlay[i];
+                overlayElement['style'].display = '';
+              }
             }
           });
         });
-        this.sidenavCloseClickHandler();
+      this.sidenavCloseClickHandler();
     }
   }
 }
