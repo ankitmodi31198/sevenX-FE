@@ -12,31 +12,31 @@
 
 <section class="banner-container d-flex align-items-center content-width-resolution-wise">
     <div class="width100">
-      <div class="row">
-        <div class="col-lg-8 d-flex flex-column justify-content-center">
-            <div class="search-container">
-                <h1>7xStartup - Startup for Startups</h1>
-                <h5>India's first one stop solution for Startups.</h5>
-                <div class="form-group">
-                    <i class="material-icons">search</i>
-                    <input type="text" id="dynamic-placeholder" [superPlaceholder]="placeholder_samples" [(ngModel)]="searchText"
-                        (ngModelChange)="searchTextChangeHandler($event)" cdkOverlayOrigin #trigger="cdkOverlayOrigin"
-                        autocomplete="off" />
+        <div class="row">
+            <div class="col-lg-8 d-flex flex-column justify-content-center">
+                <div class="search-container">
+                    <h1>7xStartup - Startup for Startups</h1>
+                    <h5>India's first one stop solution for Startups.</h5>
+                    <div class="form-group">
+                        <i class="material-icons">search</i>
+                        <input type="text" id="dynamic-placeholder" [superPlaceholder]="placeholder_samples"
+                            [(ngModel)]="searchText" (ngModelChange)="searchTextChangeHandler($event)" cdkOverlayOrigin
+                            #trigger="cdkOverlayOrigin" autocomplete="off" />
+                    </div>
+                    <ul class="popular-tags-section">
+                        <li>Popular: </li>
+                        <ng-container *ngFor="let tag of popularTags">
+                            <li (click)="navigationItemClickHandler(tag)"><a>{{ tag.label }}</a></li>
+                        </ng-container>
+                    </ul>
                 </div>
-                <ul class="popular-tags-section">
-                    <li>Popular: </li>
-                    <ng-container *ngFor="let tag of popularTags">
-                        <li (click)="navigationItemClickHandler(tag)"><a>{{ tag.label }}</a></li>
-                    </ng-container>
-                </ul>
+            </div>
+            <div class="col-lg-4 banner-container-img" data-aos="zoom-out" data-aos-delay="200">
+                <!-- <img src="assets\hero-img.png" class="img-fluid" alt=""> -->
+                <ng-lottie [options]="bannerAnimationOption">
+                </ng-lottie>
             </div>
         </div>
-        <div class="col-lg-4 banner-container-img" data-aos="zoom-out" data-aos-delay="200">
-          <!-- <img src="assets\hero-img.png" class="img-fluid" alt=""> -->
-            <ng-lottie [options]="bannerAnimationOption">
-            </ng-lottie>
-        </div>
-      </div>
     </div>
 </section>
 
@@ -46,7 +46,7 @@
     </div>
     <div class="banner-left">
         <h2>Let's Build Something Big Together</h2>
-        <p>
+        <!-- <p>
             To provide our clients the highest quality of services with integrity & independence in timely,
             efficient, responsible and innovative manner by a team of professionals that clearly enjoy working
             together to exceed the clients' needs.
@@ -55,6 +55,15 @@
             To be a leader in the areas of operation, so that the best opportunity to progress and grow at all
             levels is available to all associated with the Firm, thereby directly serving the best-interests of the
             Firm’s clients.
+        </p> -->
+        <p>
+            7xStartup is India's first one stop solution for Startups. We are dedicated to assist entrepreneurs easily
+            start and scale up the business.
+        </p>
+        <p>
+            We aim to provide our clients the highest quality of services with integrity & independence in timely,
+            efficient, responsible and innovative manner by a team of professionals that clearly enjoy working together
+            to exceed the clients' needs.
         </p>
     </div>
 </div>

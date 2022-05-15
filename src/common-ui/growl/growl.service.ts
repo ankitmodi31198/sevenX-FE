@@ -31,8 +31,11 @@ export class GrowlService {
     this.showGrowlMessage({ message: message, messageType: growlMessageType.ERROR });
   }
 
-  warnMessageGrowl(message: string) {
+  warnMessageGrowl(message: string, messageTitle?: string) {
     this.showGrowlMessage({ message: message, messageType: growlMessageType.WARN });
+    if (messageTitle) {
+      this.showGrowlMessage({ message: message, messageType: growlMessageType.WARN, messageTitle });
+    }
   }
 
   infoMessageGrowl(message: string) {

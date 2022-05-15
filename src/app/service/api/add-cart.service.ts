@@ -52,7 +52,7 @@ export class AddCartService extends BaseService {
         if (requestModel) {
           this.startupRegistrationsFormService.post(requestModel).toPromise();
         }
-        this.growlService.warnMessageGrowl('Please login to add Item in cart.')
+        this.growlService.warnMessageGrowl('Please login to add Service in cart.', 'Login Alert')
       }
     })
   }
