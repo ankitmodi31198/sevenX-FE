@@ -67,10 +67,6 @@ export class BannerComponent implements OnInit {
     path: 'assets/our_plans.json'
   };
 
-  bannerBottomAnimationOption: AnimationOptions = {
-    path: 'assets/Blogging.json'
-  };
-
   constructor(
     private router: Router
   ) {

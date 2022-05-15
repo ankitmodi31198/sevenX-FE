@@ -14,6 +14,7 @@ import { PlansModule } from './plans/plans.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { AbountUsHomeModule } from './abount-us-home/abount-us-home.module';
+import { HomePitchCardComponent } from './home-pitch-card/home-pitch-card.component';
 
 
 export function playerFactory() {
@@ -27,7 +28,8 @@ export function playerFactory() {
     AboutUsComponent,
     ReasonsToChooseComponent,
     SuperPlaceholderDirective,
-    StepsComponent
+    StepsComponent,
+    HomePitchCardComponent
   ],
   imports: [
     CommonModule,
@@ -40,6 +42,9 @@ export function playerFactory() {
     OverlayModule,
     AbountUsHomeModule,
   ],
-  exports: [HomeComponent]
+  exports: [
+    HomeComponent,
+    HomePitchCardComponent
+  ]
 })
 export class HomeModule { }
