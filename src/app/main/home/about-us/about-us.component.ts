@@ -23,7 +23,7 @@ export class AboutUsComponent implements OnInit {
       }
     },
     {
-      reason: "Expert's Assistance",
+      reason: "Expert Assistance",
       animation: {
         path: 'assets/expert_assistance.json'
       }

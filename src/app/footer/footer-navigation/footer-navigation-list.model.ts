@@ -14,10 +14,10 @@ export const footerNavigationList: FooterNavigationInterface[] = [
             //     label: 'About Us',
             //     routerLink: ['/about-us']
             // },
-            {
-                label: 'Contact Us',
-                routerLink: ['/contact-us']
-            }
+            // {
+            //     label: 'Contact Us',
+            //     routerLink: ['/contact-us']
+            // }
         ]
     },
     {

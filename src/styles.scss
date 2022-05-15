@@ -275,3 +275,10 @@ button {
         opacity: 1;
      }
 }
+
+.sevenx-contact-us-modal {
+    width: 500px;
+    mat-dialog-container {
+        padding: 0 !important;
+    }
+}

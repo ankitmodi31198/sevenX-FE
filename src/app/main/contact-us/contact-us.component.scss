@@ -3,6 +3,8 @@
 .contact-container {
   text-align: center;
   font-family: $fontFamily;
+  // width: 50rem;
+  height: auto;
 
   header {
     font-size: 3.3rem;
@@ -130,5 +132,18 @@
           margin-left: 0;
       }
   }
+  }
+
+  .contact-us-container-lottie {
+    height: 9rem;
+  }
+  .contact-form-section {
+    sevenx-startup-registrations-form {
+      .startup-registrations-form-container {
+        .startup-registrations-form {
+          padding: 0;
+        }
+      }
+    }
   }
 }

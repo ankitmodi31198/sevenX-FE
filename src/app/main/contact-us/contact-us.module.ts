@@ -4,6 +4,7 @@ import { ContactUsComponent } from './contact-us.component';
 import { StartupRegistrationsFormModule } from '../startup-registrations/startup-registrations-form/startup-registrations-form.module';
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
+import { SharedModule } from 'src/shared/shared.module';
 
 export function playerFactory() {
   return player;
@@ -16,6 +17,7 @@ export function playerFactory() {
   ],
   imports: [
     CommonModule,
+    SharedModule,
     StartupRegistrationsFormModule,
     LottieModule.forRoot({ player: playerFactory }),
   ]

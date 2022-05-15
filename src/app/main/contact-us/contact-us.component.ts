@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
 import { AnimationOptions } from 'ngx-lottie';
 
 @Component({
@@ -12,9 +13,17 @@ export class ContactUsComponent implements OnInit {
     path: 'assets/contact_us.json'
   }
 
-  constructor() { }
+  constructor(
+    private dialogRef: MatDialogRef<ContactUsComponent>
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  contactFormSubmissionHandler() {
+    if (this.dialogRef) {
+      this.dialogRef.close();
+    }
   }
 
 }

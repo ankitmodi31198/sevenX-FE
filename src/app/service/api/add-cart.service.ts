@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, Injector } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Subject } from 'rxjs';
 import { take } from 'rxjs/operators';
 import { LoginSignupDialogComponent } from 'src/app/login-signup/login-signup-dialog/login-signup-dialog.component';
 import { GrowlService } from 'src/common-ui/growl/growl.service';
@@ -19,8 +20,10 @@ import { StartupRegistrationsFormService } from './startup-registrations-form.se
 export class AddCartService extends BaseService {
   urlPath: string = 'addCart';
 
+  eFormSave: Subject<any> = new Subject();
+
   constructor(
-    protected httpClient: HttpClient, 
+    protected httpClient: HttpClient,
     protected injector: Injector,
     private startupRegistrationsFormService: StartupRegistrationsFormService,
     private authService: AuthService,
@@ -50,7 +53,7 @@ export class AddCartService extends BaseService {
         this.performActionsWhenUserLoggedIn(selectedPackage, requestModel);
       } else {
         if (requestModel) {
-          this.startupRegistrationsFormService.post(requestModel).toPromise();
+          return this.formAPIRequest(requestModel);
         }
         this.growlService.warnMessageGrowl('Please login to add Service in cart.', 'Login Alert')
       }
@@ -65,8 +68,19 @@ export class AddCartService extends BaseService {
       requestModel.state = this.authService.userDetails.state;
       requestModel.screenName = selectedPackage.screenName;
     }
-    this.startupRegistrationsFormService.post(requestModel).toPromise();
+    this.formAPIRequest(requestModel);
     this.addSelectedItemInUserCart(selectedPackage.id);
+  }
+
+  formAPIRequest(requestModel) {
+    this.startupRegistrationsFormService.post(requestModel)
+      .pipe(take(1))
+      .toPromise()
+      .then((response) => {
+        if (response && response.status === 200) {
+          this.eFormSave.next(response);
+        }
+      });
   }
 
   private addSelectedItemInUserCart(selectedPackageId: number) {

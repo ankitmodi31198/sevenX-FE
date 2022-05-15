@@ -1,7 +1,7 @@
 <div class="contact-container content-width-resolution-wise">
-    <header class="header">
-        Contact Us
-    </header>
+    <div class="contact-us-container-lottie">
+        <ng-lottie [options]="contactUsAnimationOption"></ng-lottie>
+    </div>
     <!-- <div class="contact-details">
         <a href="tel:+91 90163 80623">
             <figure>
@@ -19,11 +19,12 @@
         </a>
     </div> -->
     <div class="contact-form-section">
-        <sevenx-startup-registrations-form [isOpenFromContact]="true"></sevenx-startup-registrations-form>
-        <div class="image">
-            <!-- <img src="assets/contact-us.svg" /> -->
+        <sevenx-startup-registrations-form [isOpenFromContact]="true"
+            (eContactFormSubmit)="contactFormSubmissionHandler()">
+        </sevenx-startup-registrations-form>
+        <!-- <div class="image">
             <ng-lottie [options]="contactUsAnimationOption"></ng-lottie>
-        </div>
+        </div> -->
     </div>
     <div class="address">
         <p></p>

@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
-import { filter } from 'rxjs/operators';
+import { filter, take } from 'rxjs/operators';
 import { MAIN_LAODER_ID } from './app-utils';
+import { ContactUsComponent } from './main/contact-us/contact-us.component';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +16,8 @@ export class AppComponent {
 
   constructor(
     private router: Router,
-    private ngxUILoaderService: NgxUiLoaderService
+    private ngxUILoaderService: NgxUiLoaderService,
+    private matDialog: MatDialog
   ) { }
 
   ngOnInit(): void {
@@ -39,7 +42,11 @@ export class AppComponent {
   }
 
   contactUsClickHandler() {
-    this.router.navigate(['/contact-us']);
+    // this.router.navigate(['/contact-us']);
+    this.matDialog.open(ContactUsComponent, {panelClass: 'sevenx-contact-us-modal', closeOnNavigation: true, maxWidth: '500px'})
+      .afterClosed()
+      .pipe(take(1))
+      .subscribe();
   }
 
 }

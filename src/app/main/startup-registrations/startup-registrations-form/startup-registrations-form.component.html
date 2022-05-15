@@ -3,21 +3,6 @@
         Get Free Consultancy
     </div> -->
     <form appFormGroup [formGroup]="baseForm" class="startup-registrations-form">
-        <mat-form-field appFormField="Service" *ngIf="isOpenFromContact" class="form-field-container" appearance="fill">
-            <input matInput #ScreenNameInputElement
-                autocomplete="off" [matAutocomplete]="screenNameAuto"
-                placeholder="Select"
-                (keyup)="screenNameInputChangeHandler(ScreenNameInputElement.value)"
-                formControlName="screenName">
-            <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
-            <mat-autocomplete #screenNameAuto="matAutocomplete" [displayWith]="displayWithScreenNameFn"
-                (opened)="screenNameInputChangeHandler('')" (closed)="screenNameFieldCloseHandler(ScreenNameInputElement)">
-                <mat-option disabled *ngIf="!(filteredScreenList && filteredScreenList.length)">No Data Found</mat-option>
-                <ng-container *ngIf="filteredScreenList && filteredScreenList.length">
-                    <mat-option *ngFor="let option of filteredScreenList" [value]="option">{{option.screenName}}</mat-option>
-                </ng-container>
-            </mat-autocomplete>
-        </mat-form-field>
         <mat-form-field appFormField="Name" class="form-field-container" appearance="fill">
             <input matInput formControlName="name" placeholder="Name">
         </mat-form-field>
@@ -39,6 +24,21 @@
                 <mat-option disabled *ngIf="!(filteredStateList && filteredStateList.length)">No Data Found</mat-option>
                 <ng-container *ngIf="filteredStateList && filteredStateList.length">
                     <mat-option *ngFor="let option of filteredStateList" [value]="option">{{option}}</mat-option>
+                </ng-container>
+            </mat-autocomplete>
+        </mat-form-field>
+        <mat-form-field appFormField="Service" *ngIf="isOpenFromContact" class="form-field-container" appearance="fill">
+            <input matInput #ScreenNameInputElement
+                autocomplete="off" [matAutocomplete]="screenNameAuto"
+                placeholder="Service"
+                (keyup)="screenNameInputChangeHandler(ScreenNameInputElement.value)"
+                formControlName="screenName">
+            <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
+            <mat-autocomplete #screenNameAuto="matAutocomplete" [displayWith]="displayWithScreenNameFn"
+                (opened)="screenNameInputChangeHandler('')" (closed)="screenNameFieldCloseHandler(ScreenNameInputElement)">
+                <mat-option disabled *ngIf="!(filteredScreenList && filteredScreenList.length)">No Data Found</mat-option>
+                <ng-container *ngIf="filteredScreenList && filteredScreenList.length">
+                    <mat-option *ngFor="let option of filteredScreenList" [value]="option">{{option.screenName}}</mat-option>
                 </ng-container>
             </mat-autocomplete>
         </mat-form-field>

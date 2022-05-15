@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, EventEmitter, Input, OnDestroy, OnInit, Output, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FormStatus, getFormControlValue, getScreenNameDropdownList, getStateList, ScreenNameDropDown, setFormControlValue } from 'src/app/app-utils';
 import { LoginGetModel } from 'src/app/service/models/login.model';
@@ -14,6 +14,7 @@ import { AddCartService } from 'src/app/service/api/add-cart.service';
 import { StartupRegistrationsFormService } from 'src/app/service/api/startup-registrations-form.service';
 import { GrowlService } from 'src/common-ui/growl/growl.service';
 import { growlMessageType } from 'src/common-ui/growl/growl-constants';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'sevenx-startup-registrations-form',
@@ -21,14 +22,14 @@ import { growlMessageType } from 'src/common-ui/growl/growl-constants';
   styleUrls: ['./startup-registrations-form.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class StartupRegistrationsFormComponent implements OnInit {
+export class StartupRegistrationsFormComponent implements OnInit, OnDestroy {
 
   @Input()
   isOpenFromContact: boolean = false;
 
   baseForm: FormGroup;
 
-  screenList: ScreenNameDropDown[] = getScreenNameDropdownList();
+  screenList: ScreenNameDropDown[] = this.getScreenNameDropdownList();
 
   filteredScreenList: ScreenNameDropDown[];
 
@@ -39,6 +40,11 @@ export class StartupRegistrationsFormComponent implements OnInit {
   filteredStateList: string[] = [];
 
   selectedScreenPackage: PackageListGetModel;
+
+  formSaveSubscription: Subscription;
+
+  @Output()
+  eContactFormSubmit: EventEmitter<void> = new EventEmitter();
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -51,6 +57,11 @@ export class StartupRegistrationsFormComponent implements OnInit {
     private router: Router
   ) {
     this.init();
+    this.formSaveSubscription = this.addCartService.eFormSave.subscribe((response) => {
+      if (response && (response.status === 200) && this.isOpenFromContact) {
+        this.eContactFormSubmit.emit();
+      }
+    })
   }
 
   init() {
@@ -182,7 +193,8 @@ export class StartupRegistrationsFormComponent implements OnInit {
             messageTitle: 'Thank you!'
           });
           setTimeout(() => {
-            this.router.navigate(['']);
+            // this.router.navigate(['']);
+            this.eContactFormSubmit.emit();
           }, 2000);
         } else {
           this.growlService.errorMessageGrowl();
@@ -193,5 +205,18 @@ export class StartupRegistrationsFormComponent implements OnInit {
     }
   }
 
+  ngOnDestroy(): void {
+    if (this.formSaveSubscription) {
+      this.formSaveSubscription.unsubscribe();
+    }
+  }
 
+  getScreenNameDropdownList() {
+    const screens = getScreenNameDropdownList();
+    screens.push({
+      screenCode: 'Other',
+      screenName: 'Other'
+    })
+    return screens;
+  }
 }

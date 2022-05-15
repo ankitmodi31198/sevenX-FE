@@ -31,10 +31,10 @@ export const mainRoutes: Routes = [
         path: 'service',
         component: FormPageComponent
       },
-      {
-        path: 'contact-us',
-        component: ContactUsComponent,
-      },
+      // {
+      //   path: 'contact-us',
+      //   component: ContactUsComponent,
+      // },
       {
         path: 'digital-marketing',
         component: DigitalMarketingComponent,
