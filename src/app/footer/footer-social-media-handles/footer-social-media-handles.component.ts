@@ -30,7 +30,7 @@ export class FooterSocialMediaHandlesComponent implements OnInit {
         path: 'assets/facebook.json',
         autoplay: false
       },
-      url: 'http://twitter.com/7xstartup',
+      url: 'http://fb.me/7xstartup',
       animationItem: null
     },
     {
@@ -38,7 +38,7 @@ export class FooterSocialMediaHandlesComponent implements OnInit {
         path: 'assets/linked_in.json',
         autoplay: false
       },
-      url: 'http://twitter.com/7xstartup',
+      url: 'https://www.linkedin.com/company/7xstartup',
       animationItem: null
     },
     {
@@ -46,7 +46,7 @@ export class FooterSocialMediaHandlesComponent implements OnInit {
         path: 'assets/instagram.json',
         autoplay: false
       },
-      url: 'http://twitter.com/7xstartup',
+      url: 'https://www.instagram.com/7xstartup',
       animationItem: null
     }
   ];
