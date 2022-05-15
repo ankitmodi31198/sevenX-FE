@@ -85,6 +85,7 @@ button {
 
 .link-text-hover-container {
     border-bottom: 1px solid;
+    color: $primaryColor;
     &:hover {
         color: $primaryColor;
         cursor: pointer;
