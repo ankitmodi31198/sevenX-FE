@@ -2876,5 +2876,107 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
             ]
             }
     ],
-    
+    CONVERSION_FROM_LLP_TO_PRIVATED_LIMITED: [
+        {
+            question: "What is the minimum capital requirement?",
+            answer: [
+                "There is no minimum capital requirement as per the Companies Act, 2013 "
+            ]
+        },
+        {
+            question: "How to file the Conversion form in case of more than 7 partners in the LLP?",
+            answer: [
+                "In case of the Limited Liability Partnership having more than 7 partners at the time of conversion into Company then the Company shall have to file a Scanned copy of the Physically prepared MOA & AOA and the company shall have to file  URC-1 and  SPICE+ along with MOA and AOA."
+            ]
+        },
+        {
+            question: "Can a Foreign National or NRI be a Director of a Company?",
+            answer: [
+                "Yes, the above person can become a Director post obtaining Director Identification Number. However one Director should be Indian Resident."
+            ]
+        },
+        {
+            question: "Is it mandatory to have an Auditor and if yes in what time period it is required to be appointed?",
+            answer: [
+                "As per Companies Act, 2013 it is compulsory to have an individual as an Auditor of a Company. The first Auditor shall be appointed within 30 days from the date of Incorporation by the Board of Directors ."
+            ]
+        },
+        {
+            question: "Whether there is a need to file any separate form for PAN and TAN?",
+            answer: [
+                "No, there is no need to file any other separate form, the Details pertaining to the Area Code and other details shall be entered in the SPICE+ itself and PAN & TAN shall be generated with the Certificate of Incorporation/Conversion."
+            ]
+        },
+        {
+            question: "What are the statutory requirements to be fulfilled once a Company is registered?",
+            answer: [
+                "There are certain basic requirements to be fulfilled after conversion like:-",
+                "• Opening a current account of the company",
+                "• Appointment of Statutory auditor"
+            ]
+        },
+        {
+            question: "Can a Private Limited Company carry a multiple business after the conversion of the Limited Liability Partnership?",
+            answer: [
+                "The Act doesn’t imposes any restrictions on carrying the multiple businesses after conversion from the Limited Liability Partnership into Private Limited Company."
+            ]
+        },
+        {
+            question: "Whether it is necessary to have a PAN Card?",
+            answer: [
+                "Yes, for Indian nationals becoming a Director in a Company it is mandatory to have a PAN Card and Passport in case of Foreign Nationals."
+            ]
+        },
+        {
+            question: "What is Company Registration Certificate?",
+            answer: [
+                "It is the documentary proof evidencing that the Company has been registered and having its unique identification number as Corporate Identification Number."
+            ]
+        },
+        {
+            question: "What are the Annual Statutory Compliance requirements to be complied by a Private Company?",
+            answer: [
+                "During every financial year, the company must hold at least 4 board meetings (one in each quarter) and one Annual General Meeting (AGM) and EOGM if required. Further, the company has to get the financial statements audited by an independent auditor. Subsequently, it shall file forms like AOC – 4 and MGT – 7  and other forms as applicable as part of Annual Compliance within given time."
+            ]
+        }
+    ],
+    CONVERSION_FROM_PARTNERSHIP_TO_LLP: [
+        {
+            question: "What documents are needed to convert a partnership into an LLP?",
+            answer: [
+                "• Address proof of the office",
+                "• Regulatory authority’s approval",
+                "• Details of all the partners and directors",
+                "• Consent of all the partners and directors",
+                "• Latest income tax return filing",
+                "• NOC from tax authorities",
+                "• Creditors and their consent",
+                "• Certified liabilities and assets of the partnership"
+            ]
+        },
+        {
+            question: "What are the major steps which need to be taken to convert a partnership firm into an LLP?",
+            answer: [
+                "• All the partners must obtain a DSC",
+                "• Next, they must obtain a designated partner identification number",
+                "• Once this is done, the company must look to get their name approved",
+                "• The name must include LLP at its end",
+                "• File LLP forms 17, 2, and 3"
+            ]
+        },
+        {
+            question: "What is the Eligibility required to convert a partnership firm into an LLP?",
+            answer: [
+                "• At least seven partners.",
+                "• Share capital worth at least INR 1 lakh",
+                "• Capital must be divided into either units or shares",
+                "• Object Clause from the partnership firm’s Memorandum of Association",
+                "• DSC and DIN of all the partners",
+                "• Memorandum of Association of the partnership",
+                "• Articles of Association",
+                "• Copy of the application for name approval",
+                "• NOC from the property owner"
+            ]
+        },
+    ],
 }
