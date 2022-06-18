@@ -93,7 +93,7 @@ export const FormPageScreenDescriptionMap: { [key: string]: string } = {
     GST_ADVISORY: 'Goods and Service Tax (GST), one of the major tax reforms in India, finally became a reality when it was introduced in July 2017. Given the magnitude of the change, it comes with its own set of challenges and complexities. The change is not only in the law but also an attempt to infuse technology for reporting requirements.',
     COMPANY: 'A Private Company is an entity enjoying a separate identity which requires maintaining its active status through the regular filing with MCA. For every company, it is compulsory to file an annual return and audited financial statements with MCA for every financial year. The RoC filing is mandatory irrespective of the turnover, whether it is zero or in crore.',
     ROC_LLP: 'A Limited Liability Partnership enjoys a separate status. Thus, an organization needs to maintain its active status by regularly filing with the Ministry of Corporate Affairs (MCA). Annual compliance filing is mandatory for any LLP, whether having a business or not.',
-    PF: 'The Act extends to the whole of India and is applicable to all establishments with 20 or more employees. The employer is required to file returns in prescribed forms or using Form 5/10/12A/3A or 6A for provident contributions declared or made.',
+    PF: 'Employees’ Provident Fund is a statutory benefit payable to employees working in India. The Employees’ Provident Funds and Miscellaneous Provisions Act, 1952 ("Act") is applicable pan-India. The administration and management of Employees’ Provident Fund (EPF) is carried out by the Central Board of Trustees (CBT) established by the Central Government consisting of representatives of the Government, employers and employees respectively. The Employees’ Provident Fund Organization (EPFO) assists this Board in its activities.',
     ESIC: 'Applies to all factories and establishments with 10 or more workers except where the establishment is engaged in the Construction Sector.',
     PROFESSIONAL_TAX: 'Professional Tax is a tax collected by State Governments from the professionally occupied business entities. A person earning income from salary or professions such as Chartered Accountants, Company Secretaries, Lawyers, etc. is required to pay professional tax.',
     CLRA: 'CLRA',
@@ -8688,7 +8688,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                                     },
                                     {
                                         title: 'As per the Companies Act, no prosecution should initiate any process to be followed.'
-                                    }
+                                    }   
                                 ]
                     }
                 ]
@@ -8784,6 +8784,173 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                 ]
             }
             
+        ]
+    },
+    PF: {
+        title: FormPageScreenTitleMap['PF'],
+        description: FormPageScreenDescriptionMap['PF'],
+        navigationContainers: [
+            {
+                title: 'Overview - Provident Fund',
+                description: '',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            'Employees’ Provident Fund is a statutory benefit payable to employees working in India. The Employees’ Provident Funds and Miscellaneous Provisions Act, 1952 ("Act") is applicable pan-India. The administration and management of Employees’ Provident Fund (EPF) is carried out by the Central Board of Trustees (CBT) established by the Central Government consisting of representatives of the Government, employers and employees respectively. The Employees’ Provident Fund Organization (EPFO) assists this Board in its activities.',
+                             "EPF is a welfare scheme brought into force to secure a better future for employees. It is a statutory benefit available to the employees post retirement or when they leave the services. In case of deceased employees, their dependents will be entitled for the benefits. Under the Employees’ Provident Fund Scheme (EPF Scheme) both employers and employees have to make their contributions towards the Fund. Interest earned on the amount is credited to the member’s Provident Fund Account (PF account) and is available to the employee at the time of retirement or exit from employment as the case may be, provided certain conditions are fulfilled."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Types of schemes',
+                navigationTitle: 'Types',
+                containerKey: 'type',
+                type: FormPageContainerType.CARD_LIST,
+                value: [
+                    {
+                        title: '1. Employees’ Provident Fund Scheme, 1952',
+                        description: ['Employees’ Provident Fund Scheme was set up under the Act for the purpose of providing a post retirement benefit for the employees or a class of employees or their legal heirs in case of death, employed under an establishment to which this Act applies']
+                    },
+                    {
+                        title: '2. Employees’ Pension Scheme, 1995',
+                        description: ['Employees’ Pension Scheme was framed under the Act for the purpose of providing the superannuation pension, retiring pension or permanent total disablement pension to the employees of any establishment or class of establishments to whom this Act applies; and widow or widower’s pension, children pension or orphan pension payable to the beneficiaries of such employees.']
+                    },
+                    {
+                        title: '3. Employees’ Deposit-linked Insurance Scheme, 1976',
+                        description: ['Employees’ Deposit-linked Insurance Scheme (EDLI Scheme) was framed under the Act for the purpose of providing insurance benefits to the employees of an establishment or a class of establishments to whom this Act applies in case of death while in service.']
+                    }
+                ]
+            },
+            {
+                title: 'Applicability',
+                navigationTitle: 'Applicability',
+                containerKey: 'applicability',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        innerList: [
+                            {
+                                title: "Employees’ Provident Fund has been set up under The Employees’ Provident Fund and Miscellaneous Provisions Act, 1952 (“Act”) applicable pan-India. The Act is applicable to every factory or industry mentioned in Schedule 1 of the Act, wherein 20 or more persons are employed or to any other establishment which the Central Government specifies by notification in the official Gazette, even when the number of employees is less than 20."
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Eligibility to be the member of EPF',
+                navigationTitle: 'Eligibility',
+                description :'Enrollment for PF membership is mandatory for:',
+                containerKey: 'eligibility',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        innerList: [
+                            {
+                                title: "1.Any person employed for wages for any work of an establishment either manual or otherwise."
+                            },
+                            {
+                                title: "2. Any person employed through a contractor or engaged as an apprentice but not being an apprentice under Apprentices Act, 1961"
+                            },
+                            {
+                                title: "3. Any person under the standing orders of an establishment, earning less than or equal to Rs. 15,000 per month other than the excluded and exempted employees under Section 17 of the Act."
+                            }
+
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Withdrawals from EPF account',
+                navigationTitle: 'Withdrawals',
+                containerKey: 'withdrawals',
+                type: FormPageContainerType.LIST,
+                value: [
+                            {
+                                innerList: [
+                                    {
+                                        title: '1. The funds from an EPF account can be withdrawn completely in full settlements on attaining 58 years of age or at the time of retirement the employee can claim for a complete settlement or if an employee remains unemployed for a period of 2 months or more or in the case of death while in service before attaining the age of retirement, in which case the nominees or legal heirs are entitled to withdraw the accumulated fund.'
+                                    },
+                                    {
+                                        title: '2. The partial withdrawal of funds from the EPF is available for educational opportunity, medical treatment, repayment of home loan, marriage, purchase of land/house/flat, in case the establishment/factory is closed, natural calamity, an year before retirement and unemployment for a period of more than one month'
+                                    }
+                                ]
+                    }
+                ]
+            },
+            {
+                title: 'Advantages of Provident Fund',
+                navigationTitle: 'Advantages',
+                containerKey: 'advantages',
+                description : 'The employees covered under the various schemes of the Act are entitled for the following benefits',
+                type: FormPageContainerType.LIST,
+                value: [
+                            {
+                                innerList: [
+                                    {
+                                        title: 'Employees can take advances or make withdrawals*.'
+                                    },
+                                    {
+                                        title: 'PF amount of a deceased member is payable to the nominees or legal heirs'
+                                    },
+                                    {
+                                        title: 'The employer not only contributes towards the PF but also makes the necessary contributions towards the employee’s pension which can be used by the employee post-retirement'
+                                    },
+                                    {
+                                        title: 'Under the EDLI Scheme employees are properly insured in order to avail the lump sum benefit at the time of death while in service.'
+                                    },
+                                    {
+                                        title: 'EEE (Exempt, Exempt, Exempt) tax benefit under the Income Tax Act enables tax-free returns for the employees.'
+                                    },
+                                    {
+                                        title: 'Employees receive special benefits in the form of added income to their savings in the form of interest.'
+                                    },
+                                    {
+                                        title : 'PF account can be transferrable if any member changes employment from one establishment to another where such Provident Fund scheme is applicable.'
+                                    }
+                                ]
+                    }
+                ]
+            }
+        ]
+    },
+    ESIC: {
+        title: FormPageScreenTitleMap['ESIC'],
+        description: FormPageScreenDescriptionMap['ESIC'],
+        navigationContainers: [
+            {
+                title: 'Overview - Employee State Insurance',
+                description: '',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "The Employees' State Insurance Scheme of India (ESIC) is a multi-faceted Social Security Scheme designed to provide socio-economic protection to 'employees' in the organised sector. ESIC Scheme is administered by a statutory corporate body called the Employees' State Insurance Corporation.",
+                              "It protects employees against sickness, maternity, disablement, and death as a result of a work-related injury, as well as provides medical care to insured employees and their families",
+                            "According to official data released in January 2022, almost 10.28 lakh new members joined the ESIC-run social security plan in November 2021, compared to 12.39 lakh the previous month, providing insight into formal sector employment in the country"]
+                    }
+                ]
+            },
+            {
+                title: 'Applicability',
+                navigationTitle: 'Applicability',
+                containerKey: 'applicability',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                           "The ESI Act is applicable to all non-seasonal factories employing 10 or more persons [Section -1(2) read with Section 2(12) and Section 2(19A)]. The State Goverments have extended the coverage under Section 1(5) of the Act to Shops, Hotel, Restaurants, Cinema including preview theatres, Road-motor transport undertakings, Newspaper establishments, Private Medical Institutions, Educational Institutions and to contract and casual employees of Municipal Corporation/Municipal Bodies employing 10 or more persons in the certain States/UTs, where State Govt. is the appropriate Govt." , 
+                            "The Central Govt. has extended the coverage under Section 1(5) to Shops, Hotels, Restaurants, Road Motor Transport establishments, Cinema including preview theatres, Newspaper establishments, establishment engaged in Insurance Business, Non-Banking Financial Companies, Port Trust, Airport Authorities, Warehousing establishments employing 20 or more Persons, where Central Govt. is the appropriate Govt.",
+                            "The existing wage limit for coverage under the Act effective from 01.01.2017 is Rs.21,000/- per month (Rs.25,000/- per month in the case of Persons with Disability).)"
+                        ]
+                    }
+                ]
+            }
         ]
     },
     
