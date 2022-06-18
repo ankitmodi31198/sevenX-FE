@@ -2753,5 +2753,128 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
                 "Yes"
             ]
         },
-    ]
+    ],
+    MOA_AMENDMENT: [
+        {
+            question: "What does MOA Amendment means?",
+            answer: [
+                "Any change in the existing clauses of the memorandum is termed as amendment in MOA."
+            ]
+        },
+        {
+            question: "Is any filing required to be done with ROC for amendment?",
+            answer: [
+                "Yes, Form MGT 14 is required to be filed with ROC if a special resolution is passed for such amendment"
+            ]
+        },
+        {
+            question: "Can the subscription clause be altered in the MOA?",
+            answer: [
+                "No, the subscription clause is not subject to alteration in the MOA. The subscriber sheet that is used during the incorporation of the company is valid for a lifetime, and one is not allowed to make any further changes in it."
+            ]
+        },
+        {
+            question: "How much time is needed for the alteration of memorandum of association?",
+            answer: [
+                "The process of alteration usually takes up 2-5 working days. The process is usually faster if all the documents are in place."]
+        },
+        {
+            question: "Is it necessary to attach physical MOA and AOA with the Form MGT-14 If the company is incorporated through SPICe form and wants alteration of MOA?",
+            answer: [
+                "Yes, it is necessary to attach the physical MOA and AOA with the Form MGT-14 for the alteration of MOA under this particular circumstance."]
+        }
+    ],
+    CHANGE_IN_SHAREHOLDING: [
+        {
+            question: "What is Share Transfer?",
+            answer: [
+                "Share transfer means transferring the shares from the person having the shares (transferor) to the person desirous of acquiring the shares (transferee)."
+            ]
+        },
+        {
+            question: "Why a Share Transfer is done?",
+            answer: [
+                "Share Transfer can be done either because the person having shares does not want to continue as the shareholder of the company or he/she wants to withdraw his investment from the company."
+            ]
+        },
+        {
+            question: "Whether any forms need to file with ROC for Share Transfer?",
+            answer: [
+                "Yes, Form MGT 14 is required to be filed with ROC if a special resolution is passed for such amendment"
+            ]
+        },
+        {
+            question: "What is Share Transfer Deed (SH-7)?",
+            answer: [
+                "This is a Deed to be executed between the transferor and transferee for transfer the shares. This Deed contains the details regarding transferor, transferee, number of shares, details of share certificates, consideration for share transfer etc."
+            ]
+        },
+        {
+            question: "Is it mandatory to execute a Share Transfer Deed?",
+            answer: [
+                "Yes, in order to give effect to the share transfer, it is mandatory to execute a share transfer deed."
+            ]
+        },
+        {
+            question: "What are the documents required to complete Share transfer process?",
+            answer: [
+                "The following documents are required for share transfer: • Duly Stamped Share transfer deed • Board Meeting Documents (Board Meeting notice, minutes and attendance Sheet) • Share Certificates."
+            ]
+          },
+        {
+            question: "Is there any limit for minimum / maximum no of shares to be transferred?",
+            answer: [
+                "No, there is no such limit on minimum and maximum no of shares."
+            ]
+        },
+        {
+            question: "Who can transfer shares in a company?",
+            answer: [
+                "The existing Shareholders having shares in their name can transfer the same to other person."
+            ]
+        },
+        {
+            question: "How Share Transfer is done?",
+            answer: [
+                "The transferor and the transferee need to execute a Share Transfer Deed in form SH-4. The said deed should be stamped as per the Stamping requirements."
+            ]
+         },
+        {
+            question: "What are the Stamping requirements for Share Transfer Deed?",
+            answer: [
+                "Stamp duty is payable at Re. 0.25 per consideration of Rs.100 for transfer of shares. Share transfer stamp duty is paid through ‘Share Transfer Stamps’."
+            ]
+        },
+        {
+            question: "Is there any restriction regarding consideration to be paid for shares?",
+            answer: [
+                "No, there is no such restriction regarding consideration. It depends on the mutual consent of transferor and transferee."
+            ]
+        },
+        {
+            question: "Who will issue the new Share Certificates?",
+            answer: [
+                "The company, whose shares are transferred, will issue the new share certificates to the transferee."
+            ]
+        },
+        {
+            question: "How Share Transfer is done?",
+            answer: [
+                "The transferor and the transferee need to execute a Share Transfer Deed in form SH-4 and need to send the same to the company. The company will conduct a board meeting to approve the same and will issue new share certificate(s) to the transferee."
+            ]
+        },
+        {
+            question: "What is transmission of shares?",
+            answer: [
+                "Transmission of shares means the process of transmitting the ownership of shares to the legal heirs of a shareholder, consequent to the death of a shareholder."
+            ]
+        },
+        {
+            question: "Any filing required for share transfer?",
+            answer: [
+               "Share transfer does not require any registry filings. The details of shares transfer will be reflected in the subsequent Annual Returns; thus, the details will be updated in the ROC records."
+            ]
+            }
+    ],
+    
 }
