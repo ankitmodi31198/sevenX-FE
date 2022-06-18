@@ -79,8 +79,8 @@ export const FormPageScreenDescriptionMap: { [key: string]: string } = {
     REMOVE_DIRECTOR: 'It is possible to add or remove a director from the company at any time. There are different reasons why a director is removed and there are three different procedures based on the reason.',
     CHANGE_IN_REGISTRED_OFFICE: 'Section 12 of the Companies Act 0f 2013 mandates all companies or LLPs to have a registered office at the time of or within 30 days of incorporation. The registered office address of a company or LLP is the principal place of business and all official correspondence from the Ministry of Corporate Affairs (MCA) is sent to the mentioned address only. Therefore, any change of address to the registered office should be intimated to the RoC or MCA.',
     REGISTERED_OFFICE_CHANGE: 'Promoters of the company decide the location and place of the registered office. Once registered office is declared via filling INC 22, any changes in the registered office of the company is intimated to the ROC.',
-    MOA_AMENDMENT: 'MOA Amendment',
-    CHANGE_IN_SHAREHOLDING: 'Change in Shareholding',
+    MOA_AMENDMENT: 'A Memorandum of Association is the primary document of the company prepared at the time of incorporation of the company with an option to carry out alteration of the memorandum of association as and when required to define the various clauses as per Schedule I under the Companies Act 2013. It is a document that consists of various clauses related to the company and it defines the scope of business activities of the company.',
+    CHANGE_IN_SHAREHOLDING: 'Transfer Shares refers to the transfer of shareholding or change in ownership of shares in a company by a person to another person. The person who transfer the shares is called ‘Transferor’ and the person who gets the share transferred is called as ‘Transferee’.',
     CONVERSION_FROM_LLP_TO_PRIVATED_LIMITED: 'Conversion from LLP to Private Limited',
     ADD_REMOVE_PARTNER: 'Add/Remove a partner',
     CHANGE_IN_LLP_AGREEMENT: 'Change in LLP Agreement',
@@ -7854,5 +7854,281 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                 ]
             },
         ]
-    }
+    },
+    MOA_AMENDMENT: {
+        title: FormPageScreenTitleMap['MOA_AMENDMENT'],
+        description: FormPageScreenDescriptionMap['MOA_AMENDMENT'],
+        navigationContainers: [
+            {
+                title: 'Overview - MOA Amendment',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "A Memorandum of Association is the primary document of the company prepared at the time of incorporation of the company with an option to carry out alteration of the memorandum of association as and when required to define the various clauses as per Schedule I under the Companies Act 2013. It is a document that consists of various clauses related to the company and it defines the scope of business activities of the company.",
+                            "Any change in terms of the memorandum of association such as a change in authorized capital, change in the object, change in name of the company, etc. can be done via an amendment in MOA. A company may have to undertake alteration of memorandum of association from time to time.",
+                            "In case the company decides to take up a new business activity or drawdown an existing business activity, it can be done through alteration of object clauses in the MOA.  Basic approval of the Directors together with shareholder’s approval via Ordinary resolution is required for this alteration.  Thereafter, supporting documents of these resolutions passed along with altered MOA are filed with the ROC in Form MGT-14 for registration of the same."
+                                    ],
+                    }
+                ]
+            },
+            {
+                title: 'Features',
+                navigationTitle: 'Features',
+                containerKey: 'features',
+                type: FormPageContainerType.CARD_LIST,
+                 value: [
+                    {
+                        title: "Name Clause",
+                        description: [
+                            "The company can change or modify the name of the company by passing a special resolution. This is a part of the alteration of memorandum of association."
+                        ]
+                    },
+                    {
+                        title: "Object Clause",
+                        description: [
+                            "In case of any change in the business objective, the object clause of the MOA can be altered. Also, changes in the object clause can benefit any further business matters concerning the company."
+                        ]
+                    },
+                    {
+                        title: "Registered Office Clause",
+                        description: [
+                            "In case there is a change in the registered office of the company from one state to another, then there needs to be an alteration in the registered office clause of the memorandum of association."
+                        ]
+                    },
+                    {
+                        title: "Liability and capital clause",
+                        description: [
+                            "In case there are any modifications to be made in the liability and capital clause, then alteration to the MOA is necessary. If the authorized share capital needs to be changed, then the capital clause will be altered."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Requirement',
+                navigationTitle: 'Requirement',
+                containerKey: 'requirement',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        innerList: [
+                            {
+                                title: "The Article of Association of the Company must permit the chnge in object."
+                            },
+                            {
+                                title: "The object to be changed must be relevent to the nature and name of the Company for which the Incorporation was done."
+                            },
+                            {
+                                title: "The detailed object which is required to be changed."
+                            },
+                            {
+                                title: "The Object must be relevant to the name and the nature for which the Company was Incorporated"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Process',
+                navigationTitle: 'Process',
+                containerKey: 'process',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        title: "1. Type of Amendment",
+                        description: [
+                            "Identification of the amendment required to be made."
+                        ]
+                    },
+                    {
+                        title: "2. Hold BM",
+                        description: [
+                            "The BM is required to be convened to approve the amendment and fix date time and place for holding General Meeting."
+                        ]
+                    },
+                    {
+                        title: "3. Hold General Meeting",
+                        description: [
+                            "In order to get approval from shareholders for amending the MOA, the EGM is required to be convened by circulating 21 days clear notice or such shorter period after consent of the requisite shareholders."
+                        ]
+                    },
+                    {
+                        title: "4. Filing of the required form",
+                        description: [
+                            "Form MGT 14 for amendment is required to be filed within 30 days of passing special resolution."
+                         ]
+                    }
+                ]
+            }
+        ]
+    },
+    CHANGE_IN_SHAREHOLDING: {
+        title: FormPageScreenTitleMap['CHANGE_IN_SHAREHOLDING'],
+        description: FormPageScreenDescriptionMap['CHANGE_IN_SHAREHOLDING'],
+        navigationContainers: [
+            {
+                title: 'Overview - Change in Shareholding',
+                description: 'Transfer Shares refers to the transfer of shareholding or change in ownership of shares in a company by a person to another person. The person who transfer the shares is called ‘Transferor’ and the person who gets the share transferred is called as ‘Transferee’.',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "‘A Share’ is the share in the Share Capital of a Company.  Share Capital of the Company is the investment by the Shareholders. Share Capital of the Company is divided in to smaller units called ‘Shares’ and the shareholders are the owners of the Company. ",
+                            "Being the owners of the Company, shareholders are the ultimate decision makers in a Limited Company. Shareholders are the people who appoint the Directors for the day to day management of Company subject to provisions of Articles of Associations and Companies Act and Rules.",
+                            "The Shares of a Company is freely transferable from one person to another person subject to conditions in Articles of Association of the Company and provisions of Companies Act.",
+                            "In a private limited company, share transfer is usually restricted as per the terms specified in Articles of Association of the Company while in case of a public limited company it is freely transferable. Generally, the shares of a private limited company are owned by family persons or a small group of persons or investors. A private company can restrict the right to transfer the shares by adding restrictive condition for transfer of shares in the articles of association of the company. Therefore, the Articles of Association of the Company should be reviewed, and the restriction or condition provided therein should be fulfilled before effecting any share transfer.",
+                            "In case of companies where there is a shareholder’s agreement between the promoters and investors, or promoters themselves, the condition shareholders agreement also to be adhered before effecting the share transfer.",
+                            "The transferor and transferee should execute a Share Transfer Deed in Form No. SH-4 and the same shall be delivered to the company within sixty days from the date of such execution.",
+                            "The deed should be duly stamped and should be properly cancelled by a rubber stamp or defaced otherwise.",
+                            "",
+                            "The Stamp Duty payable on Share Transfer is at the rate of 0.25% of the value of consideration. (For eg. Stamp Duty for a Consideration of Rs.10000.00 shall be Rs.25.00). The Share transfer Deed is invalid if the stamp duty is not paid.",
+                            "The Company is required to effect the transfer of shares and make needful changes in the Register of Members and issue new certificates/endorse the transfer on certificates in within a period of one month from the date of receipt of Transfer Deed by the company."
+                                    ]
+                    }
+                ]
+            },
+            {
+                title: 'Company - Transfer of Shares - Requirements',
+                navigationTitle: 'Requirements',
+                containerKey: 'requirements',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        title: 'Decide the Transferor and Transferee and Consideration for Transfer',
+                    },
+                    {
+                        title: 'Execute Transfer Deed Pay Stamp duty',
+                    },
+                    {
+                        title: 'Submit the Deed and Certificates to Company',
+                    },
+                    {
+                        title: 'Board to Pass Resolutions for Transfer',
+                    },
+                    {
+                        title: 'Update the share transfer in the register of members and Issue new share certificates to the transfer',
+                    },
+                    {
+                        title: 'Execution of Share Transfer Deed in form SH-4.',
+                        description: [
+                            "Transferor and transferee should execute a Share Transfer Deed in form SH-4. The deed should be duly stamped as per the stamping requirements."
+                        ]
+                    },
+                    {
+                        title: 'Submission of Share Transfer Deed and Share Certificates to the company',
+                        description: [
+                            "Deliver the duly executed share transfer deed and relevant share certificates to the company for needful action from the Board of Directors for efecting the Transfer"
+                        ]
+                    },
+                    {
+                        title: 'Conditions of Articles of Association and Shareholders Agreement, if any.',
+                        description: [
+                            "Check the compliance of conditions regarding Share transfer in the Articles of Association of the company and Shareholders Agreement, if any, and comply the same in order to give effect to share transfer."
+                        ]
+                    },
+                    {
+                        title: 'Board Meeting to approve the Share Transfer.',
+                        description: [
+                            "Convene the Board Meeting and pass the Board resolution approving the Share Transfer."
+                        ]
+                    },
+                    {
+                        title: 'Updation of Register of Memebers and Share Certificates',
+                        description: [
+                            "Company to update the Register of Members and issue new share certificates or endorse the transfer on existing certificates as the case may be."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                description: 'Company - Transfer Of Shares, you need to provide below documents. The documents can be submitted through online',
+                value: [
+                    {
+                        title: 'From Trasnsferor & Transferee',
+                        innerList: [
+                            {
+                                title: 'Share Certificates'
+                            },
+                            {
+                                title: 'Duly executed SH-4 (Share Transfer Deed)'
+                            },
+                            {
+                                title: 'Stamping of Transfer Deed'
+                            }
+                        ]
+                    },
+                    {
+                        title: 'Board Meeting Documents',
+                        innerList: [
+                            {
+                                title: 'Board Meeting Notice'
+                            },
+                            {
+                                title: 'Board Meeting Minutes'
+                            },
+                            {
+                                title: 'Board Meeting Attendance Sheet'
+                            }
+                        ]
+                    },
+                    {
+                        title: 'Transferor',
+                        innerList: [
+                            {
+                                title: 'There should be a Shareolder willing to transfer the Shares'
+                            }
+                        ]
+                    },
+                    {
+                        title: 'Transferee',
+                        innerList: [
+                            {
+                                title: 'There should be a Shareolder willing to buy / takeover the shares'
+                            }
+                        ]
+                    },
+                    {
+                        title: 'Consideration',
+                        innerList: [
+                            {
+                                title: 'The Value of shares to be decided mutually or as per Arctiles of Association of Company or Sharehoders Agreement'
+                            }
+                        ]
+                    },
+                    {
+                        title: 'Share Transfer Deed',
+                        innerList: [
+                            {
+                                title: 'The Trasnferor and Transferee shoulde execute a Share Tansfer Deed in Form SH-4'
+                            }
+                        ]
+                    },
+                    {
+                        title: 'Articles of Association',
+                        innerList: [
+                            {
+                                title: 'In case of private limtied Companies, the conditions of Articles of Association for transfer of shares to outside shareholders, if any, to be complied.'
+                            }
+                        ]
+                    },
+                    {
+                        title: 'Shareholders Agreement / Co-Founders Agreement',
+                        innerList: [
+                            {
+                                title: 'Conditions of Shareholders Agreement / Co-Founders Agreement, if any, to be complied.'
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
 }
