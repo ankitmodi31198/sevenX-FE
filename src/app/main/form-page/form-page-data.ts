@@ -81,11 +81,11 @@ export const FormPageScreenDescriptionMap: { [key: string]: string } = {
     REGISTERED_OFFICE_CHANGE: 'Promoters of the company decide the location and place of the registered office. Once registered office is declared via filling INC 22, any changes in the registered office of the company is intimated to the ROC.',
     MOA_AMENDMENT: 'A Memorandum of Association is the primary document of the company prepared at the time of incorporation of the company with an option to carry out alteration of the memorandum of association as and when required to define the various clauses as per Schedule I under the Companies Act 2013. It is a document that consists of various clauses related to the company and it defines the scope of business activities of the company.',
     CHANGE_IN_SHAREHOLDING: 'Transfer Shares refers to the transfer of shareholding or change in ownership of shares in a company by a person to another person. The person who transfer the shares is called ‘Transferor’ and the person who gets the share transferred is called as ‘Transferee’.',
-    CONVERSION_FROM_LLP_TO_PRIVATED_LIMITED: 'Conversion from LLP to Private Limited',
-    ADD_REMOVE_PARTNER: 'Add/Remove a partner',
-    CHANGE_IN_LLP_AGREEMENT: 'Change in LLP Agreement',
-    CONVERSION_FROM_PARTNERSHIP_TO_LLP: 'Conversion from Partnership to LLP',
-    CONVERSION_FROM_PRIVATE_LIMITED_TO_LLP: 'Conversion from Private Limited to LLP',
+    CONVERSION_FROM_LLP_TO_PRIVATED_LIMITED: 'As Private Companies are one of the most popular forms of business structure in India. The entire world is gradually shifting towards one global market without any trade barriers between the countries. With the emergence of promotional startup benefits, a large number of entrepreneurs are looking forward to corporatization. They provide the opportunities of higher chances of growth and development and are also best for raising the equity capital which is not possible in case of a LLP.',
+    ADD_REMOVE_PARTNER: 'A Limited Liability Partnership is a hybrid of both, a partnership and company form of business. As per Limited Liability Partnership Act, 2008, an LLP must have a minimum of two partners. The partners of an LLP are responsible for its day to day management. ',
+    CHANGE_IN_LLP_AGREEMENT: 'Agreement of the Limited Liability Partnership (LLP) is its charter. In the agreement, nature of business activities, rights, duties, and obligations of partners are mentioned. However to make any changes a certain procedure is required to be followed.',
+    CONVERSION_FROM_PARTNERSHIP_TO_LLP: 'Under a Limited Liability Partnership (LLP), two or more partners form a special partnership and have limited liabilities. For converting a partnership to an LLP, you need to get a Digital Signature Certificate, a DPIN and file the LLP forms 2, 3 and 17.',
+    CONVERSION_FROM_PRIVATE_LIMITED_TO_LLP: 'One of the decisions to be taken while starting a company is what type of company you want to incorporate. It is essential to choose the business structure carefully when registering your company. If you have already chosen a Pvt. and now want to convert PVT into an LLP, then this article is for you. Here we are going to tell you about the Procedure for Conversion of Private Limited Company into LLP.',
     ITR_FILING: 'ITR Filing is a mandatory process which has to be followed by the taxpayer for multiple reasons for instance, maintenance of the financial records and for availing loan.',
     TDS_RETURN_FILING: 'Any individual or entity making a payment is required to deduct TDS if the payment exceeds a prescribed threshold limit at the rates prescribed by the tax department.',
     INCOME_TAX_ADVISORY: 'Tax is a pivot to most business decisions and, at times, gets into a tussle with commercial considerations. It is hence, imperative to maintain the right balance between the two in order to maximize stakeholder value.',
@@ -7984,7 +7984,6 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                             "In case of companies where there is a shareholder’s agreement between the promoters and investors, or promoters themselves, the condition shareholders agreement also to be adhered before effecting the share transfer.",
                             "The transferor and transferee should execute a Share Transfer Deed in Form No. SH-4 and the same shall be delivered to the company within sixty days from the date of such execution.",
                             "The deed should be duly stamped and should be properly cancelled by a rubber stamp or defaced otherwise.",
-                            "",
                             "The Stamp Duty payable on Share Transfer is at the rate of 0.25% of the value of consideration. (For eg. Stamp Duty for a Consideration of Rs.10000.00 shall be Rs.25.00). The Share transfer Deed is invalid if the stamp duty is not paid.",
                             "The Company is required to effect the transfer of shares and make needful changes in the Register of Members and issue new certificates/endorse the transfer on certificates in within a period of one month from the date of receipt of Transfer Deed by the company."
                                     ]
@@ -8131,4 +8130,661 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
             }
         ]
     },
+    CONVERSION_FROM_LLP_TO_PRIVATED_LIMITED: {
+        title: FormPageScreenTitleMap['CONVERSION_FROM_LLP_TO_PRIVATED_LIMITED'],
+        description: FormPageScreenDescriptionMap['CONVERSION_FROM_LLP_TO_PRIVATED_LIMITED'],
+        navigationContainers: [
+            {
+                title: 'Overview - Conversion from LLP to Private Limited',
+                description: '',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "As Private Companies are one of the most popular forms of business structure in India. The entire world is gradually shifting towards one global market without any trade barriers between the countries. With the emergence of promotional startup benefits, a large number of entrepreneurs are looking forward to corporatization. They provide the opportunities of higher chances of growth and development and are also best for raising the equity capital which is not possible in case of a LLP.",                           "Forming a partnership firm is simple since it does not have to be registered to start operations. A partner is an agent of the firm and all other partners. Each partner is liable for the actions of the other partners.",
+                            "The structure of LLP is not suitable for the owners who require venture capitalist or a private equity investor to invest in the company as they would choose to invest in a private limited company and not a partnership or a LLP. The second reason for conversion is that the Private Limited Companies are mostly preferred in case of FDI, especially if the promoters and/or owners of the company are the NRI’s or foreigner incorporating a private limited company"
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Process of Conversion from LLP to Private Limited',
+                navigationTitle: 'Steps',
+                containerKey: 'process',
+                type: FormPageContainerType.CARD_LIST,
+                value: [
+                    {
+                        title: '1. Complete the Application Form',
+                        description: [
+                            "You are requested to first fill the simple questionnaire provided by our expert team."
+                         ]
+                    },
+                    {
+                        title: '2. Document Processing',
+                        description: [
+                            "At the second step we will be requiring the documents in accordance with the questionnaire filled by you so that we can arrange them as per the requirement and for processing."
+                        ]
+                    },
+                    {
+                        title: '3. Name Availability',
+                        description: [
+                            "The next step is check the name availability. The name should be unique in nature and should not be similar to name of any other entity registered. It may take at least 1-2 days. The consent of partners have to be taken for the application."
+                         ]
+                    },
+                    {
+                        title: '4. Newspaper Advertisement',
+                        description: [
+                            "We will provide the format for the newspaper advertisement which shall be published in a newspaper in English and in any vernacular language, circulating in the district in which Limited Liability Partnership is situated. "
+                        ]
+                    },
+                    {
+                        title: '5. E-filing for conversion into LLP',
+                        description: [
+                            "Once the name is approved, and no objection has been received for such conversion, an online application will be filed along with the requisite documents as obtained from the client with ROC in FORM URC-1 along with Spice+. The MOA as well as AOA shall be filed along with it. This process again takes approximately 2-3 days."
+                        ]
+                    },
+                    {
+                        title: '6. Get Certificate of Incorporation',
+                        description: [
+                            "Once the Company gets incorporated we will share all the docs like Incorporation Certificate, MOA , AOA and Digital Signatures."
+                        ]
+                    }
+                    
+                ]
+            },
+            {
+                title: 'Minimum Requirements',
+                navigationTitle: 'Requirements',
+                containerKey: 'requirements',
+                type: FormPageContainerType.LIST,
+                value: [
+                            {
+                                innerList: [
+                                    {
+                                        title: 'Minimum Two Directors and maximum Fifteen'
+                                    },
+                                    {
+                                        title: 'Minimum Two Shareholders'
+                                    },
+                                    {
+                                        title: 'Minimum one Director shall be Indian resident'
+                                    },
+                                    {
+                                        title: 'Digital Signatures of Subscriber and Directors'
+                                    },
+                                    {
+                                        title: 'No Minimum Capital requirement.'
+                                    },
+                                    {
+                                        title: 'Newspaper Advertisement'
+                                    }
+                                ]
+                    }
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        title: 'Documents for Conversion from LLP to Private Limited',
+                        innerList: [
+                            {
+                                innerList: [
+                                    {
+                                        title: 'Pan Card and Aadhar Card of Partners'
+                                    },
+                                    {
+                                        title: 'Photograph of partners'
+                                    },
+                                    {
+                                        title: 'LLP Agreement and Certificate of Incorporation'
+                                    },
+                                    {
+                                        title: 'Latest ITR of LLP'
+                                    },
+                                    {
+                                        title: 'Statement of Assets and Liabilities (Latest)'
+                                    },
+                                    {
+                                        title: 'Cutting of newspapers advertisement'
+                                    },
+                                    {
+                                        title: 'NOC from all the creditors, if any'
+                                    },
+                                    {
+                                        title: 'Business Address Proof Owned Property : (Copy of Registry and Latest Govt. Electricity Bill or Water Bill)'
+                                    },
+                                    {
+                                        title: 'Business Address Proof Rented/leased: (Rent Agreement, NOC from the Owner, Latest Govt. Electricity Bill or Water Bill)'
+                                    }
+                                    ,
+                                    {
+                                        title: 'Note:-  In case of NRI or Foreign National documents of Directors and Subscribers must be notarized or apostilled.' 
+                                    }
+                                    ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Advantages of Conversion from LLP to Private Limited',
+                navigationTitle: 'Advantages',
+                containerKey: 'advantages',
+                type: FormPageContainerType.CARD_LIST,
+                value: [
+                    {
+                        title: 'Separate Legal Existence',
+                        description: ['Once an entity is registered it is born in the eyes of law which means it is separate from its owners, Directors, Managers, shareholders and employees etc.']
+                    },
+                    {
+                        title: 'Limited Liability',
+                        description: ['As the Company is a separate legal entity its Liability is limited to an extent of its Share Capital or the guarantee provided. The Company obligation does not create any right over the Owner personal assets.']
+                    },
+                    {
+                        title: 'Fund Raising',
+                        description: ['It is the most preferred entity by the investors also as it provides an opportunity to raise money through Banks, Foreign Investors, Venture Capitalist and the Angel Investors etc.']
+                    },
+                    {
+                        title: 'No Capital Gain',
+                        description: ['Conversion of LLP into a private limited company does not attract any capital gain, hence it is a beneficial option for the LLPs to convert into private limited company without any additional cost of taxation.']
+                    }
+                ]
+            },
+        ]
+    },
+    ADD_REMOVE_PARTNER: {
+        title: FormPageScreenTitleMap['ADD_REMOVE_PARTNER'],
+        description: FormPageScreenDescriptionMap['ADD_REMOVE_PARTNER'],
+        navigationContainers: [
+            {
+                title: 'Overview - Add/Remove a partner',
+                description: '',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "A Limited Liability Partnership is a hybrid of both, a partnership and company form of business. As per Limited Liability Partnership Act, 2008, an LLP must have a minimum of two partners. The partners of an LLP are responsible for its day to day management. Unlike regular partnership, an LLP may add or remove such partners and such change would not have an effect on the existence of the organization, as it is a separate entity. Such change in partnership is privy to the approval of the Ministry of Corporate Affairs and must be done in adherence of the Limited Liability Partnership Act, 2008 and the rules made thereunder, along with the provisions of the LLP Agreement."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Process of Add/Remove a partner',
+                description: 'The removal or resignation of a partner from LLP may only take place in accordance with the provisions of the LLP Agreement. However, if the agreement is silent to such effect, the necessary amendments must be made. Subsequent to such alteration, a supplementary LLP Agreement along with necessary documents and requisite fees, must be sent to the MCA, in specific forms.',
+                navigationTitle: 'Steps',
+                containerKey: 'process',
+                type: FormPageContainerType.CARD_LIST,
+                value: [
+                    {
+                        title: '1. ObtainDigital Signature Certificate (DSC)'
+                    },
+                    {
+                        title: '2. Obtain Director Identification Number'
+                    },
+                    {
+                        title: '3. Passing a resolution for appointment of partner'
+                    },
+                    {
+                        title: '4. Execute Supplementary LLP Agreement'
+                    },
+                    {
+                        title: '5. Obtain Consent of the proposed designated partner in form 9'
+                    },
+                    {
+                        title: '6. Intimation to Registrar via Form 3 and Form 4'
+                    }
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                            {
+                                innerList: [
+                                    {
+                                        title: 'Digital Signature Certificate'
+                                    },
+                                    {
+                                        title: 'Form 3 (Information with regard to Limited Liability Partnership Agreement and changes, if any, made therein)'
+                                    },
+                                    {
+                                        title: 'Form 4 (Notice of appointment of partners/ designated partner and changes among them,intimation of DPIN by the LLP to Registrar and consent of partner to become apartner /designated partner)'
+                                    },
+                                    {
+                                        title: 'Limited Liability Partnership Identification Number (LLPIN)'
+                                    }
+                                ]
+                    }
+                ]
+            },
+            {
+                title: 'Advantages of Add/Remove a partner',
+                navigationTitle: 'Advantages',
+                containerKey: 'advantages',
+                type: FormPageContainerType.LIST,
+                value: [
+                            {
+                                innerList: [
+                                    {
+                                        title: '1. Increased Capital'
+                                    },
+                                    {
+                                        title: '2. Diversification'
+                                    },
+                                    {
+                                        title: '3. Unique Business Approach'
+                                    },
+                                    {
+                                        title: '4. Increased Business Connectivity'
+                                    }
+                                ]
+                    }
+                ]
+            }
+            
+        ]
+    },
+    CHANGE_IN_LLP_AGREEMENT: {
+        title: FormPageScreenTitleMap['CHANGE_IN_LLP_AGREEMENT'],
+        description: FormPageScreenDescriptionMap['CHANGE_IN_LLP_AGREEMENT'],
+        navigationContainers: [
+            {
+                title: 'Overview - Change in LLP Agreement',
+                description: '',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "Agreement of the Limited Liability Partnership (LLP) is its charter. In the agreement, nature of business activities, rights, duties, and obligations of partners are mentioned. However to make any changes a certain procedure is required to be followed."
+                         ]
+                    }
+                ]
+            },
+            {
+                title: 'Process of Change in LLP Agreement',
+                description: '',
+                navigationTitle: 'Steps',
+                containerKey: 'process',
+                type: FormPageContainerType.CARD_LIST,
+                value: [
+                    {
+                        title: '1. A resolution needs to be passed to revise the LLP agreement.'
+                    },
+                    {
+                        title: '2. Form 3 is to be filed with the Registrar within 30 days of passing the resolution.'
+                    },
+                    {
+                        title: '3. File Form 4 for change in partner or designated partnerr'
+                    }
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                            {
+                                innerList: [
+                                    {
+                                        title: 'Consent of the partner and proof of cessation'
+                                    },
+                                    {
+                                        title: 'Affidavit or any proof of change of name'
+                                    },
+                                    {
+                                        title: ' Copy of resolution of the company and authorization letter mentioning name and address of individual nominated as partners of the company'
+                                    }
+                                ]
+                    }
+                ]
+            },
+            {
+                title: 'Advantages of Change in LLP Agreement',
+                navigationTitle: 'Advantages',
+                containerKey: 'advantages',
+                type: FormPageContainerType.LIST,
+                value: [
+                            {
+                                innerList: [
+                                    {
+                                        title: '1. The Contribution of Capital is changed by partners in LLP'
+                                    },
+                                    {
+                                        title: '2. The changing of terms and conditions for addition, resignation, expulsion or the retirement of the partner involved in LLP'
+                                    },
+                                    {
+                                        title: '3. The business activity, rights and liabilities are modified in LLP'
+                                    }
+                                ]
+                    }
+                ]
+            }
+            
+        ]
+    },
+    CONVERSION_FROM_PARTNERSHIP_TO_LLP: {
+        title: FormPageScreenTitleMap['CONVERSION_FROM_PARTNERSHIP_TO_LLP'],
+        description: FormPageScreenDescriptionMap['CONVERSION_FROM_PARTNERSHIP_TO_LLP'],
+        navigationContainers: [
+            {
+                title: 'Overview - Conversion from Partnership to LLP',
+                description: '',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "A Limited Liability Partnership (LLP) can prove to be a much better business vehicle than a regular partnership. Partnerships are affected by personal liabilities, and LLPs remove excessive regulations of the Indian Partnership Act, 1932. Furthermore, there are tax benefits, no audit requirements below a certain capital, no cap with regard to a number of partners or capital contribution requirements."
+                         ]
+                    }
+                ]
+            },
+            {
+                title: 'Advantages of Conversion from Partnership to LLP',
+                navigationTitle: 'Advantages',
+                containerKey: 'advantages',
+                type: FormPageContainerType.CARD_LIST,
+                value: [
+                    {
+                        title: 'Separate Legal Entity:',
+                        description: [
+                            "An LLP is a separate legal entity from its partners. Each partner can sue the other in case a situation arises.",
+                            "It has an uninterrupted existence that follows perpetual succession, i.e, the partners might leave, but the business will remain. A term of dissolution has to be mutually agreed upon by the firm, to dissolve."
+                        ]},
+                    {
+                        title: 'Flexible Agreement:',
+                        description: ["Transferring the ownership of LLP is simple. A person can be quickly inducted in as a designated partner, and the ownership will switch to them."
+                        ]
+                    },
+                    {
+                        title: 'Suitable For Small Business:',
+                        description: ["LLPs with a capital of less than 25 lakhs and turnover less than 40 lakhs per year, do not require any formal audits. It makes registering as LLP beneficial for small businesses and startups.",
+                    "An LLP can own or acquire property because it is recognized as a juristic person. Partners of an LLP cannot claim the property as theirs."
+                ]
+                },
+                    {
+                        title: 'No Owner /Manager Distinction:',
+                        description: ['An LLP has partners, who own and manage the business. This is different from a private limited company, whose directors may be different from shareholders. For this reason, venture capitalists do not invest in the LLP structure.']},
+                ]
+            },
+            {
+                title: 'Checklist qualities',
+                navigationTitle: 'Checklist qualities',
+                containerKey: 'requirements',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        title: 'Separate Legal Entity:',
+                        description: [
+                            "Starting a business requires specific requirements to be eligible for registering as an LLP.",
+                            "The normal partnership structure of an LLP shares the same attributes when it comes to internal management, profit distribution, and tax liabilities. But, it offers the partners less financial liability (limited liability).",
+                            "Any business who has, at least two partners are required to form an LLP. There is no limit to the maximum number of partners.",
+                            "The nomination of a natural person, if a body corporate is a Partner.",
+                            "No shared capital requirement, though each partner must have an agreed contribution towards it.",
+                            "Minimum capital contribution: There is no minimum capital requirement for an LLP (or a company, for that matter). The LLP should have an authorized capital of at least Rs. 1 lakh.",
+                            "At least one designated partner has to be an Indian resident",
+                            "DPIN for all Partners",
+                            "DSC (Digital signature certificate) for all the Designated Partners",
+                            "Address proof for the office of LLP. The registered office of an LLP does not have to be a commercial space. Even a rented home can be the registered office, so long as an NoC is obtained from the landlord.",
+                            "With regard to the changes in FDI regulations dated November 10, 2015, foreign investors are now permitted to have 100% FDI automatically. The 100% FDI in LLP is granted to foreign companies who operate in activities or sectors where 100% FDI is considered permissible through the channels of the automatic route. Also, there should not be any performance pre-requisites that are linked to FDI. A definite interpretation of the terms such as ‘ internal accruals’ and ‘ownership and control’ has been provided with reference to the LLP. Thus, Foreign investment is made smoother and quicker with FDI in LLP.",
+                            "The LLPs will also be permitted to opt for downstream investment in a different company or even choose LLP in those sectors which allow 100% FDI in accordance with the automatic route. This does not come up with any performance constraints that are FDI linked.",]
+                     }
+                ]
+            },
+            {
+                title: 'Process - Conversion from Partnership to LLP',
+                navigationTitle: 'Steps',
+                containerKey: 'process',
+                type: FormPageContainerType.CARD_LIST,
+                value: [
+                    {
+                        title: 'Process of LLP registration ',
+                        description: [
+                            "• Arrange basic documents of Partners",
+                            "• Fill in an online form with accurate information",
+                            "• Apply for Digital Signature and DIN of Partners",
+                            "• Prepare all legal documents",
+                            "• Apply to name availability of the proposed LLP",
+                            "• Verification of all documents and forms by the respective Government dept and authorities",
+                            "• File Incorporation Docs with ROC",
+                            "• Get LLP Incorporation Certificate",
+                            "• Drafting of LLP Agreement",
+                            "• Filing of LLP Agreement"
+                        ]
+                    },
+                    {
+                        title: 'Step 1: Obtaining DSC And DIN',
+                        description: [
+                            "The first step is to obtain DSC of the desired partners of Limited Liability Partnership. The reason for this is that all the forms need to be submitted online and require the directors' digital signatures. The law also requires that all directors file for a DIN number. The application has to be made in Form DIR- 3."
+                        ]
+                    },
+                    {
+                        title: 'Step 2: Application For Name Approval',
+                        description: [
+                            "This process involves registering the LLP. Before doing this, you would need to see if the name is already taken. You can check on the free search facility on the MCA portal. The registrar only approves LLP names that are not taken before.",
+                            "The approval of the name will be made by the Registrar only if the Central Government does not deem it undesirable. The name should also not hold any resemblance to any of the existing partnership firms, LLPs, trademarks, or body corporates."
+                        ]
+                    },
+                    {
+                        title: 'Step 3: LLP Agreement',
+                        description: [
+                            "LLP agreement is very crucial in a limited liability partnership as it determines the mutual rights and duties amongst the partners, and between the LLP and the partners. The partners enter into the LLP agreement upon the LLP registration by filing form 3 online on the MCA portal. This procedure has to be done within 30 days of the date of incorporation."
+                        ]
+                    },
+                    {
+                        title: 'Step 4: LLP Incorporation Certificate',
+                        description: [
+                            "Once the registrar approves your MOA and AOA, you’re steps closer to getting your LLP registered. The next step is to get the LLP Incorporation Certificate. You can do it by submitting all the documents to the registrar. The time frame is between 2- 12 days. Once you get your LLP Incorporation Certificate, you’re ready to go."
+                        ]
+                    },
+                    {
+                        title: 'Step 5: Apply For PAN & TAN & Bank Account',
+                        description: [
+                            "As soon as you get the incorporation certificate, you need to apply for your company PAN & TAN with the NSDL. The cost for this procedure is less than Rs.200 and it takes around three weeks to get done."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                description: 'The method of LLP registration in India does not require much legwork when it comes to documents.',
+                value: [
+                    {
+                        title: 'To Be Submitted By Partners',
+                        innerList: [
+                            {
+                                title: 'Scanned copy of PAN Card or passport (Foreign Nationals & NRIs)'
+                            },
+                            {
+                                title: 'Scanned copy of Aadhar Card/ Voters ID/Passport/Drivers License'
+                            },
+                            {
+                                title: 'Scanned copy of latest bank statement/telephone/mobile bill or electricity/gas bill'
+                            },
+                            {
+                                title: 'Scanned passport-sized photograph Specimen signature (blank document with signature [partners only])'
+                            },
+                            {
+                                title: 'Note: Any one of the partners must self-attest the first three documents. In the case of foreign nationals and NRIs, all the documents must be notarized (if currently in India or a non-Commonwealth country) or apostilled (if in a Commonwealth country).'
+                            }
+                        ]
+                    },
+                    {
+                        title: 'For Registered Office',
+                        innerList: [
+                            {
+                                title: 'Scanned copy of the latest bank statement/telephone/mobile bill, or electricity or gas Bill'
+                            },
+                            {
+                                title: 'Scanned copy of the notarised rental agreement in English'
+                            },
+                            {
+                                title: 'Scanned copy of No-objection certificate from the property owner'
+                            },
+                            {
+                                title: 'Scanned copy of sale deed/property deed in English (in case of owned property)'
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    CONVERSION_FROM_PRIVATE_LIMITED_TO_LLP: {
+        title: FormPageScreenTitleMap['CONVERSION_FROM_PRIVATE_LIMITED_TO_LLP'],
+        description: FormPageScreenDescriptionMap['CONVERSION_FROM_PRIVATE_LIMITED_TO_LLP'],
+        navigationContainers: [
+            {
+                title: 'Overview - Conversion from Private Limited to LLP',
+                description: '',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "One of the decisions to be taken while starting a company is what type of company you want to incorporate. It is essential to choose the business structure carefully when registering your company. If you have already chosen a Pvt. and now want to convert PVT into an LLP, then this article is for you. Here we are going to tell you about the Procedure for Conversion of Private Limited Company into LLP.",
+                        "Private Limited Company is all the shares of the company are held privately. In this, you can conduct the business yourself or can appoint directors to manage the company on your behalf.",
+                    "Limited Liability Company is all partners in an LLP is limited to their Investment. The personal property of the partners cannot be kept in this type of company. That’s the reason most individuals or businesses choose this as a partnership."]
+                    }
+                ]
+            },
+            {
+                title: 'Applicability',
+                navigationTitle: 'Applicability',
+                containerKey: 'applicability',
+                type: FormPageContainerType.LIST,
+                value: [
+                            {
+                                innerList: [
+                                    {
+                                        title: 'All members of the company must agree upon the option of conversion.'
+                                    },
+                                    {
+                                        title: 'The LLP’s partners will become all of the members of the Pvt. company.'
+                                    },
+                                    {
+                                        title: 'The Registrar of Companies should have an up-to-date copy of the ITR.'
+                                    },
+                                    {
+                                        title: 'The conversion must be approved by the members and by all of the private company’s creditors.'
+                                    },
+                                    {
+                                        title: 'As per the Companies Act, no prosecution should initiate any process to be followed.'
+                                    }
+                                ]
+                    }
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                            {
+                                innerList: [
+                                    {
+                                        title: 'Consent of all directors and shareholders of the company'
+                                    },
+                                    {
+                                        title: 'It is necessary to obtain NOC from the tax authorities'
+                                    },
+                                    {
+                                        title: 'Consent of all creditors'
+                                    },
+                                    {
+                                        title: 'Last year financial statement ITR filled'
+                                    },
+                                    {
+                                        title: 'Digital signature of all existing directors'
+                                    },
+                                    {
+                                        title: 'Pvt. Ltd. company documents'
+                                    }
+                                ]
+                    }
+                ]
+            },
+            {
+                title: 'Advantages of Conversion from Private Limited to LLP',
+                navigationTitle: 'Advantages',
+                containerKey: 'advantages',
+                type: FormPageContainerType.LIST,
+                value: [
+                            {
+                                innerList: [
+                                    {
+                                        title: 'At least money can be kept as capital in the formation of LLP. For this, there is no minimum capital requirement. This does not put a burden on their owners.'
+                                    },
+                                    {
+                                        title: 'It requires a minimum of 2 partners, and the maximum can be kept as many as you want.'
+                                    },
+                                    {
+                                        title: 'The cost of registering an LLP is less as compared to Pvt.'
+                                    },
+                                    {
+                                        title: 'All private companies are required to get their accounts audited, but in the case of LLP, there is no such requirement. In LLP, the audit has to be done only if the contribution by the partner is more than Rs. 25 lakhs or the annual turnover is more than Rs. 40 lakhs.'
+                                    },
+                                    {
+                                        title: 'LLP has to file only two documents, i.e., Annual Return Statement and Bank Account, Solvency Statement in a year.'
+                                    },
+                                    {
+                                        title: 'Provision of Tax on Dividend Distribution is not payable in the LLP company. Also, the deduction is allowed on any payment of interest, salary bonus, commission, or remuneration paid to partners under section 40(B).'
+                                    }
+                                ]
+                    }
+                ]
+            },
+            {
+                title: 'Process of Conversion from Private Limited to LLP',
+                description: '',
+                navigationTitle: 'Steps',
+                containerKey: 'process',
+                type: FormPageContainerType.CARD_LIST,
+                value: [
+                    {
+                        title: 'Step 1: Obtain DIN for designated partners who do not already have DIN.'
+                    },
+                    {
+                        title: 'Step 2: To consider the conversion request, the board will have to convene a meeting. For a corporation to be converted into an LLP, a board resolution must be enacted, and any director must be approved before applying for the LLP name.'
+                    },
+                    {
+                        title: 'Step 3: The company must apply for an LLP name reservation and acquire a name approval certificate from the ROC.'
+                    },
+                    {
+                        title: 'Step 4: Fill out the e-Form ROC with the documents mentioned above after filing the e-Form.'
+                    },
+                    {
+                        title: 'Step 5: Form 18 is used to convert a corporation into an LLP that must be filed with the incorporation form.'
+                    },
+                    {
+                        title: 'Step 6: The ROC issues a COI for conversion to LLP after the company has completed all processes and been approved by the ministry. COI contains information on the LLP agreement that these partners have signed that must be filled and submitted within 30 days.'
+                    },
+                    {
+                        title: 'Step 7: After receiving the LLP’s foundation certificate, the final document must be submitted within 15 days, followed by the conversion date.'
+                    }
+                ]
+            }
+            
+        ]
+    },
+    
 }
