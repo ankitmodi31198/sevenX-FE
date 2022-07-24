@@ -25,7 +25,7 @@ export class StepsComponent implements OnInit {
   };
 
   websiteDevelopmentAndDigitalMarketingAnimationOption: AnimationOptions = {
-    path: 'assets/wesite_development_digital_marketing.json'
+    path: 'assets/wesite_development_digital_marketing_1.json'
   };
 
   legalComplianceAnimationOption: AnimationOptions = {

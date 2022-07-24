@@ -7,8 +7,13 @@ import { StartupRegistrationsFormModule } from '../startup-registrations/startup
 import { PlansModule } from '../home/plans/plans.module';
 import { GetPackagesService } from 'src/app/service/api/get-packages.service';
 import { ComingSoonModule } from 'src/common-ui/coming-soon/coming-soon.module';
+import { LottieModule } from 'ngx-lottie';
+import player from 'lottie-web';
+import { DigitalMarketingModule } from '../digital-marketing/digital-marketing.module';
 
-
+export function playerFactory() {
+  return player;
+}
 
 @NgModule({
   declarations: [
@@ -18,8 +23,10 @@ import { ComingSoonModule } from 'src/common-ui/coming-soon/coming-soon.module';
     CommonModule,
     StartupRegistrationsFormModule,
     PlansModule,
-    ComingSoonModule
+    ComingSoonModule,
+    LottieModule.forRoot({ player: playerFactory }),
     // NgxPageScrollModule
+    DigitalMarketingModule
   ],
   exports: [
     FormPageComponent

@@ -1,4 +1,4 @@
-import { FormPageContainerType, FormPageScreenCode } from "./form-page-constants";
+import { FormPageContainerType } from "./form-page-constants";
 import { FormPageScreenWiseDataModel } from "./form-page-interface";
 
 export const FormPageScreenTitleMap: { [key: string]: string } = {
@@ -55,7 +55,12 @@ export const FormPageScreenTitleMap: { [key: string]: string } = {
     PAYMENT_GATEWAY_LICENSE: 'Payment Gateway License',
     FEMA_COMPLIANCES: 'Foreign Exchange Management Act (FEMA) Compliances',
     PROPRIETORSHIP_REGISTRATION: 'Proprietorship Registration',
-    HUF: 'HUF'
+    HUF: 'HUF',
+    FINANCIAL_MODELLING_AND_VALUATIONS: 'Financial Modelling & Valuations',
+    PITCH_DECKS_AND_FUNDING: 'Pitch Deck & Funding',
+    STARTUP_IDEA_ANALYSIS: 'Startup Idea Analysis',
+    FIND_A_CO_FOUNDER: 'Find a Co-Founder',
+    WEBSITE_AND_DIGITAL_MARKETING: 'Website Development & Digital Marketing'
 };
 
 export const FormPageScreenDescriptionMap: { [key: string]: string } = {
@@ -112,7 +117,12 @@ export const FormPageScreenDescriptionMap: { [key: string]: string } = {
     PAYMENT_GATEWAY_LICENSE: 'As we are aware of the fact that the popularity of online shopping in India has increased immensely due to the benefits of ease and flexibility offered by this platform. The term Payment Gateway denotes a financial service that is provided by way of an e-commerce application service provider.',
     FEMA_COMPLIANCES: 'A need emerges with the Corporate to watch out for outside trade exchanges, in the setting of sectoral tops, investment tops, to go around from the enormous penalties. FEMA compliance plays an essential role in the growth and success of various sectors in India. The purpose of introducing the Foreign Exchange Management Act, 1999 (FEMA) is to smooth external trade, maintaining a healthy foreign exchange market in India, promote the importance of balance payments.',
     PROPRIETORSHIP_REGISTRATION: 'Proprietorship is a business concern owned and operated by an individual. Proprietorship is nothing but the Individual carrying the business himself.',
-    HUF: 'HUF means Hindu undivided family in India. A person can save income tax by creating a HUF in India. HUF is taxed separately from its members in India. A Hindu family come together to form a HUF in India. Individuals belonging to other religions are not allowed to form HUF’s  in India except Sikh & Jain.'
+    HUF: 'HUF means Hindu undivided family in India. A person can save income tax by creating a HUF in India. HUF is taxed separately from its members in India. A Hindu family come together to form a HUF in India. Individuals belonging to other religions are not allowed to form HUF’s  in India except Sikh & Jain.',
+    STARTUP_IDEA_ANALYSIS: "Nobody knows your business better than you. But sometimes there are perspectives and angles that we do not see. There will be opportunities and threats that you may overlook. To better understand the potential growth of your business, you need a comprehensive SWOT analysis. How? Read on.<br><br> COVID-19 pandemic is continuously devastating small to large businesses. Entrepreneurs are stuck in a stubborn muck; some don’t even know how to get away from it. It is time for you to regroup andevaluate your startup success. You need to bring out your SWOT analysis.",
+    FIND_A_CO_FOUNDER: "Many factors make a startup successful – having the right co-founder is one of them. Though you can start and run the show solo, it helps to have a business partner to share responsibilities and double the odds.",
+    FINANCIAL_MODELLING_AND_VALUATIONS: 'A financial model is the representation of the financial information that goes into a business in areas of expenses, revenues, assets in the form of spreadsheet(s) or an Excel file.<br><br> A startup valuation is what the startup is worth in the market depending on different factors. Startup valuation is a process that each entrepreneur has to do whenever they are raising money or even when they are looking for a cofounder.',
+    PITCH_DECKS_AND_FUNDING: 'We help entrepreneurs prepare their pitch decks. This service is also designed for startups founders who seek funding from angel investors and need to create a pitch deck to attract investors to their startups.',
+    WEBSITE_AND_DIGITAL_MARKETING: 'We can make your business grow, by developing websites for your business. A website in itself, carry out a lot of different marketing strategies, to help your business nurture. To make you grow, day by day through our most versatile websites, you can have for your businesses. As compare to any other form of advertising, the web has a far broader reach.'
 };
 
 export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataModel } = {
@@ -8953,5 +8963,1019 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
             }
         ]
     },
-    
+    STARTUP_IDEA_ANALYSIS: {
+        hideNavigationBar: true,
+        hideBannerForm: true,
+        bannerWrapperStyleClass: 'swot-analysis-banner',
+        title: "SWOT Analysis for Startups",
+        description: FormPageScreenDescriptionMap['STARTUP_IDEA_ANALYSIS'],
+        animationOption: {
+            path: 'assets/idea_analysis.json'
+        },
+        navigationContainers: [
+            {
+                title: 'What is a SWOT Analysis?',
+                navigationTitle: '',
+                containerKey: '',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "You must have heard or even applied the SWOT process some time in the duration of your business. It might have been a success or not, but this business strategy is one that you need to update continually.",
+                            "The current economic situation is alarming; a lot of small businesses are on-edge and panicking. Instead of running around in a panic, find a way to capitalize on the situation. It is in this way that the analysis can help you.",
+                            "A SWOT analysis can help you see your business from different perspectives. If you can see every angle of your business, you will find that your business is more than what meets in the eye. You will discover your strengths and weaknesses. Also, doors for opportunities will open, but these will be accompanied by possible threats."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'SWOT analysis definition',
+                navigationTitle: '',
+                containerKey: '',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "To put it simply, the SWOT is a brainstorming process that can help entrepreneurs and business leaders create a solid business strategy to maximize company growth. The word is an acronym for strengths, weaknesses, opportunities, and threats."
+                        ],
+                        innerList: [
+                            {
+                                innerList: [
+                                    {
+                                        description: [
+                                            "Strengths are seen internally. These are the positive attributes of your company that you have control over. Advantages usually refer to your employee skills, resources, brand, and capabilities. Discover your strengths and use them to your advantage.",
+                                            "Weaknesses are the opposite of your strengths. These are internal characteristics that give a negative attribute that hinder your strengths. By identifying your gaps, you can find ways to improve and instead back your strengths up.",
+                                            "Opportunities are usually external factors in your organization that have a high probability of bringing success. This can be new technological improvements, a business venture, or possible company expansion.",
+                                            "When there are opportunities, it will always be accompanied by threats. These are impeding factors that you have no control over. The only way to counter this is todevise a solid contingency plan to deal with them when they occur."
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Who should create the SWOT analysis?',
+                navigationTitle: '',
+                containerKey: '',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "The most obvious answer would be the startup leader, which is not entirely correct. As the leader, you need to spearhead the creation of SWOT; however, you should not do it all alone.",
+                            "Remember how the analysis can make you see different perspectives? How can this happen if you do it all alone? What you need are fresh eyes and minds. Since this is a brainstorming process, gather stakeholders of the organization. You can even bring in an external person like your business consultant or another startup leader that is familiar with your business.",
+                            "It is also essential to bring in members of your business. You can invite leaders from each department of your company to each give their ideas.",
+                            "Other than that, customer/client and vendor surveys can also help in your strategic planning. They don’t belong to your organization, but still, they are involved in your business. Their feedback will help you view your business through the lens of an outsider who is the receiving end of your product. Besides, the customers are your primary concern to deliver your service or product, so their feedback is a huge factor."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'How is a SWOT Analysis Important for Your Startup?',
+                navigationTitle: '',
+                containerKey: '',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "SWOT analysis is not something you should belittle. It is a tried and tested analysis that ensures the success of a company. As a startup, this business analysis will serve as a stepping stone to go forward. Here are a few benefits that you can reap from the report."
+                        ],
+                        innerList: [
+                            {
+                                title: "Reduce Risks",
+                                description: [
+                                    "A SWOT analysis can help the business realize its weaknesses, which is a potential risk itself. If these drawbacks are not improved, it can create more damage to the organization. By conducting the analysis, leaders can find ways to counter each threat by improving any flaw in production and gaining leverage to the strengths. It is in this way that the company can improve its viability and reduce, if not eliminate, threats."
+                                ]
+                            },
+                            {
+                                title: "Improve Business Performance",
+                                description: [
+                                    "The analysis can help improve business performance by incorporating each strength with external opportunities. Through the SWOT framework, you will know what you do well and use that as an optimal advantage for success."
+                                ]
+                            },
+                            {
+                                title: "Competitive Strategy",
+                                description: [
+                                    "One key factor that every company should consider is market competition. How are their competitors faring, and how are they at an advantage? This is where the SWOT framework comes in.",
+                                    "The strategy does not only focus on your company. Many successful companies do a SWOT analysis of their key competitors, as well as in their organization. After, they compare all reports and deviseactionable strategies on how to position themselves against competitors.",
+                                    "View through the lens of sports. You find out the strengths and weaknesses of your opponent and find out your team’s as well. Compare each data and find a way to attack the opponent’s weakness and, at the same time, improve your faults and leverage your strengths."
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'How to Create a SWOT Analysis?',
+                navigationTitle: '',
+                containerKey: '',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "Remember that SWOT analysis is a strategy-building framework. Once you’ve gathered the people for brainstorming, commence the idea-sharing. But then the more people you have, the more chaotic a meeting will be. For an organized SWOT meeting, let each attendee create their SWOT analysis.",
+                            "You can start by placing each idea on a sticky note. Once everyone is done writing their entries, each should stick their notes on the board bearing the columns for strengths, weaknesses, opportunities, and threats.",
+                            "To guide you in identifying which belongs to the columns, here are guide questions for you:"
+                        ]
+                    },
+                    {
+                        title: "Strengths",
+                        innerList: [
+                            {
+                                title: "What processes are successful?"
+                            },
+                            {
+                                title: "What assets do you have in your team, and which is the strongest?"
+                            },
+                            {
+                                title: "How secure is your customer base?"
+                            },
+                            {
+                                title: "What gives you the edge from your competitors?"
+                            },
+                            {
+                                title: "How skilled is your workforce?"
+                            },
+                            {
+                                title: "What does your customer say about you?"
+                            }
+                        ]
+                    },
+                    {
+                        title: "Weaknesses",
+                        innerList: [
+                            {
+                                title: "What hinders your production process?"
+                            },
+                            {
+                                title: "In what areas does your competitor have an advantage on you?"
+                            },
+                            {
+                                title: "What knowledge does your workforce lack?"
+                            },
+                            {
+                                title: "Is the level of workforce skill lower than standard?"
+                            },
+                            {
+                                title: "Do you have enough funding budget?"
+                            },
+                            {
+                                title: "Is your customer base too low?"
+                            },
+                            {
+                                title: "Is your business making a profit?"
+                            },
+                            {
+                                title: "Are you falling behind from your competitors?"
+                            }
+                        ]
+                    },
+                    {
+                        title: "Opportunities",
+                        innerList: [
+                            {
+                                title: "In what way can you turn your strengths and weaknesses into opportunities?"
+                            },
+                            {
+                                title: "What actions should you do now that has not been done before?"
+                            },
+                            {
+                                title: "What are the current trends that you can leverage?"
+                            },
+                            {
+                                title: "How is the field changing, and how can you take advantage of this change?"
+                            },
+                            {
+                                title: "Which businesses could support us? What can we do to help them in return?"
+                            },
+                            {
+                                title: "Are there upcoming events that the company can participate in growing your customer base or presence?"
+                            }
+                        ]
+                    },
+                    {
+                        title: "Threats",
+                        innerList: [
+                            {
+                                title: "Who are your running and emerging competitors?"
+                            },
+                            {
+                                title: "If you have suppliers, are they capable of supplying the materials you need at a given period and price?"
+                            },
+                            {
+                                title: "What future technological change can affect your business?"
+                            },
+                            {
+                                title: "Is your business prepared for unforeseen situations such as a global pandemic, financial instability, or natural calamity?"
+                            },
+                            {
+                                title: "What trends can become a significant threat to your business?"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'From SWOT Analysis to Actionable Strategies',
+                navigationTitle: '',
+                containerKey: '',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "SWOT analysis should not merely sit on papers. Once you’ve seen the results of the data gathering, take actionable strategies to leverage viability, eliminate drawbacks, grab favorable circumstances, and manage possible risks.",
+                            "If one of your viable strategies is to employ an affordable offshore software development team,Full Scale is your best choice.",
+                            "Full Scale has been operating for some time, bringing software development success to startups. Our CEOs Matt DeCoursey and Matt Watson understand the struggles of small businesses in scaling their companies. As experts, they can see the potential for businesses to grow and guide them in taking the first step to success."
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    FIND_A_CO_FOUNDER: {
+        hideNavigationBar: true,
+        hideBannerForm: true,
+        title: FormPageScreenTitleMap['FIND_A_CO_FOUNDER'],
+        description: FormPageScreenDescriptionMap['FIND_A_CO_FOUNDER'],
+        animationOption: {
+            path: 'assets/co_founder.json'
+        },
+        navigationContainers: [
+            {
+                title: '3 IMPORTANT TIPS BEFORE YOU look out for a co-founder',
+                navigationTitle: '',
+                containerKey: '',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        title: '1. Prepare a checklist',
+                        description: [
+                            "The first step is to prepare a checklist detailing what you expect from a potential co-founder and your non-negotiables. The list should cover areas like personal traits, skills, professional qualifications, working style, and other relevant aspects. Here are some of the questions to include in your checklist to finding a co-founder:"
+                        ],
+                        innerList: [
+                            {
+                                innerList: [
+                                    {
+                                        description: [
+                                            "a. How well do you work together?",
+                                            "b. Do you share the same vision?",
+                                            "c. Do you trust each other?",
+                                            "d. Are you banking a lot of your partner’s experience?",
+                                            "e. Do you disagree with respect?",
+                                            "f. How do they cope with stress?",
+                                            "g. Do they have relevant expertise?",
+                                            "h. How do they handle risks?",
+                                            "i. Are you equally passionate about the product/service?",
+                                            "j. Are you like-minded in business decisions?",
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                description: [
+                                    "The checklist you prepare will serve as a guide to see whether you and your potential co-founder are a good match and identify red flags early on."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        title: "2. Search for a partner who shares your values",
+                        description: [
+                            "Like-mindedness in values is one of the top characteristics to look out for in a startup co-founder. Imagine starting a green tech company with someone who thinks global warming is a hoax. Or, co-founding an NGO with a partner who puts profit over people? Remember, starting a business involves creating a work culture, so it is in your best interests to have a co-founder who shares your values, principles, and vision."
+                        ]
+                    },
+                    {
+                        title: "3. Look for someone with complementary traits",
+                        description: [
+                            "While it is important to have a co-founder who shares your values and vision, it is also crucial to look for someone with complementary skills and personal traits. For instance, if you and your partner both lack communication skills, it becomes difficult to make a pitch to investors, speak to your clients, conduct training sessions for your teams, etc. Co-founders with strengths and traits that support each other make a good match.",
+                            "Connect with a like-minded community of startup entrepreneurs. Be inspired by fellow entrepreneurs. The time to startup is now"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    FINANCIAL_MODELLING_AND_VALUATIONS: {
+        hideBannerForm: true,
+        title: FormPageScreenTitleMap['FINANCIAL_MODELLING_AND_VALUATIONS'],
+        description: FormPageScreenDescriptionMap['FINANCIAL_MODELLING_AND_VALUATIONS'],
+        animationOption: {
+            path: 'assets/startup_valuation.json'
+        },
+        navigationContainers: [
+            {
+                title: 'What is a financial model?',
+                navigationTitle: 'Financial Model',
+                containerKey: 'fiancialModelOverview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "A financial model is the representation of the financial information that goes into a business in areas of expenses, revenues, assets in the form of spreadsheet(s) or an Excel file.",
+                            "This is an especially important document for businesses at their earlier stages and for startups to set up the financial details and scenarios and act accordingly. A startup can assess when it is going to be generating profit, when and how much financing it needs, and how it is going to perform financially through its financial model.",
+                            "Apart from financial operating model which describes how the business is going to operate and studies its operating expenses and revenues, a financial forecasts study is also an essential part of the financial study of a business. A financial forecasts document looks into the financial future of the business and makes assumptions about its future performance, expenses, revenues, and funding needs.",
+                            "We help startups at different stages and in different markets/industries in building and improving their financial operating models and financial forecasts"
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Financial model: How to get started?',
+                navigationTitle: '',
+                containerKey: 'fiancialModelOverview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "To get started, we first need to figure out our company's revenue and expenses. To do this, we need to gather data from your accounts receivable (receiving money from customers), accounts payable (paying outgoing bills), and inventory (what you have in stock).",
+                            "Then, we can start projecting future revenues based on current trends and assumptions about market conditions. This projection will tell us what kind of growth your company is likely to experience in the future – which is important information when figuring out your budgeting decisions.",
+                            "Once we have our projected revenues figured out, it's time to figure out the expenses. Expenses can be broken down into three main categories: operating costs (those related directly to running the business), capital costs (those related to expanding or investing in the company), and financing costs (those associated with obtaining loans or equity capital).",
+                            "We can also factor in income taxes now if necessary – this will give us an idea of how much money we'll need each year just for taxes! Once we've determined all of our expenses, it's time to figure out what revenue will be needed each year just to cover those costs. This calculation gets more complicated as your company grows – but it's important not only so that you know how much money you need each month/quarter/year but also where that money is going, which is where financial models come into play!",
+                            "Financial models allow us simulate different scenarios involving changes in sales volume or marketing spend; these simulations help us decide which investments are likely make us more money in the long run (less than 5 years) as well as determine whether there are any areas where increased spending might not be prudent (more than 5 years). By carefully examining all potential outcomes associated with various scenarios, we're able statistics-driven decision making - something that has helped many businesses turn around their fortunes! So armed with this knowledge about your own business - you will be able to make decision and approach investors more successfully."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Financial model: Calculating Income and Expenses',
+                navigationTitle: '',
+                containerKey: 'fiancialModelOverview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "There are a few steps you need to take in order to calculate your income and expenses. The first thing you'll want to do is determine your gross income. This is simply the total amount of money that comes in from all of your sources each month. Once you have your gross income, you'll need to subtract any deductions that you're eligible for. This includes things like taxes, social security, and retirement contributions. After you've deducted all of your deductions, what's left is your net income.",
+                            "Your next step is to figure out what expenses you're responsible for. This includes everything from rent and office salaries and rent payments to marketing expenses. Once you know what expenses are included in your budget, it's time to figure out how much money each expense costs. You can do this by dividing the cost by the number of months it will last or by using a percentage calculator.",
+                            "Now that you have both your gross and net incomes figured out, it's time to see where exactly money is being spent on a monthly basis. This can be done with a budget or cash flow statement, which will show where each dollar is going throughout the month.",
+                            "At 7xStartup, we work with you on calculating your revenues and expenses and we help you build your financial model from scratch."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Financial model: Full financial modeling services',
+                navigationTitle: '',
+                containerKey: 'fiancialModelOverview',
+                type: FormPageContainerType.CARD_LIST,
+                description: `We work with the startup’s team on gathering the financial data, data granularity, making accurate assumption, studying the market, finding the best ways to simplify formulas, among many others.
+                <br>
+                We provide full financial modeling services for startups in their pre-seed stage, seed stage, series A stage, series B stage, and beyond.
+                <br>
+                Our financial modeling services include:`,
+                value: [
+                    {
+                        title: "Building the financial model",
+                        description: [
+                            "We gather and analyze the financial data and our team works on creating the right financial model for your startup. We send you a full financial model that includes a cash flow statement, a balance sheet, a financing sheet, and all the needed info. After sending you the final file our team discussed with you any comments/feedback you might have and we implement the changes and the updates needed."
+                        ]
+                    },
+                    {
+                        title: "Building the financial forecasts",
+                        description: [
+                            "Similarly, we work on the startup's financial forecasts model. We make sure the assumptions made are validated and as accurate as possible. We prepare the forecasts and add all the data and formulas needed."
+                        ]
+                    },
+                    {
+                        title: "Cash flow statement and analysis",
+                        description: [
+                            "Whether you plan to build a three-statement financial model or not, our team works with you on preparing your cash flow statement and analyzing the data presented in it. Our cash flow analysis aims at presenting clearly what comes in and out of your business, its assets, and the liquidity of the business over a period of time."
+                        ]
+                    },
+                    {
+                        title: "Capital formation",
+                        description: [
+                            "We provide the startup's team with all the advisory and services needed to set the amount of capital the business needs and how much can be raised through the coming funding rounds. We also study the financial data and business expenses and discuss with you how best to acquire your capital and assets."
+                        ]
+                    },
+                    {
+                        title: "Business valuation analysis",
+                        description: [
+                            "Studying the business valuation is an essential part of your financial model. Our team works on valuating your business or startup based on multiple methods and sources and offers you different validated ways to valuate the business. We study the market and similar businesses at similar stages as well to make sure all factors are taken into consideration. We also discuss and implement the feedback that you will provide us with."
+                        ]
+                    },
+                    {
+                        title: "Business feasibility study",
+                        description: [
+                            "We work with you on conducting a financial feasibility and a fill business feasibility study for your startup or business project. Our team works with your team on gathering the data and analyzing it (including technical, market, and organization feasibility study data) and completing the study needed to reach a data-based decision."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Financial model: Financial advisory',
+                navigationTitle: '',
+                containerKey: 'fiancialModelOverview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "Not only do we help you build your financial model, but also our team of experts and mentors will work with you on studying and analyzing all the financial data of your business and coming up with the best financial plans and strategies to ensure that your project is financially secure, profitable, and performing in an optimal way.",
+                            "Financial analysis is the process of quantifying financial performance and evaluating financial risks in order to make informed business decisions. Our financial analysts use a variety of mathematical and statistical models to examine your company's cash flow, debt levels, profitability, liquidity, and other factors."
+                        ],
+                        innerList: [
+                            {
+                                description: [
+                                    "These are some areas we can help you with while preparing your financial model:"
+                                ],
+                                innerList: [
+                                    {
+                                        title: "Lowering financial risks",
+                                        description: [
+                                            "Starting a business or any project would involve a financial risk, our job is to work with you on reducing that financial risk – in case it is too high – and advise you on best practices to keep operating in a financially secure state.",
+                                            "If you are facing any challenges with how high the financial risk of your business is, we can study your case and come up with the right solutions to help you reduce the financial risk involved. We do this by studying the financial data and input and analyzing it. Some of the solution scenarios we can work on are limiting loans and debts, exploring new income channels, reducing operational costs, reducing COGS, and others. Every business is a unique situation.",
+                                            "Our financial analysts also play an important role in risk management. Risk management is the practice of managing risk by controlling exposures to potential losses. Our financial analysts work with the startup's managers to identify potential risks and develop strategies for mitigating those risks. This includes everything from setting budget limits on spending that could lead to excessive risk-taking, all the way up to developing specific policies for dealing with specific types of risks (such as credit risks)."
+                                        ]
+                                    },
+                                    {
+                                        title: "Controlling your cash flow effectively",
+                                        description: [
+                                            "We also help startups and businesses in monitoring, managing, and controlling their cash flow. Whether you have a positive cash flow or a negative cash flow, we work with you on how to optimize your cash flow and manage it correctly in the long run. We do this by working with you on maximizing income, minimizing costs, and studying all financing scenarios that you an approach to gain funding when a cash flow crisis is in the offing.",
+                                            "One of the most important tasks our financial analysis tackle is forecasting future cash flows. Forecasting involves estimating future sales volumes, costs, and other variables in order to determine how much revenue a company will generate over time. This information can be used to make informed decisions about how much money to allocate to investments (such as new products or expansions) and how much money to reserve for future expenses (such as salaries or taxes)."
+                                        ]
+                                    },
+                                    {
+                                        title: "Measuring financial performance",
+                                        description: [
+                                            "There are many financial performance measures and metrics to consider such as your gross profit, net profit margin, ROI, operating expense margin, and others. We focus on the metrics that are most relevant to your business model.",
+                                            "We study your cash flow, working and operating capital, costs, growth potential, financing sources and scenarios, and analyze the best strategies to deploy in order to improve and boost your business financial performance. Studying and preparing the financial model will reflect all these strategies that we will be discussing with you."
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Financial model: Financial Projections',
+                navigationTitle: '',
+                containerKey: 'fiancialModelOverview',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "Financial projections are a very useful tool in business. They can help managers make informed decisions about how to allocate resources and plan for the future.",
+                            "Projections can be made in a variety of formats, including cash flow, balance sheet, and income statement. A typical financial projection includes the following information:"
+                        ],
+                        innerList: [
+                            {
+                                innerList: [
+                                    {
+                                        title: "Projected revenue and expenses"
+                                    },
+                                    {
+                                        title: "Projected cash flow (inaccuracies can sometimes lead to overspending)"
+                                    },
+                                    {
+                                        title: "Estimated profitability (this is important for investors)"
+                                    },
+                                    {
+                                        title: "The date that the projection will be completed"
+                                    },
+                                    {
+                                        title: "An appendix with relevant historical data"
+                                    },
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        description: [
+                            "Financial projections are an essential part of business planning, but they're not always easy to create or understand. Our experts work with you on exploring your financial projections and forecasts and work on building files and reports to present the data and the analysis."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Financial model: How to build a three statement model?',
+                navigationTitle: '',
+                containerKey: 'fiancialModelOverview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "There are different types of financial models but one of the most widely-used financial models is the three statement model due to the comprehensive nature of it covering and linking all three financial statements of a business; income statement, balance sheet, and cash flow.",
+                            "Our team works with you on each of these financial statements and helps you build an accurate and well-presented three statement financial model. This will make approaching angel investors and VC funding later on a much smoother process.",
+                            "We help you in gathering the data needed, making the financial assumptions, setting the functions and the formulas, providing financial advisory relevant to any of the three statements and building your three statement financial model from scratch.",
+                            "We also work with you on other types of financial models like the discounted cash flow model and the merger model."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Financial model: Building a Balance Sheet',
+                navigationTitle: '',
+                containerKey: 'fiancialModelOverview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "A balance sheet is a financial statement that summarizes a company's assets, liabilities, and owner's equity at a specific point in time. By analyzing a balance sheet, investors can get an understanding of how well the company is positioned to repay its debts and invest in future growth.",
+                            "On the asset side of the balance sheet, companies list everything they own, from land to cash reserves. This section is important because it gives investors an idea of how much money the company has to work with.",
+                            "On the liability side of the balance sheet, companies list all of their debts, including short-term borrowings and long-term debt. By understanding this section, investors can see which debts are more likely to be repaid and which ones could affect the company's operating ability down the road.",
+                            "Finally, on the owner's equity side of the balance sheet, companies list their net worth (assets minus liabilities). This figure tells investors how much money each shareholder has contributed to the company. It also shows whether there are any major shareholders who could potentially take control of the business if things go wrong.",
+                            "Our team works with you on building your balance sheet and presenting your assets and debts within your financial model."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Financial model: Steps',
+                navigationTitle: '',
+                containerKey: 'fiancialModelOverview',
+                type: FormPageContainerType.CARD_LIST,
+                description: `These are some tips for creating a successful financial forecast`,
+                value: [
+                    {
+                        title: "Gather the needed financial data",
+                        description: [
+                            "You need to collect all the data related to your financial activities. Gathering accurate data is the first steps of building an accurate financial model or forecasts. At this stage, we work with you on collecting your annual and monthly financial data."
+                        ]
+                    },
+                    {
+                        title: "Identify your financial assumptions",
+                        description: [
+                            "Other than financial data we need to work on the financial assumptions. Making sound and rational financial assumptions related to your forecasted income, costs, number of customers is another vital element for building your financial model.",
+                            "Financial assumptions help you consider any changing circumstances that could significantly affect your sales and find early solutions to avoid them. Making the right assumptions helps you predict challenges to overcome as well as opportunities to seize.",
+                            "7xStartup will help you in making accurate financial assumptions based on your current financial state, revenues and sales, the market, competitors, and other factors that can come into play."
+                        ]
+                    },
+                    {
+                        title: "Valuate your startup and plan for your financing",
+                        description: [
+                            "Our team works with you on valuating your startup, pre-money and post-money, and we study all of your financing and funding scenarios. We analyze and prepare a funding plan as well."
+                        ]
+                    },
+                    {
+                        title: "Build the financial model",
+                        description: [
+                            "We work with you on building the financial model, incorporating all the data, the assumptions, and the formulas. We create a financial model that is built specifically to reflect your business model, revenue strategies, and operations accurately. We send you the final version of your business plan and implement changes you might propose later on after examining the model."
+                        ]
+                    },
+                    {
+                        title: "Have access to our financial advisory and consultancy services",
+                        description: [
+                            "Our financial advisors will always be ready to work with you on improving and editing your financial model to adopt new updates in your model or make amendments. Our team also provides full financial advisory to solve any financial challenges you might have. We also provide you with our internal investors' feedback and insights on your financial model, forecasts, and operations."
+                        ]
+                    }
+                ]
+            },
+
+
+            {
+                title: 'Startup Valuation',
+                navigationTitle: 'Startup Valuation',
+                containerKey: 'startupValuationOverview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "A startup valuation is what the startup is worth in the market depending on different factors. Startup valuation is a process that each entrepreneur has to do whenever they are raising money or even when they are looking for a cofounder (for example, the technical cofounder and the business cofounder programs require valuation).",
+                            "Every business, startup or not, needs to have a financial analysis and valuation document created in order to determine the true worth of their company. Too often startups omit this key step and instead try to guesstimate the value of their company based on what they think it could be worth. This can be a dangerous route to go down because there is no guarantee that the market will agree with your assumptions. The Startup valuation methodology is a precise, rigorous and accurate method for valuing startups. It was developed by experienced entrepreneurs and financiers to help aspiring entrepreneurs accurately price their companies and secure the best possible terms from investors. The methodology employs a series of steps to arrive at an accurate valuation of a startup. The first step is to identify the market value of the company based on its current size, stage of development, and potential future growth. After that, analysts use established valuation methods to find an appropriate price for the company. Finally, this number is adjusted for risk factors such as the company's cash flow cushion and its competitive landscape.",
+                            "We help entrepreneurs value their startups and we apply different types of startup valuation methods in order to reach a realistic and fair valuation of the startup.",
+                            "One of our unique advantages is that beside applying the standard methods, we have data from the market (either startups that joined our Raise Capital program or other startups) and we use the info to put a good valuation. As everybody knows, valuation of a startup depends on the market trends and investor’s other alternatives. For example, when the NASDAQ 100 and/or S&P 500 are going up then the angel investors expect to generate more income through a risky investment such as a startup. Startup valuations are also affected sometimes but by illogical reasons, for instance startups in AI or blockchain tend to be valued high because angel investors/VCs expect to see huge gain in these domains.",
+                            "During the planning phase, we determine the value of the startup based on the startups that raise money recently in our network. We will not be disclosing the name of the startup but we will try to select a startup that is in a similar industry and can raise money. We will also try to have multiple valuations for the startup based on different forecasts and would propose the most appropriate one.",
+                            "We also study the data of other startups in the market and the startup's own features to forecast the revenue and cash flow that will help us in valuing the startup. Having a clear valuation of the startup will help us in the negotiation with the angel investors or other funding sources.",
+                            "Since the valuation of the startup changes in every funding round and whenever the startup achieves a milestone, we will be helping the entrepreneur in valuing the startup through different rounds and determining the amount of equity that should be given. Usually in the planning phase, we will be preparing several scenarios of funding and in each scenario, we will be highlighting the funding needed, the valuation and the new milestone. Such clear planning will also help the angel investor understand what their gain is if the valuation is correct."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Startup Valuation: Seed round valuation',
+                navigationTitle: '',
+                containerKey: 'startupValuationOverview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "Startups at this stage usually have little revenue and traction. It can be challenging to value a seed stage startup before you have found a product-market-fit. Setting clear milestones that you will achieve in specific timeframes and determine what sources you will be needing is a good way for valuing your startup. Also, understating the demand and the competitiveness of the product in the market also help you value your seed startup and what you should negotiate about during the negotiations with angel investors and negotiations with VCs. The best way to value a seed stage startup with no proven track record is through applying a comparable method. This is done by comparing the startup to other seed stage startups with similar industry, location, business model, and market size.",
+                            "During the planning for funding phase, we help seed stage startups in identifying the right valuation for their seed funding round based on other startups that have already raised capital in our network and other startups in the market that share similar business models and are in the same industry and stage. We will also try to have multiple valuation for the startup based on different forecasts and would propose a conservative one."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Startup Valuation: Series A valuation',
+                navigationTitle: '',
+                containerKey: 'startupValuationOverview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "During series A rounds, entrepreneurs might receive different term sheets from investors, which makes it hard to identify the right valuation of the startup. You can value your series A startup using common valuation methods or valuing your startup based on revenues, number of users, product demand, potential market and other factors that show traction and key performance indicators.",
+                            "Through our Raise Capital program, we help series A startups in identifying the right valuation for their series A funding round. We take into account different factors when we value the startup, such as the track record i.e. revenue, achieved millstones and other key performance indicators. We apply different valuation methods. The Venture Capital valuation method is one of the most preferred valuation methods used for valuing series A startups."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Startup Valuation: Series B valuation',
+                navigationTitle: '',
+                containerKey: 'startupValuationOverview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "Series B startups would have already gained traction and had a proven track record, which makes the valuation more straightforward. The valuation of the series B startup is usually higher than series A startups as entrepreneurs now can show high growth potential and track record for the angel investors and VCs. VCs tend to invest more in series B startups as they are in a growth stage. The valuation of the series B startups can be determined based on the performance of the startup, its assets and revenue forecast along with other suitable valuation methods for series B stage. Post-money valuation method can also be used for series B valuation. We help series B startups reach a fair valuation for their series B funding round.",
+                            "When such data -related to cash flow and revenues- is lacking, then our team will make studies and research in order to reach accurate assumptions and estimations about the valuation depending on the “risk factors” and assign values to these risk factors in order to reach a fair valuation."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Startup Valuation: Calculate Startup Valuation',
+                navigationTitle: '',
+                containerKey: 'startupValuationOverview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "There are many online calculators that help founders roughly evaluate their startups like the ones provided by EquityNet, Caycon or EnterpriseMonkey. The main problem with many online calculators is that they have their success based on how often entrepreneurs refer this method of calculation to others, thus they usually tend to overvalue startups just to be more pleasing for entrepreneurs! It is also worth mentioning that many of these online calculators use startups in USA or Silicon Valley as the reference! It might sound illogical to you but the country of the startup plays an important role in the valuation. Some online calculators provide a range and we think it will be better. In general, such online calculators are useful to have a rough estimation but not accurate enough because they do not take all factors into consideration; however, it might be a good starting point to check your startup’s valuation using one of these online calculators and then move forward into more accurate and holistic methods. 7xStartup dedicates a team that will work on valuing your startup and coming back to you with an accurate and fair valuation. In most cases, the valuation will be a range presented through a study."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Startup Valuation: Valuation method',
+                navigationTitle: '',
+                containerKey: 'startupValuationOverview',
+                type: FormPageContainerType.CARD_LIST,
+                description: `Below are some of the methods we use in our Raise Capital program when we are advising entrepreneurs on fair valuation of their startups. There are many methods that founders and investors follow in valuing a startup, and they have evolved and improved over the years.`,
+                value: [
+                    {
+                        title: "Discounted Cash Flow Method",
+                        description: [
+                            "The DCF method relies on an analysis on how much money the startup will probably generate in the future (expected future cash flow) with the assistance of a discount rate. DCF valuation method is considered equally important to valuing a startup based on industry standard. Some startups prefer to use the DCF method over the market comparable method because the valuation won’t be affected by the market trends and size as it purely relies on financial data that is based on assumptions."
+                        ]
+                    },
+                    {
+                        title: "Venture Capital Method",
+                        description: [
+                            "You can use the VCM in order to reach a pre-revenue valuation in a mathematical way.",
+                            "The investor sets an anticipated exit valuation based on the current state and the projections then he sets his targeted ROI thus reaching the post-money valuation (post money valuation = exit value / ROI) then the pre-money valuation can be easily calculated (pre-money valuation = post-money valuation - investment) then this value can be adjusted according to dilution."
+                        ]
+                    },
+                    {
+                        title: "Scorecard method",
+                        description: [
+                            "Scorecard method might be preferred by many angel investors for pre-revenue startups. The method is a little similar to the RFS method in the sense that it follows a comparable value of a typical funded startup in the same market and stage and adjusts it accordingly; however, the factors used might be different."
+                        ]
+                    },
+                    {
+                        title: "Comparable Transactions",
+                        description: [
+                            "Comparable Transactions is an effective valuation method where the valuation of the startup is reached through comparing the startup with other startups with similar business model, industry and stage. This is a good valuation method that is suitable for all startups especially early stage i.e. pre-revenue startups."
+                        ]
+                    },
+                    {
+                        title: "Dave Berkus Valuation Method",
+                        description: [
+                            "Dave Berkus Valuation Method is ideal for pre-revenue startup evaluations because it does not rely on the revenues generated; rather, it relies on other more abstract factors related to the business. Technology risks, execution risks, market risks, production risks are the risks that the Dave Berkus method accounts for."
+                        ]
+                    },
+                    {
+                        title: "The Risk Factor Summation Method (RFS)",
+                        description: [
+                            "RFS is also ideal for early-stage startups and for pre-money evaluations.",
+                            "It uses a base-value of a comparable startup and then adjusts it with 12 standard risk factors.",
+                            "Pre-money valuation refers to the value of the startup before the startup receives funding from external sources of financing and investment. DCF is one of the valuation methods that"
+                        ]
+                    },
+                    {
+                        title: "Qualitative Valuation Method",
+                        description: [
+                            "There are many ways to quantify value. One way is to look at the dollar amount spent on an object or service. Another way is to consider the quality of the object or service. A third way is to look at how much enjoyment someone gets from using or consuming an object or service.",
+                            "When looking to quantify the value of a business, there are many different methods that can be used. The most common is to look at a company's net worth. However, this measure can be misleading because it doesn't take into account the company's debt or liabilities. Another common measure is market capitalization. This metric looks at the total value of a company's outstanding shares and assumes that they will be sold in an orderly market at prevailing prices. However, stock prices can be highly volatile, which can distort the true value of a company."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Startup Valuation: How to value a web or technology startup?',
+                navigationTitle: '',
+                containerKey: 'startupValuationOverview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "When valuing a web or technology startup, there are several factors to consider. These include the company's unique selling proposition (USP), how well the product or service is marketed and whether it has a large customer base. In addition, it's important to assess how much money the company has raised, how feasible it is to grow the business and whether its key personnel are retained.",
+                            "Through the Raise Capital program, 7xStartup helps entrepreneurs in putting a fair valuation of their web or tech startups. We take into account the demand and the need for the service among customers and other industry related parameters."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Startup Valuation: How to value an enterprise software startup?',
+                navigationTitle: '',
+                containerKey: 'startupValuationOverview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "It is not easy to value an enterprise software startup. This is because the industry is still in its infancy, and there are no well-established frameworks or methodologies for valuing such businesses. Nevertheless, a few pointers can be given.",
+                            "First of all, it is important to understand the type of business being run by the startup. Is it a pure software company that develops and sells a single product? Or does it have complementary products that serve other industries? If the latter, then valuation may be more complex as multiple revenue streams will need to be considered (e.g., licensing, services, joint ventures).",
+                            "Furthermore, how big is the market for enterprise software? Do competitors dominate the space or has the startup carved out a niche market? Size matters when valuing enterprises as they tend to take longer to reach profitability than smaller companies. Finally, what are the trends in this sector? Are companies starting up more frequently or shutting down more frequently than usual? These are all factors that must be considered when crafting an estimate for value.",
+                            "We help entrepreneurs in valuing their software startups based on the product itself (features and technologies implemented), market size, financial projections, track record, among others."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Startup Valuation: How to value a consumer goods startup?',
+                navigationTitle: '',
+                containerKey: 'startupValuationOverview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "When valuing a consumer goods startup, it is important to consider the company's potential for success. This will help investors determine the value of the company and whether or not they should invest. In order to calculate a startup's potential for success, investors must first understand its target market. This is done by analyzing the demographics of the area where the startup operates and extrapolating that information to other areas in which it could potentially operate. In addition, investors should also assess how well known the company is within its target market and how much competition there is. Once a startup's potential for success has been estimated, it can be compared to similar companies in order to determine its value. Investors can use several methods to calculate a startup's value, such as enterprise value per share (EV/share), revenue projections, gross margin projections and return on investment (ROI). Once a valuation has been determined, it can be used as a basis for funding decisions.",
+                            "We have helped many consumer goods startups in reaching a fair valuation based on the demand for the service, the size of the customer base (current and potential size),unique selling proposition, financial projections, cash flow and other factors in order to reach an accurate and fair valuation."
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    PITCH_DECKS_AND_FUNDING: {
+        hideBannerForm: true,
+        title: FormPageScreenTitleMap['PITCH_DECKS_AND_FUNDING'],
+        description: FormPageScreenDescriptionMap['PITCH_DECKS_AND_FUNDING'],
+        animationOption: {
+            path: 'assets/funding.json'
+        },
+        navigationContainers: [
+            {
+                title: 'Introduction',
+                navigationTitle: 'Pitch Deck',
+                containerKey: 'pitchDeckOverview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "If you are looking for business experts in order to prepare a pitch deck you need, then this service is what you are looking. We help you present your startup to external parties whether partners or investors you need to have in place a concise, accurate, and interesting pitch deck that gives out accurate information about your business and keeps the viewer interest.",
+                            "In addition to that, we help you create a high quality pitch deck before approaching angel investors and help you attract the investing party’s attention which will significantly increase your success rate in attaining the capital successfully. In our Raise Capital program, we can help you prepare and review a good pitch deck to successfully approach angel investors and VCs."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Startup Pitch Deck: Steps',
+                navigationTitle: '',
+                containerKey: 'pitchDeckOverview',
+                type: FormPageContainerType.CARD_LIST,
+                description: `When we design a pitch deck for the startup, we take into consideration all the information that investors or any funding sources need. So we have our own pitch deck template that includes the following slides:`,
+                value: [
+                    {
+                        title: "Business Problem Statement",
+                        description: [
+                            "This is the first slide needed in the pitch deck, we understand that the first thing angel investors need to see is the problem you need to solve, they need to make sure that you are addressing a real problem that customers need a solution for.",
+                            "What we do is make a slide that contains the problem your service or product will solve in a clear way. We help you define the problem and describe the customer's pain who might be interested in your service. We also make sure that the description includes the current state which means the state before providing your service or product as a solution.",
+                            "We also help you express the situation in case the problem you address is not being solved and make sure to define the bad impacts and the consequences that could happen.",
+                            "Furthermore, we make sure that your problem statement slide includes facts that make investors take the problem seriously and that also give them an impression that you make research and you are aware of the problem you target."
+                        ]
+                    },
+                    {
+                        title: "Business Solution Statement",
+                        description: [
+                            "In this slide, we do not write solutions randomly, we address each problem we mentioned in the problem statement slide separately. We will help you clarify the way you solve the problem and then describe the positive results that will happen after launching your product or service."
+                        ]
+                    },
+                    {
+                        title: "Business vision Statement",
+                        description: [
+                            "Introducing your vision in a suitable way will give you a higher chance to be accepted by angel investors. We provide you with our consultancy to make sure that you explained your vision well. We will help you describe what you would like to achieve through your startup and the benefits you will bring after launching it."
+                        ]
+                    },
+                    {
+                        title: "Market Study",
+                        description: [
+                            "One key component of market analysis is understanding customer needs. By surveying customer opinions and data about past behavior, you can identify areas in which you could improve your products or services. We work with you on that.",
+                            "In addition to customer needs, our market analysis also considers supply and demand dynamics. By understanding how much product is available on the market and how much customers are willing to pay for it, your startup can make informed decisions about pricing and promotion strategies.",
+                            "Overall, market analysis provides an essential foundation for successful business decision-making."
+                        ]
+                    },
+                    {
+                        title: "Business Target Market",
+                        description: [
+                            "The target audience should be defined in this slide, so we will help you determine your target customers who might be interested in your service or product. we will be showing why you are targeting a certain audience and the reasons that make s them your target. Their location will be identified in addition to their common characteristics demographics and behaviors.",
+                            "We also focus on addressing your product-market fit in the pitch deck. Product/Market Fit (PMF) is a term used in business to describe when a product or service meets the needs and wants of the market. It is important for any business to have PMF in order to succeed. Without it, a business could pursue an unfulfilled market, waste resources, and ultimately fail.",
+                            "To have PMF, a product or service must meet three main criteria:",
+                            "a) The product or service must be useful to customers.",
+                            "b) The product or service must be available at a fair price.",
+                            "c) The demand for the product or service must be high enough to make it profitable. If any one of these factors is not met, then the product or service may not be successful and will likely not meet customer needs.",
+                            "To ensure that your business has PMF, you need to research your target market and understand their needs and wants. You also need to make sure that your product or service is available at a fair price and can meet customer demand."
+                        ]
+                    },
+                    {
+                        title: "Business Competitive Advantage",
+                        description: [
+                            "In this slide we make sure that present your competitive advantage well because it is very important for investors to know how you are unique. We will also help you prepare competitor analysis in order to show your position among them and explain the advantage your startup has over your competitors. The chart has to include information about your direct and indirect competitors from all levels like their solutions, revenue, market value, and others.",
+                            "We work on building the competitive landscape of your startup describing the different types of companies with similar visions and values proposed in the market and their competitive positions. It's important to know your rivals in order to stay ahead of them and maintain a strong position in the market."
+                        ]
+                    },
+                    {
+                        title: "Business Model",
+                        description: [
+                            "A business model is a blueprint or model for how a company intends to generate revenue and create shareholder value. This 'model' is created during the early stages of business planning, typically before a company has even generated any revenue. A business model can be thought of as the framework within which a company executes its strategy and operations.",
+                            "There are many different types of business models, but all have four common elements: customer acquisition, revenue generation, cost control, and returns on investment (ROI).",
+                            "We work with you on presenting your business model and all the information related to it in your pitch deck. We also provide you with investors' and experts' feedback on your business model and how it is presented."
+                        ]
+                    },
+                    {
+                        title: "Business Roadmap",
+                        description: [
+                            "In the Raise capital program , we help you in defining your business roadmap that should go in your pitch deck with help of a high-potential technical team and business experts. In this slide, we will help you choose a suitable chart and design to explain the activities you are planning to do in the future. Your current stage will be defined and your short-term goals will be clarified."
+                        ]
+                    },
+                    {
+                        title: "Business Marketing Strategy",
+                        description: [
+                            "Angel investors and other funding sources need to know how your target customers will reach out to your product or service. We help you identify the marketing channels that you are planning to take and explain how functional your marketing strategy will be.",
+                            "We need to highlight that we can help you find new channels and make new strategies through our Grow your Product program."
+                        ]
+                    },
+                    {
+                        title: "Business SWOT Analysis",
+                        description: [
+                            "Since the pitch deck is needed to be introduced to angel investors in order to know about the investment opportunity you offer for them, we make sure that you present a good SWOT analysis which is needed to explain the Strengths, Weaknesses, Opportunities, and Threats. We help you confirm your strengths point in a way that makes your business advantage clear, additionally, we help you show your weakness and threats that your business could be facing and explain the measure you are planning to take in order to avoid the potential risks."
+                        ]
+                    },
+                    {
+                        title: "Financial Forecast",
+                        description: [
+                            "Before introducing your pitch deck to angel investors, we make sure that you put a well-organized financial forecast which is an extremely important section in the pitch deck. We help you prepare a professional chart where we put the revenues and the achievement you will achieve for the following five years. It will also include the profits, losses, and the number of customers you are predicting to have according to deep and detailed analysis."
+                        ]
+                    },
+                    {
+                        title: "Management team section",
+                        description: [
+                            "On this slide, we put information about your team so angel investors will be able to have an idea about how professional your team is. We add info about each member on your team, their positions, expertise, achievements, and jobs. Furthermore, also, we add a description of how they work together as a one-person and mention that they have a teamwork spirit. That will leave a good impression on investors’ minds."
+                        ]
+                    },
+                    {
+                        title: "Allocation of Funding",
+                        description: [
+                            "In this section, we help you introduce the investment opportunity to angel investors and other funding sources. You need to mention the amount of money you seek for the building of growing your business and explain how the fund will be spent with clear numbers."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Startup Pitch Deck: Review',
+                navigationTitle: '',
+                containerKey: 'pitchDeckOverview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "At 7xStartup, we review the pitch deck for entrepreneurs who already have one. Our business expert will refine your pitch deck to meet the investors' and other funding sources' needs.",
+                            "What makes us one of our kind is that we provide this service as part of our all-in-one funding support packages. Join our Raise Capital Program and get your pitch deck done and have full business consultancy from our business experts and internal network of investors."
+                        ]
+                    }
+                ]
+            },
+
+
+            {
+                title: 'Funding Plan',
+                navigationTitle: 'Funding',
+                containerKey: 'fundingOverview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "Before meeting angel investors and approaching VCs, you need to have a clear plan. It’s also important to have a clear strategy on how to raise the money during your journey. Raising money is not going to happen once! So it’s better to go to them with a clear plan on what will happen in the next round of funding.",
+                            "What you have to achieve at this round and what will be your valuation in the next round. This will help angel investors/VCs and others to have a clear understanding of your success journey and the options that you have. They will also see the potential that you have and how much they will be making if they invest in you and compare it to their other options. A funding plan is important for any business. It outlines how the business will raise money and when it will need it. A funding plan should be realistic, and take into account factors such as available cash, debt levels, etc. The goal of a funding plan is to help the business achieve its financial goals while staying healthy. A good funding plan will also help investors understand the risk they are taking on when investing in the company.",
+                            "During this phase, we advise you on how much to raise and how to break it so that we can increase the likelihood of raising the money. It’s important to take into the plan the amount to be raised and how likely it is to raise it. We also advise on the right valuation of the startup at each round and we set up a clear plan with milestones and estimate what your valuation could be at each round or when you achieve a clear milestone. We work on identifying the right funding source for your startup. It is important to have multiple options on the table before you start raising capital because each angel investor and VC has different criteria and ticket size, so having multiple alternatives increases the chances of raising the target amount."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Funding Plan: Startup Valuation',
+                navigationTitle: '',
+                containerKey: 'fundingOverview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "Putting a fair valuation on your startup before starting raising capital is highly important; it will help you determine the amount you need to raise and how much equity you need to give up in the round. It will also help you determine the right funding source for your round. Some of the challenges that entrepreneurs face, especially entrepreneurs that have young startups are lack of clear financial data, revenue and traction. We address this problem through our startup valuation service, through applying the right valuation method that fits the startup’s stage. One of the methods we use for valuing a pre-revenue startup that is looking for early funding is comparing the startup to other startups in our network that share a similar business model, industry and stage. We take into account different factors that help us value the startup, such as the demand of the product, market trends, number of users, and the team potentials, among others. For advanced stage startups that have a proven track record and generated revenue, we use a mix of different methods in order to reach a fair valuation. We can use the comparable method above, the performance of the startup and its cash flow and revenue. We also apply traditional valuation methods like Venture Capital method, RFS and pre-money valuation method.",
+                            "In the planning phase, we work with entrepreneurs on reaching a fair value of the startup before approaching angel investors and connecting VCs in order to identify the right amount of equity that needs to be given."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Funding Plan: Identifying the Funding Options',
+                navigationTitle: '',
+                containerKey: 'fundingOverview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "One of the benefits of planning for your funding round is that it helps you identify which type of financing you need to get. If you are looking for equity financing, angel investors and VCs are the most common equity financing sources; however, angel investors and VCs have different criteria and investment tickets. You need to assess the best option for you based on your startup’s valuation and stage. With VCs you will be able to raise large amount of capital, but convincing VC is more challenging than angel investors as the startup needs to have a proven track record and good position in the market, so VCs are more suitable for startups in series B and series C (some VCs also invest in earlier stages like series A round, but not seed funding round). Angel investors are a good funding option for startups that haven’t built traction yet like seed stage startups. Angel investors invest less amount of capital compared to VCs, but they are more flexible. There are some angel investors who also invest in pre-seed startups if they see great potential in the team and idea itself. If you want to maintain full ownership and control over your startup, you might be interested in getting startup business loans and grants, but you also need to do a detailed research in order to identify the right type of small business loans you need and which banks or lenders you need to approach. Each small business loan has its requirements and payment terms. You need to make sure that you are eligible.",
+                            "We take into account different parameters before identifying the right funding source(s) to raise the capital. For example, the time range to get the money, dilution, negotiation time and whether that funding institution is willing to invest multiple times or not.",
+                            "We study your business and funding strategies and goals and decide whether it would be best to get angel funding, get a loan, or seek VC funding. We also prepare different funding alternatives and scenarios before deciding which funding source we need to go with. We help identify the different funding options that a startup has and in most cases we open new doors for a startup that were previously thought closed through planning for your funding round."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Funding Plan: Amount to be Raised',
+                navigationTitle: '',
+                containerKey: 'fundingOverview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "Through the Raise Capital program, we advise you on how much to raise and how to break the amount down so that we can increase the likelihood of raising the money. We take into account the amount to be raised, how likely it is to raise it and how much it will take to raise it and we base our funding plan on the conclusions.",
+                            "Starting with a reasonable amount of money to be raised is a highly important aspect as asking for more than what is needed is not a good approach and it leads to problems in the long term.",
+                            "We start first with breaking the amount to be raised into multiple rounds. This will help you in increasing your chances of raising capital and giving up less equity.",
+                            "For example, if the founder is looking for raising $2M for 20% for multiple purposes in mind, we try to work on focusing on the essential goals and we recommend breaking the amount and targeting $500K for the first round to give up less equity at such an early stage. This is studied on a case by case basis.",
+                            "We also identify the costs needed and the timeframes for each funding step to make sure we reach desired results with less costs as quick as possible"
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Funding Plan: Equity Dilution',
+                navigationTitle: '',
+                containerKey: 'fundingOverview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "Identifying the right equity you need to give up to investors is based on your startup valuation in the funding round and the invested amount of the angel investor and VC. The more engaged the investors were in the round the more equity they will take. VCs tend to get more equity in the startup (30%-40%) compared to angel investors (20%-30%) as they invest more, but it also depends on how much was the VC or angel investor involved.",
+                            "At 7xStartup, we help entrepreneurs in identifying the right amount of equity that needs to be given through advising on the right valuation at each round. We always advise startups on breaking the amount needed to be raised in order to decrease the amount of equity given, among other advantages.",
+                            "We work with you on making a detailed funding plan that includes your funding goals through setting clear milestones for each funding round and how to accomplish every step and attain the funding needed for each round to make sure we are achieving real results. We also help entrepreneurs in negotiating the amount of equity they need to give up to investors and negotiating other funding terms through our negotiations with angel investors and negotiations with VCs services."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Funding Plan: Debt Capital',
+                navigationTitle: '',
+                containerKey: 'fundingOverview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "The funding plan when you are looking to raise debt capital for your startup is different from equity financing as banks and lenders have different requirements from angel investors and VCs. You don’t need to assess how much equity you need to give up in your startup. You still need to identify the right amount of funds you need and the valuation of your startup. Some lenders and banks ask for certain info about the startup, such as key performance indicators, cash flow and generated revenue. You also need to identify the right type of startup business loans and grants you need to apply to as there are many startup business loans and grants available for startups and each has its own requirements and terms. For example, some organisations provide grants for startups only in certain industries. Also, some loan programs require a certain annual revenue and credit score, so you need to make sure you do research and plan well to make sure you are eligible.",
+                            "We help startups that are seeking debt capital in making a funding roadmap that it is fully designed for raising debt capital. We study and analyze your requirements in order to identify the right type of business loans and grants program for you based on the amount of funds you need and the usage of funds. For example, if you need loan funding in order to purchase, replace or repair your business equipment, then getting equipment loans is a good option. We also advise on the right amount of fund you need to apply to that aligns with the funding source requirements and your needs. We also review your business plan to make sure it meets the acceptance criteria of the bank."
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    WEBSITE_AND_DIGITAL_MARKETING: {
+        hideNavigationBar: true,
+        hideBannerForm: true,
+        title: FormPageScreenTitleMap['WEBSITE_AND_DIGITAL_MARKETING'],
+        description: FormPageScreenDescriptionMap['WEBSITE_AND_DIGITAL_MARKETING'],
+        animationOption: {
+            path: 'assets/wesite_development_digital_marketing_1.json'
+        },
+        navigationContainers: [
+            {
+                title: 'Introduction',
+                navigationTitle: '',
+                containerKey: '',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "We can make your business grow, by developing websites for your business. A website in itself, carry out a lot of different marketing strategies, to help your business nurture. To make you grow, day by day through our most versatile websites, you can have for your businesses. As compare to any other form of advertising, the web has a far broader reach. A website also holds great importance, because it establishes your credibility as a business. While as an individual, it takes enough time to make your business visible. But through our tailor-made affordable websites, you can be known around the world, within in just a short span of time. Once you have your own business website, you can advertise, your business over the web, e.g. via pay-per-click advertising programs, social networking forums & other sites."
+                        ],
+                        innerList: [
+                            {
+                                innerList: [
+                                    {
+                                        title: "Brand Recognition and Brand Vision",
+                                        description: [
+                                            "We focus on overall brand recognition and brand vision of a business through our specialized services handled under the supervision of well qualified and experienced team of website developers, web designers and marketing team."
+                                        ]
+                                    },
+                                    {
+                                        title: "Online Presence of Your Business",
+                                        description: [
+                                            "At 7xStartup you can get the entire online presence of your business from website design to development and then to promotion for increasing your traffic and generating more revenues."
+                                        ]
+                                    },
+                                    {
+                                        title: "Use New Technological Trends",
+                                        description: [
+                                            "We are recognized as well reputed website designing and Development Company in Chandigarh because we deliver our services creatively and as per new technological trends for creative online development of your business needs."
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+        ]
+    }
 }

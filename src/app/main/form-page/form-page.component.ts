@@ -26,6 +26,10 @@ export class FormPageComponent implements OnInit, OnDestroy {
 
   mainScrollableWindowScrollListener: () => void;
 
+  get isDigitalMarketingPage(): boolean {
+    return this.selectedServiceScreenCode?.toLowerCase() === FormPageScreenCode.WEBSITE_AND_DIGITAL_MARKETING.toLowerCase();
+  }
+
   constructor(
     private activatedRoute: ActivatedRoute,
     private renderer: Renderer2

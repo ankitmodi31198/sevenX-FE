@@ -4,12 +4,18 @@ import { HeaderNavigationInterface } from "./header.interface";
 
 export const headerNavigationList: HeaderNavigationInterface[] = [
     {
-        label: 'Startup Idea Analysis',
-        routerLink: ['/startup-idea-analysis']
+        label: FormPageScreenTitleMap[FormPageScreenCode.STARTUP_IDEA_ANALYSIS],
+        screenName: FormPageScreenCode.STARTUP_IDEA_ANALYSIS,
+        queryParams: { screenCode: FormPageScreenCode.STARTUP_IDEA_ANALYSIS },
+        routerLink: ['/service'],
+        showInSearch: false
     },
     {
-        label: 'Find a Co-Founder',
-        routerLink: ['/find-a-co-founder']
+        label: FormPageScreenTitleMap[FormPageScreenCode.FIND_A_CO_FOUNDER],
+        screenName: FormPageScreenCode.FIND_A_CO_FOUNDER,
+        queryParams: { screenCode: FormPageScreenCode.FIND_A_CO_FOUNDER },
+        routerLink: ['/service'],
+        showInSearch: false
     },
     {
         // label: 'Government Registrations',
@@ -189,13 +195,13 @@ export const headerNavigationList: HeaderNavigationInterface[] = [
                                 routerLink: ['/service'],
                                 showInSearch: true
                             },
-                            {
-                                label: FormPageScreenTitleMap[FormPageScreenCode.CHANGE_IN_REGISTRED_OFFICE],
-                                screenName: FormPageScreenCode.CHANGE_IN_REGISTRED_OFFICE,
-                                queryParams: { screenCode: FormPageScreenCode.CHANGE_IN_REGISTRED_OFFICE },
-                                routerLink: ['/service'],
-                                showInSearch: true
-                            },
+                            // {
+                            //     label: FormPageScreenTitleMap[FormPageScreenCode.CHANGE_IN_REGISTRED_OFFICE],
+                            //     screenName: FormPageScreenCode.CHANGE_IN_REGISTRED_OFFICE,
+                            //     queryParams: { screenCode: FormPageScreenCode.CHANGE_IN_REGISTRED_OFFICE },
+                            //     routerLink: ['/service'],
+                            //     showInSearch: true
+                            // },
                             {
                                 label: FormPageScreenTitleMap[FormPageScreenCode.REGISTERED_OFFICE_CHANGE],
                                 screenName: FormPageScreenCode.REGISTERED_OFFICE_CHANGE,
@@ -264,8 +270,10 @@ export const headerNavigationList: HeaderNavigationInterface[] = [
         ]
     },
     {
-        label: 'Website & Digital Marketing',
-        routerLink: ['/digital-marketing']
+        label: FormPageScreenTitleMap[FormPageScreenCode.WEBSITE_AND_DIGITAL_MARKETING],
+        screenName: FormPageScreenCode.WEBSITE_AND_DIGITAL_MARKETING,
+        queryParams: { screenCode: FormPageScreenCode.WEBSITE_AND_DIGITAL_MARKETING },
+        routerLink: ['/service']
     },
     {
         label: 'Legal Compliances',
@@ -369,14 +377,14 @@ export const headerNavigationList: HeaderNavigationInterface[] = [
                         queryParams: { screenCode: FormPageScreenCode.PROFESSIONAL_TAX },
                         routerLink: ['/service'],
                         showInSearch: true
-                    },
-                    {
-                        label: FormPageScreenTitleMap[FormPageScreenCode.CLRA],
-                        screenName: FormPageScreenCode.CLRA,
-                        queryParams: { screenCode: FormPageScreenCode.CLRA },
-                        routerLink: ['/service'],
-                        showInSearch: true
                     }
+                    // {
+                    //     label: FormPageScreenTitleMap[FormPageScreenCode.CLRA],
+                    //     screenName: FormPageScreenCode.CLRA,
+                    //     queryParams: { screenCode: FormPageScreenCode.CLRA },
+                    //     routerLink: ['/service'],
+                    //     showInSearch: true
+                    // }
                 ]
             },
             {
@@ -493,19 +501,17 @@ export const headerNavigationList: HeaderNavigationInterface[] = [
         ]
     },
     {
-        label: 'Startup Valuations',
-        routerLink: ['/startup-valuations']
+        label: FormPageScreenTitleMap[FormPageScreenCode.FINANCIAL_MODELLING_AND_VALUATIONS],
+        screenName: FormPageScreenCode.FINANCIAL_MODELLING_AND_VALUATIONS,
+        queryParams: { screenCode: FormPageScreenCode.FINANCIAL_MODELLING_AND_VALUATIONS },
+        routerLink: ['/service'],
+        showInSearch: false
     },
     {
-        label: 'Pitch Deck & Funding',
-        routerLink: ['/funding-investor-agreements']
-    },
-    // {
-    //     label: 'About Us',
-    //     routerLink: ['/about-us']
-    // },
-    // {
-    //     label: 'Contact Us',
-    //     routerLink: ['/contact-us']
-    // }
+        label: FormPageScreenTitleMap[FormPageScreenCode.PITCH_DECKS_AND_FUNDING],
+        screenName: FormPageScreenCode.PITCH_DECKS_AND_FUNDING,
+        queryParams: { screenCode: FormPageScreenCode.PITCH_DECKS_AND_FUNDING },
+        routerLink: ['/service'],
+        showInSearch: false
+    }
 ]
