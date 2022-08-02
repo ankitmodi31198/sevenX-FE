@@ -1,0 +1,79 @@
+<div class="startup-idea-list-main-container">
+
+    <mat-accordion>
+        <mat-expansion-panel [expanded]="true">
+            <mat-expansion-panel-header>
+                <div class="filter-expansion-panel-header-container">
+                    <div class="filter-expansion-panel-header-title-container">Filters</div>
+                </div>
+            </mat-expansion-panel-header>
+            <div class="filter-expansion-panel-fields-container">
+                <form [formGroup]="filterForm">
+                    <mat-form-field class="form-field-container data-form-field-container" appearance="fill">
+                        <input matInput formControlName="fromDate" [matDatepicker]="fromDatePicker" placeholder="From Date">
+                        <mat-datepicker-toggle matSuffix [for]="fromDatePicker"></mat-datepicker-toggle>
+                        <mat-datepicker #fromDatePicker disabled="false"></mat-datepicker>
+                    </mat-form-field>
+                    <mat-form-field class="form-field-container data-form-field-container" appearance="fill">
+                        <input matInput formControlName="toDate" [matDatepicker]="toDatePicker" placeholder="To Date">
+                        <mat-datepicker-toggle matSuffix [for]="toDatePicker"></mat-datepicker-toggle>
+                        <mat-datepicker #toDatePicker disabled="false"></mat-datepicker>
+                    </mat-form-field>
+                    <mat-form-field class="form-field-container" appearance="fill">
+                        <input matInput formControlName="startupName" placeholder="Startup Name">
+                    </mat-form-field>
+                    <mat-form-field class="form-field-container" appearance="fill">
+                        <input matInput type="number" formControlName="contactNo" placeholder="Contact Number">
+                    </mat-form-field>
+                    <mat-form-field class="form-field-container" appearance="fill">
+                        <input matInput formControlName="email" placeholder="Email">
+                    </mat-form-field>
+                    <mat-form-field class="form-field-container" appearance="fill">
+                        <input matInput #stageInputElement
+                            autocomplete="off" [matAutocomplete]="stageAutocomplete"
+                            placeholder="Stage" (keyup)="startupIdeaStageInputChangeHandler(stageInputElement.value)"
+                            formControlName="stage">
+                        <mat-icon class="cursor-pointer" matSuffix>keyboard_arrow_down</mat-icon>
+                        <mat-autocomplete #stageAutocomplete="matAutocomplete"
+                            (opened)="startupIdeaStageInputChangeHandler('')" (closed)="startupIdeaStageFieldCloseHandler(stageInputElement)">
+                            <mat-option disabled *ngIf="!(filteredStartupIdeaStageOptions && filteredStartupIdeaStageOptions.length)">No Data Found</mat-option>
+                            <ng-container *ngIf="filteredStartupIdeaStageOptions && filteredStartupIdeaStageOptions.length">
+                                <mat-option *ngFor="let option of filteredStartupIdeaStageOptions" [value]="option">{{option}}</mat-option>
+                            </ng-container>
+                        </mat-autocomplete>
+                    </mat-form-field>
+                    <mat-form-field class="form-field-container" appearance="fill">
+                        <input matInput #transactionStatusInputElement
+                            autocomplete="off" [matAutocomplete]="industryAutocomplete"
+                            placeholder="Industry"
+                            (keyup)="startupIdeaIndustryInputChangeHandler(transactionStatusInputElement.value)"
+                            formControlName="industry">
+                        <mat-icon class="cursor-pointer" matSuffix>keyboard_arrow_down</mat-icon>
+                        <mat-autocomplete #industryAutocomplete="matAutocomplete"
+                            (opened)="startupIdeaIndustryInputChangeHandler('')" (closed)="startupIdeaIndustryFieldCloseHandler(transactionStatusInputElement)">
+                            <mat-option disabled *ngIf="!(filteredStartupIdeaIndustryOptions && filteredStartupIdeaIndustryOptions.length)">No Data Found</mat-option>
+                            <ng-container *ngIf="filteredStartupIdeaIndustryOptions && filteredStartupIdeaIndustryOptions.length">
+                                <mat-option *ngFor="let option of filteredStartupIdeaIndustryOptions" [value]="option">{{option}}</mat-option>
+                            </ng-container>
+                        </mat-autocomplete>
+                    </mat-form-field>
+                </form>
+            </div>
+            <div class="filter-expansion-panel-buttons-container">
+                <button mat-button (click)="resetClickHandler()">Reset</button>
+                <button mat-raised-button color="primary" (click)="filterClickHandler()">Filter</button>
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+
+    <app-table #startupIdeaList [tableConfig]="tableConfig"
+        [tableColumnsConfig]="tableColumnsConfig"
+        [tablePaginationConfig]="tablePaginationConfig"
+        (rowClick)="rowClickHandler($event)">
+        <ng-template #tableHeaderDisplayTemplate>
+            <div class="startup-idea-list-header-container">
+                Startup Idea List
+            </div>
+        </ng-template>
+    </app-table>
+</div>

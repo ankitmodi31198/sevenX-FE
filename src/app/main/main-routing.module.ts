@@ -17,6 +17,7 @@ import { StartupIdeaAnalysisComponent } from "./startup-idea-analysis/startup-id
 import { StartupValuationsComponent } from "./startup-valuations/startup-valuations.component";
 import { FundingInvestorAgreementsComponent } from "./funding-investor-agreements/funding-investor-agreements.component";
 import { FindACoFounderComponent } from "./find-a-co-founder/find-a-co-founder.component";
+import { StartupIdeaListComponent } from "./startup-idea-list/startup-idea-list.component";
 
 export const mainRoutes: Routes = [
   {
@@ -58,6 +59,12 @@ export const mainRoutes: Routes = [
       {
         path: 'order-list',
         component: OrderListComponent,
+        canActivate: [AuthGuard, AdminAuthGuard],
+        canActivateChild: [AuthGuard, AdminAuthGuard]
+      },
+      {
+        path: 'startup-idea-list',
+        component: StartupIdeaListComponent,
         canActivate: [AuthGuard, AdminAuthGuard],
         canActivateChild: [AuthGuard, AdminAuthGuard]
       },

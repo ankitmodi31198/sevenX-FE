@@ -22,13 +22,15 @@ import { FundingInvestorAgreementsModule } from './funding-investor-agreements/f
 import { StartupValuationsModule } from './startup-valuations/startup-valuations.module';
 import { FindACoFounderModule } from './find-a-co-founder/find-a-co-founder.module';
 import { DigitalMarketingModule } from './digital-marketing/digital-marketing.module';
+import { StartupIdeaListComponent } from './startup-idea-list/startup-idea-list.component';
 
 
 @NgModule({
   declarations: [
     MainComponent,
     ConsultantListComponent,
-    OrderListComponent
+    OrderListComponent,
+    StartupIdeaListComponent
   ],
   imports: [
     CommonModule,
