@@ -18,6 +18,7 @@ import { StartupValuationsComponent } from "./startup-valuations/startup-valuati
 import { FundingInvestorAgreementsComponent } from "./funding-investor-agreements/funding-investor-agreements.component";
 import { FindACoFounderComponent } from "./find-a-co-founder/find-a-co-founder.component";
 import { StartupIdeaListComponent } from "./startup-idea-list/startup-idea-list.component";
+import { FindCoFounderListComponent } from "./find-co-founder-list/find-co-founder-list.component";
 
 export const mainRoutes: Routes = [
   {
@@ -65,6 +66,12 @@ export const mainRoutes: Routes = [
       {
         path: 'startup-idea-list',
         component: StartupIdeaListComponent,
+        canActivate: [AuthGuard, AdminAuthGuard],
+        canActivateChild: [AuthGuard, AdminAuthGuard]
+      },
+      {
+        path: 'find-co-founder-list',
+        component: FindCoFounderListComponent,
         canActivate: [AuthGuard, AdminAuthGuard],
         canActivateChild: [AuthGuard, AdminAuthGuard]
       },

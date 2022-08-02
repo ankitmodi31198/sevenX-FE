@@ -2,24 +2,24 @@ import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { map } from 'rxjs/operators';
-import { getFormControl, setFormControlValue } from 'src/app/app-utils';
-import { StartupIdeaListService } from 'src/app/service/api/startup-idea-list.service';
-import { StartupIdeaListGetModel } from 'src/app/service/models/startup-idea-list.model';
+import { getFormControl, getStateList, setFormControlValue } from 'src/app/app-utils';
+import { FindCoFounderListService } from 'src/app/service/api/find-co-founder-list.service';
+import { FindCoFounderListGetModel } from 'src/app/service/models/find-co-founder-list.model';
 import { SortingOrder } from 'src/common-ui/directive/sortable-column.directive';
 import { TableColumnsConfig, TableConfig, TablePaginationConfig } from 'src/common-ui/table/table-config';
 import { TableColumnTypes } from 'src/common-ui/table/table-constants';
 import { TableComponent } from 'src/common-ui/table/table.component';
-import { IndustryOptions, StageOptions } from '../main-constants';
+import { IndustryOptions, SkillsOptions, StageOptions } from '../main-constants';
 
 @Component({
-  selector: 'sevenx-startup-idea-list',
-  templateUrl: './startup-idea-list.component.html',
-  styleUrls: ['./startup-idea-list.component.scss'],
+  selector: 'sevenx-find-co-founder-list',
+  templateUrl: './find-co-founder-list.component.html',
+  styleUrls: ['./find-co-founder-list.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class StartupIdeaListComponent implements OnInit {
+export class FindCoFounderListComponent implements OnInit {
 
-  @ViewChild('startupIdeaList')
+  @ViewChild('findCoFounderTable')
   orderTable: TableComponent;
 
   tableConfig: TableConfig;
@@ -30,17 +30,31 @@ export class StartupIdeaListComponent implements OnInit {
 
   filterForm: FormGroup;
 
-  startupIdeaStageOptions: string[] = StageOptions;
+  fieldOptionsMap: { [key: string]: string[] } = {
+    'stage': StageOptions,
+    'industry': IndustryOptions,
+    'skill': SkillsOptions,
+    'state': getStateList()
+  };
 
-  filteredStartupIdeaStageOptions: string[] = [];
+  filterFieldOptionsMap: { [key: string]: string[] } = {
+    'stage': [],
+    'industry': [],
+    'skill': [],
+    'state': []
+  }
 
-  startupIdeaIndustryOptions: string[] = IndustryOptions;
+  stageOptions: string[] = StageOptions;
 
-  filteredStartupIdeaIndustryOptions: string[] = [];
+  filteredStageOptions: string[] = [];
+
+  industryOptions: string[] = IndustryOptions;
+
+  filteredIndustryOptions: string[] = [];
 
   constructor(
     private formBuilder: FormBuilder,
-    private startupIdeaListService: StartupIdeaListService,
+    private findCoFounderListService: FindCoFounderListService,
     private matDialog: MatDialog
   ) { }
 
@@ -57,7 +71,9 @@ export class StartupIdeaListComponent implements OnInit {
       contactNo: [],
       email: [],
       stage: [],
-      industry: []
+      industry: [],
+      skill: [],
+      state: []
     });
     getFormControl('fromDate', this.filterForm).disable();
     getFormControl('toDate', this.filterForm).disable();
@@ -83,14 +99,14 @@ export class StartupIdeaListComponent implements OnInit {
     if (filterModel) {
       requestModel = requestModel ? Object.assign(requestModel, filterModel) : Object.assign({}, filterModel);
     }
-    return this.startupIdeaListService.post(requestModel)
+    return this.findCoFounderListService.post(requestModel)
       .pipe(
         map((response) => {
           if (response && response.status && response.status === 200) {
-            let result: StartupIdeaListGetModel[] = [];
+            let result: FindCoFounderListGetModel[] = [];
             if (response.data) {
               if (response.data?.startupIdeaFormList?.length) {
-                result = response.data.startupIdeaFormList.map((value: StartupIdeaListGetModel) => new StartupIdeaListGetModel().toLocal(value));
+                result = response.data.startupIdeaFormList.map((value: FindCoFounderListGetModel) => new FindCoFounderListGetModel().toLocal(value));
               }
               if (response.data.totalStartupIdeaFormCount) {
                 this.tablePaginationConfig.totalCount = response.data.totalStartupIdeaFormCount;
@@ -124,46 +140,46 @@ export class StartupIdeaListComponent implements OnInit {
         isSortableColumn: true,
         sortingFieldName: 'created_at'
       },
-      {
-        field: 'startupName',
-        columnHeader: 'Startup Name',
-        columnType: TableColumnTypes.TEXT,
-        isEditableColumn: () => false,
-        styleClass: 'startup-idea-list-name-column-container',
-        isSortableColumn: false
-      },
-      {
-        field: 'contactNo',
-        columnHeader: 'Contact Number',
-        columnType: TableColumnTypes.TEXT,
-        isEditableColumn: () => false,
-        styleClass: 'startup-idea-list-contact-number-column-container',
-        isSortableColumn: false
-      },
-      {
-        field: 'email',
-        columnHeader: 'Email',
-        columnType: TableColumnTypes.TEXT,
-        isEditableColumn: () => false,
-        styleClass: 'startup-idea-list-email-column-container',
-        isSortableColumn: false
-      },
-      {
-        field: 'stage',
-        columnHeader: 'Stage',
-        columnType: TableColumnTypes.TEXT,
-        isEditableColumn: () => false,
-        styleClass: 'startup-idea-list-stage-column-container',
-        isSortableColumn: false
-      },
-      {
-        field: 'industry',
-        columnHeader: 'Industry',
-        columnType: TableColumnTypes.TEXT,
-        isEditableColumn: () => false,
-        styleClass: 'startup-idea-list-industry-column-container',
-        isSortableColumn: false
-      }
+      // {
+      //   field: 'startupName',
+      //   columnHeader: 'Startup Name',
+      //   columnType: TableColumnTypes.TEXT,
+      //   isEditableColumn: () => false,
+      //   styleClass: 'startup-idea-list-name-column-container',
+      //   isSortableColumn: false
+      // },
+      // {
+      //   field: 'contactNo',
+      //   columnHeader: 'Contact Number',
+      //   columnType: TableColumnTypes.TEXT,
+      //   isEditableColumn: () => false,
+      //   styleClass: 'startup-idea-list-contact-number-column-container',
+      //   isSortableColumn: false
+      // },
+      // {
+      //   field: 'email',
+      //   columnHeader: 'Email',
+      //   columnType: TableColumnTypes.TEXT,
+      //   isEditableColumn: () => false,
+      //   styleClass: 'startup-idea-list-email-column-container',
+      //   isSortableColumn: false
+      // },
+      // {
+      //   field: 'stage',
+      //   columnHeader: 'Stage',
+      //   columnType: TableColumnTypes.TEXT,
+      //   isEditableColumn: () => false,
+      //   styleClass: 'startup-idea-list-stage-column-container',
+      //   isSortableColumn: false
+      // },
+      // {
+      //   field: 'industry',
+      //   columnHeader: 'Industry',
+      //   columnType: TableColumnTypes.TEXT,
+      //   isEditableColumn: () => false,
+      //   styleClass: 'startup-idea-list-industry-column-container',
+      //   isSortableColumn: false
+      // }
     ]
   }
 
@@ -175,45 +191,24 @@ export class StartupIdeaListComponent implements OnInit {
     return tablePaginationConfig;
   }
 
-  startupIdeaStageInputChangeHandler(searchedValue: string) {
+  filterFieldInputChangeHandler(searchedValue: string, field: string) {
     searchedValue = searchedValue ? searchedValue.toLowerCase().trim() : '';
-    this.filteredStartupIdeaStageOptions = this.startupIdeaStageOptions.filter((status: string) => {
+    this.filterFieldOptionsMap[field] = this.fieldOptionsMap[field].filter((status: string) => {
       return status && status.toLowerCase().includes(searchedValue);
     });
   }
 
-  startupIdeaStageFieldCloseHandler(stageInputElement: HTMLInputElement) {
-    if (stageInputElement) {
-      const searchedString = stageInputElement.value ? stageInputElement.value.toLowerCase().trim() : '';
+  filterFieldCloseHandler(inputElement: HTMLInputElement, field: string) {
+    if (inputElement) {
+      const searchedString = inputElement.value ? inputElement.value.toLowerCase().trim() : '';
       let matchedValue: string = null;
       if (searchedString) {
-        matchedValue = this.startupIdeaStageOptions.find((status: string) => {
+        matchedValue = this.fieldOptionsMap[field].find((status: string) => {
           return status && status.toLowerCase() === searchedString;
         }) || null;
       }
-      setFormControlValue('stage', matchedValue, this.filterForm);
-      stageInputElement.blur();
-    }
-  }
-
-  startupIdeaIndustryInputChangeHandler(searchedValue: string) {
-    searchedValue = searchedValue ? searchedValue.toLowerCase().trim() : '';
-    this.filteredStartupIdeaIndustryOptions = this.startupIdeaIndustryOptions.filter((status: string) => {
-      return status && status.toLowerCase().includes(searchedValue);
-    });
-  }
-
-  startupIdeaIndustryFieldCloseHandler(industryInputElement: HTMLInputElement) {
-    if (industryInputElement) {
-      const searchedString = industryInputElement.value ? industryInputElement.value.toLowerCase().trim() : '';
-      let matchedValue: string = null;
-      if (searchedString) {
-        matchedValue = this.startupIdeaIndustryOptions.find((status: string) => {
-          return status && status.toLowerCase() === searchedString;
-        }) || null;
-      }
-      setFormControlValue('industry', matchedValue, this.filterForm);
-      industryInputElement.blur();
+      setFormControlValue(field, matchedValue, this.filterForm);
+      inputElement.blur();
     }
   }
 
@@ -232,7 +227,7 @@ export class StartupIdeaListComponent implements OnInit {
     }
   }
 
-  rowClickHandler(rowData: StartupIdeaListGetModel) {
+  rowClickHandler(rowData: FindCoFounderListGetModel) {
     alert("add startup idea's form component in disable form control mode with selected data.");
   }
 

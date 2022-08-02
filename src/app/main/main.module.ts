@@ -23,6 +23,7 @@ import { StartupValuationsModule } from './startup-valuations/startup-valuations
 import { FindACoFounderModule } from './find-a-co-founder/find-a-co-founder.module';
 import { DigitalMarketingModule } from './digital-marketing/digital-marketing.module';
 import { StartupIdeaListComponent } from './startup-idea-list/startup-idea-list.component';
+import { FindCoFounderListComponent } from './find-co-founder-list/find-co-founder-list.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { StartupIdeaListComponent } from './startup-idea-list/startup-idea-list.
     MainComponent,
     ConsultantListComponent,
     OrderListComponent,
-    StartupIdeaListComponent
+    StartupIdeaListComponent,
+    FindCoFounderListComponent
   ],
   imports: [
     CommonModule,

@@ -1,10 +1,10 @@
-export const StartupIdeaStageOptions: string[] = [
+export const StageOptions: string[] = [
     'Idea',
     'Early traction',
     'Scaling up'
 ]
 
-export const StartupIdeaIndustryOptions: string[] = [
+export const IndustryOptions: string[] = [
     'Adtech',
     'Advanced manufacturing',
     'Agtech',
@@ -64,4 +64,15 @@ export const StartupIdeaIndustryOptions: string[] = [
     'Virtual reality (VR)',
     'Wearables and quantified self',
     '3D printing',
+    'Other'
+];
+
+export const SkillsOptions: string[] = [
+    'Marketing',
+    'Business Development',
+    'Designer',
+    'Coder',
+    'Finance & Accounts',
+    'Accelerator',
+    'Others'
 ]

@@ -39,8 +39,12 @@
                 <span style="padding-left: 0.5rem;">Order List</span>
             </button>
             <button *ngIf="isAdminLoggedIn" mat-menu-item [routerLink]="['/startup-idea-list']">
-                <i class="icon-container fa fa-shopping-cart"></i>
+                <i class="icon-container fa fa-lightbulb-o"></i>
                 <span style="padding-left: 0.5rem;">Startup Idea List</span>
+            </button>
+            <button *ngIf="isAdminLoggedIn" mat-menu-item [routerLink]="['/find-co-founder-list']">
+                <i class="icon-container fa fa-search"></i>
+                <span style="padding-left: 0.5rem;">Find Co Founder List</span>
             </button>
             <button mat-menu-item (click)="logOutClickHandler()">
                 <i class="icon-container fa fa-power-off"></i>

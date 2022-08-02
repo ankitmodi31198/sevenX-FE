@@ -1,0 +1,109 @@
+<div class="find-co-founder-list-main-container">
+
+    <mat-accordion>
+        <mat-expansion-panel [expanded]="true">
+            <mat-expansion-panel-header>
+                <div class="filter-expansion-panel-header-container">
+                    <div class="filter-expansion-panel-header-title-container">Filters</div>
+                </div>
+            </mat-expansion-panel-header>
+            <div class="filter-expansion-panel-fields-container">
+                <form [formGroup]="filterForm">
+                    <mat-form-field class="form-field-container data-form-field-container" appearance="fill">
+                        <input matInput formControlName="fromDate" [matDatepicker]="fromDatePicker" placeholder="From Date">
+                        <mat-datepicker-toggle matSuffix [for]="fromDatePicker"></mat-datepicker-toggle>
+                        <mat-datepicker #fromDatePicker disabled="false"></mat-datepicker>
+                    </mat-form-field>
+                    <mat-form-field class="form-field-container data-form-field-container" appearance="fill">
+                        <input matInput formControlName="toDate" [matDatepicker]="toDatePicker" placeholder="To Date">
+                        <mat-datepicker-toggle matSuffix [for]="toDatePicker"></mat-datepicker-toggle>
+                        <mat-datepicker #toDatePicker disabled="false"></mat-datepicker>
+                    </mat-form-field>
+                    <mat-form-field class="form-field-container" appearance="fill">
+                        <input matInput formControlName="startupName" placeholder="Startup Name">
+                    </mat-form-field>
+                    <mat-form-field class="form-field-container" appearance="fill">
+                        <input matInput type="number" formControlName="contactNo" placeholder="Contact Number">
+                    </mat-form-field>
+                    <mat-form-field class="form-field-container" appearance="fill">
+                        <input matInput formControlName="email" placeholder="Email">
+                    </mat-form-field>
+                    <mat-form-field class="form-field-container" appearance="fill">
+                        <input matInput #stageInputElement
+                            autocomplete="off" [matAutocomplete]="stageAutocomplete"
+                            placeholder="Stage" (keyup)="filterFieldInputChangeHandler(stageInputElement.value, 'stage')"
+                            formControlName="stage">
+                        <mat-icon class="cursor-pointer" matSuffix>keyboard_arrow_down</mat-icon>
+                        <mat-autocomplete #stageAutocomplete="matAutocomplete"
+                            (opened)="filterFieldInputChangeHandler('',  'stage')" (closed)="filterFieldCloseHandler(stageInputElement, 'stage')">
+                            <mat-option disabled *ngIf="!(filterFieldOptionsMap['stage'] && filterFieldOptionsMap['stage'].length)">No Data Found</mat-option>
+                            <ng-container *ngIf="filterFieldOptionsMap['stage'] && filterFieldOptionsMap['stage'].length">
+                                <mat-option *ngFor="let option of filterFieldOptionsMap['stage']" [value]="option">{{option}}</mat-option>
+                            </ng-container>
+                        </mat-autocomplete>
+                    </mat-form-field>
+                    <mat-form-field class="form-field-container" appearance="fill">
+                        <input matInput #industryInputElement
+                            autocomplete="off" [matAutocomplete]="industryAutocomplete"
+                            placeholder="Industry"
+                            (keyup)="filterFieldInputChangeHandler(industryInputElement.value, 'industry')"
+                            formControlName="industry">
+                        <mat-icon class="cursor-pointer" matSuffix>keyboard_arrow_down</mat-icon>
+                        <mat-autocomplete #industryAutocomplete="matAutocomplete"
+                            (opened)="filterFieldInputChangeHandler('', 'industry')" (closed)="filterFieldCloseHandler(industryInputElement, 'industry')">
+                            <mat-option disabled *ngIf="!(filterFieldOptionsMap['industry'] && filterFieldOptionsMap['industry'].length)">No Data Found</mat-option>
+                            <ng-container *ngIf="filterFieldOptionsMap['industry'] && filterFieldOptionsMap['industry'].length">
+                                <mat-option *ngFor="let option of filterFieldOptionsMap['industry']" [value]="option">{{option}}</mat-option>
+                            </ng-container>
+                        </mat-autocomplete>
+                    </mat-form-field>
+                    <mat-form-field class="form-field-container" appearance="fill">
+                        <input matInput #skillInputElement
+                            autocomplete="off" [matAutocomplete]="skillAutocomplete"
+                            placeholder="Skill"
+                            (keyup)="filterFieldInputChangeHandler(skillInputElement.value, 'skill')"
+                            formControlName="skill">
+                        <mat-icon class="cursor-pointer" matSuffix>keyboard_arrow_down</mat-icon>
+                        <mat-autocomplete #skillAutocomplete="matAutocomplete"
+                            (opened)="filterFieldInputChangeHandler('', 'skill')" (closed)="filterFieldCloseHandler(skillInputElement, 'skill')">
+                            <mat-option disabled *ngIf="!(filterFieldOptionsMap['skill'] && filterFieldOptionsMap['skill'].length)">No Data Found</mat-option>
+                            <ng-container *ngIf="filterFieldOptionsMap['skill'] && filterFieldOptionsMap['skill'].length">
+                                <mat-option *ngFor="let option of filterFieldOptionsMap['skill']" [value]="option">{{option}}</mat-option>
+                            </ng-container>
+                        </mat-autocomplete>
+                    </mat-form-field>
+                    <mat-form-field class="form-field-container" appearance="fill">
+                        <input matInput #stateInputElement
+                            autocomplete="off" [matAutocomplete]="stateAutocomplete"
+                            placeholder="State"
+                            (keyup)="filterFieldInputChangeHandler(stateInputElement.value, 'state')"
+                            formControlName="state">
+                        <mat-icon class="cursor-pointer" matSuffix>keyboard_arrow_down</mat-icon>
+                        <mat-autocomplete #stateAutocomplete="matAutocomplete"
+                            (opened)="filterFieldInputChangeHandler('', 'state')" (closed)="filterFieldCloseHandler(stateInputElement, 'state')">
+                            <mat-option disabled *ngIf="!(filterFieldOptionsMap['state'] && filterFieldOptionsMap['state'].length)">No Data Found</mat-option>
+                            <ng-container *ngIf="filterFieldOptionsMap['state'] && filterFieldOptionsMap['state'].length">
+                                <mat-option *ngFor="let option of filterFieldOptionsMap['state']" [value]="option">{{option}}</mat-option>
+                            </ng-container>
+                        </mat-autocomplete>
+                    </mat-form-field>
+                </form>
+            </div>
+            <div class="filter-expansion-panel-buttons-container">
+                <button mat-button (click)="resetClickHandler()">Reset</button>
+                <button mat-raised-button color="primary" (click)="filterClickHandler()">Filter</button>
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+
+    <app-table #findCoFounderTable [tableConfig]="tableConfig"
+        [tableColumnsConfig]="tableColumnsConfig"
+        [tablePaginationConfig]="tablePaginationConfig"
+        (rowClick)="rowClickHandler($event)">
+        <ng-template #tableHeaderDisplayTemplate>
+            <div class="find-co-founder-list-header-container">
+                Startup Idea List
+            </div>
+        </ng-template>
+    </app-table>
+</div>
