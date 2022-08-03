@@ -29,6 +29,10 @@ export class FormPageComponent implements OnInit, OnDestroy {
   get isDigitalMarketingPage(): boolean {
     return this.selectedServiceScreenCode?.toLowerCase() === FormPageScreenCode.WEBSITE_AND_DIGITAL_MARKETING.toLowerCase();
   }
+  
+  get isFindACoFounderPage(): boolean {
+    return this.selectedServiceScreenCode?.toLowerCase() === FormPageScreenCode.FIND_A_CO_FOUNDER.toLowerCase();
+  }
 
   constructor(
     private activatedRoute: ActivatedRoute,

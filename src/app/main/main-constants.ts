@@ -2,7 +2,7 @@ export const StageOptions: string[] = [
     'Idea',
     'Early traction',
     'Scaling up'
-]
+];
 
 export const IndustryOptions: string[] = [
     'Adtech',
@@ -75,4 +75,16 @@ export const SkillsOptions: string[] = [
     'Finance & Accounts',
     'Accelerator',
     'Others'
-]
+];
+
+export function getStageOfStartupList(): string[] {
+    return StageOptions;
+}
+
+export function getStartupIndustryList(): string[] {
+    return IndustryOptions;
+}
+
+export function getSkillsList(): string[] {
+    return SkillsOptions;
+}

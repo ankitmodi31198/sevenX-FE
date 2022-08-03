@@ -10,6 +10,7 @@ import { ComingSoonModule } from 'src/common-ui/coming-soon/coming-soon.module';
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 import { DigitalMarketingModule } from '../digital-marketing/digital-marketing.module';
+import { FindACoFounderFormModule } from '../find-a-co-founder/find-a-co-founder-form/find-a-co-founder-form.module';
 
 export function playerFactory() {
   return player;
@@ -26,7 +27,8 @@ export function playerFactory() {
     ComingSoonModule,
     LottieModule.forRoot({ player: playerFactory }),
     // NgxPageScrollModule
-    DigitalMarketingModule
+    DigitalMarketingModule,
+    FindACoFounderFormModule
   ],
   exports: [
     FormPageComponent
