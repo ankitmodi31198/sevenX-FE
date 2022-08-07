@@ -93,6 +93,13 @@
             <mat-form-field appFormField="Other Remarks" class="form-field-container" appearance="fill">
                 <input matInput formControlName="remarks" placeholder="Other Remarks">
             </mat-form-field>
+
+            <div class="width50">
+                <div class="form-field-container mat-form-field">
+                    <input type="file" (change)="onDocumentChange($event)" multiple>
+                </div>
+            </div>
+
         </form>
         <button mat-raised-button color="primary" (click)="submitClickHandler()">
             Submit

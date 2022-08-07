@@ -11,6 +11,7 @@ import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 import { DigitalMarketingModule } from '../digital-marketing/digital-marketing.module';
 import { FindACoFounderFormModule } from '../find-a-co-founder/find-a-co-founder-form/find-a-co-founder-form.module';
+import { StartupIdeaAnalysisModule } from '../startup-idea-analysis/startup-idea-analysis.module';
 
 export function playerFactory() {
   return player;
@@ -28,7 +29,8 @@ export function playerFactory() {
     LottieModule.forRoot({ player: playerFactory }),
     // NgxPageScrollModule
     DigitalMarketingModule,
-    FindACoFounderFormModule
+    FindACoFounderFormModule,
+    StartupIdeaAnalysisModule
   ],
   exports: [
     FormPageComponent

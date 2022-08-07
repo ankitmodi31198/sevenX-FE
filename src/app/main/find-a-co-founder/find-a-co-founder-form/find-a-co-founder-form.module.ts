@@ -5,6 +5,7 @@ import { GrowlModule } from 'src/common-ui/growl/growl.module';
 import { SharedModule } from 'src/shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FindACoFounderService } from 'src/app/service/api/find-a-co-founder.service';
+import { CoFounderDocsService } from 'src/app/service/api/co-founder-docs.service';
 
 
 
@@ -22,7 +23,8 @@ import { FindACoFounderService } from 'src/app/service/api/find-a-co-founder.ser
     FindACoFounderFormComponent
   ],
   providers: [
-    FindACoFounderService
+    FindACoFounderService,
+    CoFounderDocsService
   ]
 })
 export class FindACoFounderFormModule { }

@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { take } from 'rxjs/operators';
-import { FormStatus, setFormControlValue } from 'src/app/app-utils';
+import { FormStatus, getFormControlValue, setFormControlValue } from 'src/app/app-utils';
+import { CoFounderDocsService } from 'src/app/service/api/co-founder-docs.service';
 import { FindACoFounderService } from 'src/app/service/api/find-a-co-founder.service';
 import { FindACoFounderPostModel } from 'src/app/service/models/find-a-co-founder.model';
 import { growlMessageType } from 'src/common-ui/growl/growl-constants';
@@ -31,7 +32,8 @@ export class FindACoFounderFormComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private findACoFounderService: FindACoFounderService,
-    private growlService: GrowlService
+    private growlService: GrowlService,
+    private coFounderDocsService: CoFounderDocsService
   ) {
     this.init();
   }
@@ -53,7 +55,8 @@ export class FindACoFounderFormComponent implements OnInit {
       industry: ['', [Validators.required]],
       idea: ['', [Validators.required]],
       profileSkills: ['', [Validators.required]],
-      remarks: ['']
+      remarks: [''],
+      document: ['']
     });
   }
 
@@ -63,16 +66,22 @@ export class FindACoFounderFormComponent implements OnInit {
     } else {
       const postModel = new FindACoFounderPostModel().toRemote(this.baseForm.getRawValue());
 
+      const documents: any[] = getFormControlValue('document', this.baseForm);
+
       this.findACoFounderService.post(postModel)
         .pipe(take(1))
         .subscribe((response) => {
           if (response && response.status === 200) {
-            this.growlService.showGrowlMessage({
-              message: 'We will get back to you soon.',
-              messageType: growlMessageType.SUCCESS,
-              messageTitle: 'Thank you!'
-            });
-            window.location.reload();
+            if (documents && documents.length) {
+              this.uploadDocument(response.data.id);
+            } else {
+              this.growlService.showGrowlMessage({
+                message: 'We will get back to you soon.',
+                messageType: growlMessageType.SUCCESS,
+                messageTitle: 'Thank you!'
+              });
+              window.location.reload();
+            }
           } else {
             this.growlService.errorMessageGrowl();
           }
@@ -162,5 +171,52 @@ export class FindACoFounderFormComponent implements OnInit {
       return skill && skill.toLowerCase().includes(searchedValue);
     });
   }
+
+
+  onDocumentChange(event: any) {
+    if (event && event.target && event.target.files && event.target.files.length) {
+      const existingFiles = getFormControlValue('document', this.baseForm);
+      if (existingFiles && existingFiles.length) {
+        setFormControlValue('document', [...existingFiles, ...event.target.files], this.baseForm);
+      } else {
+        setFormControlValue('document', event.target.files, this.baseForm);
+      }
+    }
+  }
+
+
+  uploadDocument(coFounderDetailsId: number) {
+    const documents = getFormControlValue('document', this.baseForm);
+    const formData = new FormData();
+    // const documentData = new FormData();
+    for (let i = 0; i < documents.length; i++) {
+      const oDocument = documents[i];
+      formData.append("document", oDocument, oDocument.name);
+    }
+    formData.set("coFounderDetailsId", `${coFounderDetailsId}`);
+    this.documentUploadRequest(formData);
+  }
+
+  documentUploadRequest(uploadDocumentPostModel): Promise<any> {
+    return this.coFounderDocsService.post(uploadDocumentPostModel)
+      .pipe(take(1))
+      .toPromise()
+      .then((response) => {
+        if (response && response.data && response.status === 200) {
+          this.growlService.showGrowlMessage({
+            message: 'We will get back to you soon.',
+            messageType: growlMessageType.SUCCESS,
+            messageTitle: 'Thank you!'
+          });
+
+          window.location.reload();
+        } else {
+          this.growlService.errorMessageGrowl();
+        }
+      }, () => {
+        this.growlService.errorMessageGrowl();
+      });
+  }
+
 
 }
