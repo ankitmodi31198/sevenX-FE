@@ -4,24 +4,7 @@ import { FooterNavigationInterface } from "./footer-navigation.interface";
 
 export const footerNavigationList: FooterNavigationInterface[] = [
     {
-        label: 'Company',
-        items: [
-            {
-                label: 'Digital Marketing',
-                routerLink: ['/digital-marketing']
-            },
-            // {
-            //     label: 'About Us',
-            //     routerLink: ['/about-us']
-            // },
-            // {
-            //     label: 'Contact Us',
-            //     routerLink: ['/contact-us']
-            // }
-        ]
-    },
-    {
-        label: 'Government Registrations',
+        label: 'Business',
         items: [
             {
                 label: FormPageScreenTitleMap[FormPageScreenCode.PROPRIETORSHIP_REGISTRATION],
@@ -36,9 +19,15 @@ export const footerNavigationList: FooterNavigationInterface[] = [
                 routerLink: ['/service']
             },
             {
-                label: FormPageScreenTitleMap[FormPageScreenCode.OPC],
-                screenName: FormPageScreenCode.OPC,
-                queryParams: { screenCode: FormPageScreenCode.OPC },
+                label: FormPageScreenTitleMap[FormPageScreenCode.LLP],
+                screenName: FormPageScreenCode.LLP,
+                queryParams: { screenCode: FormPageScreenCode.LLP },
+                routerLink: ['/service']
+            },
+            {
+                label: FormPageScreenTitleMap[FormPageScreenCode.PARTERSHIP_FIRM],
+                screenName: FormPageScreenCode.PARTERSHIP_FIRM,
+                queryParams: { screenCode: FormPageScreenCode.PARTERSHIP_FIRM },
                 routerLink: ['/service']
             },
             {
@@ -48,15 +37,50 @@ export const footerNavigationList: FooterNavigationInterface[] = [
                 routerLink: ['/service']
             },
             {
-                label: FormPageScreenTitleMap[FormPageScreenCode.LTD_COMPANY],
-                screenName: FormPageScreenCode.LTD_COMPANY,
-                queryParams: { screenCode: FormPageScreenCode.LTD_COMPANY },
+                label: FormPageScreenTitleMap[FormPageScreenCode.ROC_LLP],
+                screenName: FormPageScreenCode.ROC_LLP,
+                queryParams: { screenCode: FormPageScreenCode.ROC_LLP },
                 routerLink: ['/service']
             }
         ]
     },
     {
-        label: 'Legal Compliances',
+        label: 'New Startup',
+        items: [
+            {
+                label: FormPageScreenTitleMap[FormPageScreenCode.STARTUP_REGISTRATION],
+                screenName: FormPageScreenCode.STARTUP_REGISTRATION,
+                queryParams: { screenCode: FormPageScreenCode.STARTUP_REGISTRATION },
+                routerLink: ['/service']
+            },
+            {
+                label: FormPageScreenTitleMap[FormPageScreenCode.MSME_UDYAM],
+                screenName: FormPageScreenCode.MSME_UDYAM,
+                queryParams: { screenCode: FormPageScreenCode.MSME_UDYAM },
+                routerLink: ['/service']
+            },
+            {
+                label: FormPageScreenTitleMap[FormPageScreenCode.GST_REGISTRATION],
+                screenName: FormPageScreenCode.GST_REGISTRATION,
+                queryParams: { screenCode: FormPageScreenCode.GST_REGISTRATION },
+                routerLink: ['/service']
+            },
+            {
+                label: FormPageScreenTitleMap[FormPageScreenCode.IEC],
+                screenName: FormPageScreenCode.IEC,
+                queryParams: { screenCode: FormPageScreenCode.IEC },
+                routerLink: ['/service']
+            },
+            {
+                label: FormPageScreenTitleMap[FormPageScreenCode.TRADEMARK],
+                screenName: FormPageScreenCode.TRADEMARK,
+                queryParams: { screenCode: FormPageScreenCode.TRADEMARK },
+                routerLink: ['/service']
+            }
+        ]
+    },
+    {
+        label: 'Income Tax & GST',
         items: [
             {
                 label: FormPageScreenTitleMap[FormPageScreenCode.ITR_FILING],
@@ -77,15 +101,26 @@ export const footerNavigationList: FooterNavigationInterface[] = [
                 routerLink: ['/service']
             },
             {
-                label: FormPageScreenTitleMap[FormPageScreenCode.GST_REGISTRATION],
-                screenName: FormPageScreenCode.GST_REGISTRATION,
-                queryParams: { screenCode: FormPageScreenCode.GST_REGISTRATION },
+                label: FormPageScreenTitleMap[FormPageScreenCode.GST_RETURN_FILING],
+                screenName: FormPageScreenCode.GST_RETURN_FILING,
+                queryParams: { screenCode: FormPageScreenCode.GST_RETURN_FILING },
                 routerLink: ['/service']
             },
             {
                 label: FormPageScreenTitleMap[FormPageScreenCode.GST_ADVISORY],
                 screenName: FormPageScreenCode.GST_ADVISORY,
                 queryParams: { screenCode: FormPageScreenCode.GST_ADVISORY },
+                routerLink: ['/service']
+            }
+        ]
+    },
+    {
+        label: 'Go Digital',
+        items: [
+            {
+                label: FormPageScreenTitleMap[FormPageScreenCode.WEBSITE_AND_DIGITAL_MARKETING],
+                screenName: FormPageScreenCode.WEBSITE_AND_DIGITAL_MARKETING,
+                queryParams: { screenCode: FormPageScreenCode.WEBSITE_AND_DIGITAL_MARKETING },
                 routerLink: ['/service']
             }
         ]
