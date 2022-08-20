@@ -1,13 +1,13 @@
 @import "src/custom-theme.scss";
 
-.startup-idea-analysis-form-container {
+.find-a-co-founder-form-container {
     text-align: center;
     margin: auto;
     box-shadow: $panelBoxShadow;
     border-radius: $borderRadius;
     padding: 2rem 1rem 2rem 2rem;
     margin-bottom: 2rem;
-    .startup-idea-analysis-form {
+    .find-a-co-founder-form {
         display: flex;
         flex-wrap: wrap;
         .form-field-container {

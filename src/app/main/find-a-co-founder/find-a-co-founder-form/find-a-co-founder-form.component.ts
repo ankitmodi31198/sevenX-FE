@@ -2,37 +2,38 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { take } from 'rxjs/operators';
 import { FormStatus, getFormControlValue, setFormControlValue } from 'src/app/app-utils';
-import { StartupIdeaAnalysisService } from 'src/app/service/api/startup-idea-analysis.service';
-import { StartupIdeaDocsService } from 'src/app/service/api/startup-idea-docs.service';
-import { StartupIdeaAnalysisPostModel } from 'src/app/service/models/startup-idea-analysis.model';
+import { CoFounderDocsService } from 'src/app/service/api/co-founder-docs.service';
+import { FindACoFounderService } from 'src/app/service/api/find-a-co-founder.service';
+import { FindACoFounderPostModel } from 'src/app/service/models/find-a-co-founder.model';
 import { growlMessageType } from 'src/common-ui/growl/growl-constants';
 import { GrowlService } from 'src/common-ui/growl/growl.service';
-import { getStageOfStartupList, getStartupIndustryList } from '../main-constants';
-
+import { getSkillsList, getStageOfStartupList, getStartupIndustryList } from '../../main-constants';
 
 @Component({
-  selector: 'sevenx-startup-idea-analysis',
-  templateUrl: './startup-idea-analysis.component.html',
-  styleUrls: ['./startup-idea-analysis.component.scss'],
+  selector: 'sevenx-find-a-co-founder-form',
+  templateUrl: './find-a-co-founder-form.component.html',
+  styleUrls: ['./find-a-co-founder-form.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class StartupIdeaAnalysisComponent implements OnInit {
+export class FindACoFounderFormComponent implements OnInit {
 
   baseForm: FormGroup;
 
-  startupIndustryList: string[] = getStartupIndustryList();
-
   stageOfStartupList: string[] = getStageOfStartupList();
 
-  displayWithStartupIndustryFn = (industry: string) => industry || '';
+  startupIndustryList: string[] = getStartupIndustryList();
+
+  skillList: string[] = getSkillsList();
 
   displayWithStartupStageFn = (stage: string) => stage || '';
 
+  displayWithStartupIndustryFn = (industry: string) => industry || '';
+
   constructor(
     private formBuilder: FormBuilder,
-    private StartupIdeaAnalysisService: StartupIdeaAnalysisService,
+    private findACoFounderService: FindACoFounderService,
     private growlService: GrowlService,
-    private startupIdeaDocsService: StartupIdeaDocsService
+    private coFounderDocsService: CoFounderDocsService
   ) {
     this.init();
   }
@@ -49,51 +50,25 @@ export class StartupIdeaAnalysisComponent implements OnInit {
       startupName: ['', [Validators.required]],
       contactNo: ['', [Validators.required]],
       email: ['', [Validators.required]],
-      idea: ['', [Validators.required]],
+      startupYear: [''],
+      stage: ['', [Validators.required]],
       industry: ['', [Validators.required]],
-      stage: ['', Validators.required],
+      idea: ['', [Validators.required]],
+      profileSkills: ['', [Validators.required]],
       remarks: [''],
       document: ['']
     });
   }
 
-  startupIndustryFieldCloseHandler(screenNameInputElement: HTMLInputElement) {
-    if (screenNameInputElement) {
-      this.StartupIndustryFormControlValue(screenNameInputElement.value);
-      screenNameInputElement.blur();
-    }
-  }
-
-  StartupIndustryFormControlValue(searchedString: string) {
-    searchedString = searchedString ? searchedString.toLowerCase().trim() : '';
-    let matchedValue: string = null;
-    if (searchedString) {
-      matchedValue = this.startupIndustryList.find((stage: string) => {
-        return stage && stage.toLowerCase() === searchedString;
-      }) || null;
-    }
-
-    setFormControlValue('industry', matchedValue, this.baseForm);
-  }
-
-  startupIndustryInputChangeHandler(searchedValue: string) {
-    this.startupIndustryList = getStartupIndustryList();
-    searchedValue = searchedValue ? searchedValue.toLowerCase().trim() : '';
-    this.startupIndustryList = getStartupIndustryList().filter((stage: string) => {
-      return stage && stage.toLowerCase().includes(searchedValue);
-    });
-  }
-
-
   submitClickHandler() {
     if (this.baseForm && this.baseForm.status && this.baseForm.status.toUpperCase() === FormStatus.INVALID.toUpperCase()) {
       return;
     } else {
-      const postModel = new StartupIdeaAnalysisPostModel().toRemote(this.baseForm.getRawValue());
+      const postModel = new FindACoFounderPostModel().toRemote(this.baseForm.getRawValue());
 
       const documents: any[] = getFormControlValue('document', this.baseForm);
 
-      this.StartupIdeaAnalysisService.post(postModel)
+      this.findACoFounderService.post(postModel)
         .pipe(take(1))
         .subscribe((response) => {
           if (response && response.status === 200) {
@@ -115,7 +90,6 @@ export class StartupIdeaAnalysisComponent implements OnInit {
         });
     }
   }
-
 
   stageOfStartupFieldCloseHandler(inputElement: HTMLInputElement) {
     if (inputElement) {
@@ -143,6 +117,62 @@ export class StartupIdeaAnalysisComponent implements OnInit {
     });
   }
 
+  startupIndustryFieldCloseHandler(screenNameInputElement: HTMLInputElement) {
+    if (screenNameInputElement) {
+      this.StartupIndustryFormControlValue(screenNameInputElement.value);
+      screenNameInputElement.blur();
+    }
+  }
+
+  StartupIndustryFormControlValue(searchedString: string) {
+    searchedString = searchedString ? searchedString.toLowerCase().trim() : '';
+    let matchedValue: string = null;
+    if (searchedString) {
+      matchedValue = this.startupIndustryList.find((stage: string) => {
+        return stage && stage.toLowerCase() === searchedString;
+      }) || null;
+    }
+
+
+    setFormControlValue('industry', matchedValue, this.baseForm);
+  }
+
+  startupIndustryInputChangeHandler(searchedValue: string) {
+    this.startupIndustryList = getStartupIndustryList();
+    searchedValue = searchedValue ? searchedValue.toLowerCase().trim() : '';
+    this.startupIndustryList = getStartupIndustryList().filter((stage: string) => {
+      return stage && stage.toLowerCase().includes(searchedValue);
+    });
+  }
+
+
+  skillFieldCloseHandler(inputElement: HTMLInputElement) {
+    if (inputElement) {
+      this.skillFormControlValue(inputElement.value);
+      inputElement.blur();
+    }
+  }
+
+  skillFormControlValue(searchedString: string) {
+    searchedString = searchedString ? searchedString.toLowerCase().trim() : '';
+    let matchedValue: string = null;
+    if (searchedString) {
+      matchedValue = this.skillList.find((skill: string) => {
+        return skill && skill.toLowerCase() === searchedString;
+      }) || null;
+    }
+    setFormControlValue('profileSkills', matchedValue, this.baseForm);
+  }
+
+  skillInputChangeHandler(searchedValue: string) {
+    this.skillList = getSkillsList();
+    searchedValue = searchedValue ? searchedValue.toLowerCase().trim() : '';
+    this.skillList = getSkillsList().filter((skill: string) => {
+      return skill && skill.toLowerCase().includes(searchedValue);
+    });
+  }
+
+
   onDocumentChange(event: any) {
     if (event && event.target && event.target.files && event.target.files.length) {
       const existingFiles = getFormControlValue('document', this.baseForm);
@@ -155,8 +185,7 @@ export class StartupIdeaAnalysisComponent implements OnInit {
   }
 
 
-
-  uploadDocument(startupDetailsId: number) {
+  uploadDocument(coFounderDetailsId: number) {
     const documents = getFormControlValue('document', this.baseForm);
     const formData = new FormData();
     // const documentData = new FormData();
@@ -164,12 +193,12 @@ export class StartupIdeaAnalysisComponent implements OnInit {
       const oDocument = documents[i];
       formData.append("document", oDocument, oDocument.name);
     }
-    formData.set("startupDetailsId", `${startupDetailsId}`);
+    formData.set("coFounderDetailsId", `${coFounderDetailsId}`);
     this.documentUploadRequest(formData);
   }
 
   documentUploadRequest(uploadDocumentPostModel): Promise<any> {
-    return this.startupIdeaDocsService.post(uploadDocumentPostModel)
+    return this.coFounderDocsService.post(uploadDocumentPostModel)
       .pipe(take(1))
       .toPromise()
       .then((response) => {
@@ -188,5 +217,6 @@ export class StartupIdeaAnalysisComponent implements OnInit {
         this.growlService.errorMessageGrowl();
       });
   }
+
 
 }

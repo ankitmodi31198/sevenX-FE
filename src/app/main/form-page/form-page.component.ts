@@ -30,6 +30,14 @@ export class FormPageComponent implements OnInit, OnDestroy {
     return this.selectedServiceScreenCode?.toLowerCase() === FormPageScreenCode.WEBSITE_AND_DIGITAL_MARKETING.toLowerCase();
   }
 
+  get isFindACoFounderPage(): boolean {
+    return this.selectedServiceScreenCode?.toLowerCase() === FormPageScreenCode.FIND_A_CO_FOUNDER.toLowerCase();
+  }
+
+  get isStartupIdeaAnalysisPage(): boolean {
+    return this.selectedServiceScreenCode?.toLowerCase() === FormPageScreenCode.STARTUP_IDEA_ANALYSIS.toLowerCase();
+  }
+
   constructor(
     private activatedRoute: ActivatedRoute,
     private renderer: Renderer2

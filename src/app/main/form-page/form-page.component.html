@@ -10,7 +10,8 @@
                 </sevenx-startup-registrations-form> -->
                 <sevenx-startup-registrations-form></sevenx-startup-registrations-form>
             </div>
-            <div class="banner-animation-container" *ngIf="selectedServiceScreenData?.hideBannerForm && selectedServiceScreenData?.animationOption">
+            <div class="banner-animation-container"
+                *ngIf="selectedServiceScreenData?.hideBannerForm && selectedServiceScreenData?.animationOption">
                 <ng-lottie [options]="selectedServiceScreenData?.animationOption"></ng-lottie>
             </div>
         </div>
@@ -19,7 +20,8 @@
         *ngIf="!selectedServiceScreenData?.hideNavigationBar && selectedServiceScreenData?.navigationContainers?.length">
         <div class="form-page-navigation-bar-container content-width-resolution-wise">
             <ng-container *ngFor="let item of selectedServiceScreenData.navigationContainers">
-                <div *ngIf="item.navigationTitle" (click)="scrollToElement(item.containerKey)" class="form-page-navigation-bar-item-wrapper-container">
+                <div *ngIf="item.navigationTitle" (click)="scrollToElement(item.containerKey)"
+                    class="form-page-navigation-bar-item-wrapper-container">
                     <div class="form-page-navigation-bar-item-container"
                         [ngClass]="{ 'active-navigation-tab': activeTab === item.containerKey }">
                         {{ item.navigationTitle }}
@@ -35,7 +37,8 @@
                 class="form-page-container-wrapper-container">
                 <div class="form-page-container-header-container">
                     {{ container.title }}
-                    <div class="form-page-container-description-container" *ngIf="container.description" [innerHTML]="container?.description"></div>
+                    <div class="form-page-container-description-container" *ngIf="container.description"
+                        [innerHTML]="container?.description"></div>
                 </div>
                 <div class="form-page-container-details-wrapper-container">
                     <ng-container [ngSwitch]="container.type">
@@ -61,6 +64,12 @@
     </div>
     <ng-container *ngIf="isDigitalMarketingPage">
         <sevenx-digital-marketing></sevenx-digital-marketing>
+    </ng-container>
+    <ng-container *ngIf="isFindACoFounderPage">
+        <sevenx-find-a-co-founder-form></sevenx-find-a-co-founder-form>
+    </ng-container>
+    <ng-container *ngIf="isStartupIdeaAnalysisPage">
+        <sevenx-startup-idea-analysis></sevenx-startup-idea-analysis>
     </ng-container>
 </div>
 
