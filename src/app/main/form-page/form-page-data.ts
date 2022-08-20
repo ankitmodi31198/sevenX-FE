@@ -118,7 +118,8 @@ export const FormPageScreenDescriptionMap: { [key: string]: string } = {
     FEMA_COMPLIANCES: 'A need emerges with the Corporate to watch out for outside trade exchanges, in the setting of sectoral tops, investment tops, to go around from the enormous penalties. FEMA compliance plays an essential role in the growth and success of various sectors in India. The purpose of introducing the Foreign Exchange Management Act, 1999 (FEMA) is to smooth external trade, maintaining a healthy foreign exchange market in India, promote the importance of balance payments.',
     PROPRIETORSHIP_REGISTRATION: 'Proprietorship is a business concern owned and operated by an individual. Proprietorship is nothing but the Individual carrying the business himself.',
     HUF: 'HUF means Hindu undivided family in India. A person can save income tax by creating a HUF in India. HUF is taxed separately from its members in India. A Hindu family come together to form a HUF in India. Individuals belonging to other religions are not allowed to form HUF’s  in India except Sikh & Jain.',
-    STARTUP_IDEA_ANALYSIS: "Nobody knows your business better than you. But sometimes there are perspectives and angles that we do not see. There will be opportunities and threats that you may overlook. To better understand the potential growth of your business, you need a comprehensive SWOT analysis. How? Read on.<br><br> COVID-19 pandemic is continuously devastating small to large businesses. Entrepreneurs are stuck in a stubborn muck; some don’t even know how to get away from it. It is time for you to regroup andevaluate your startup success. You need to bring out your SWOT analysis.",
+    STARTUP_IDEA_ANALYSIS: "Nobody knows your business better than you. But sometimes there are perspectives and angles that you do not see. There will be opportunities and threats that you may overlook. To better understand the potential growth of your business, you need a comprehensive SWOT analysis. How? Read on.",
+    // <br><br> COVID-19 pandemic is continuously devastating small to large businesses. Entrepreneurs are stuck in a stubborn muck; some don’t even know how to get away from it. It is time for you to regroup andevaluate your startup success. You need to bring out your SWOT analysis.
     FIND_A_CO_FOUNDER: "Many factors make a startup successful – having the right co-founder is one of them. Though you can start and run the show solo, it helps to have a business partner to share responsibilities and double the odds.",
     FINANCIAL_MODELLING_AND_VALUATIONS: 'A financial model is the representation of the financial information that goes into a business in areas of expenses, revenues, assets in the form of spreadsheet(s) or an Excel file.<br><br> A startup valuation is what the startup is worth in the market depending on different factors. Startup valuation is a process that each entrepreneur has to do whenever they are raising money or even when they are looking for a cofounder.',
     PITCH_DECKS_AND_FUNDING: 'We help entrepreneurs prepare their pitch decks. This service is also designed for startups founders who seek funding from angel investors and need to create a pitch deck to attract investors to their startups.',
@@ -8967,7 +8968,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
         hideNavigationBar: true,
         hideBannerForm: true,
         bannerWrapperStyleClass: 'swot-analysis-banner',
-        title: "SWOT Analysis for Startups",
+        title: "Startup Idea Anaylysis",
         description: FormPageScreenDescriptionMap['STARTUP_IDEA_ANALYSIS'],
         animationOption: {
             path: 'assets/idea_analysis.json'
@@ -8981,21 +8982,9 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                 value: [
                     {
                         description: [
-                            "You must have heard or even applied the SWOT process some time in the duration of your business. It might have been a success or not, but this business strategy is one that you need to update continually.",
+                            "You must have heard or even applied the SWOT process some time in the duration of your business. It might have been a success or not, but the business strategy is one that you need to update continually.",
                             "The current economic situation is alarming; a lot of small businesses are on-edge and panicking. Instead of running around in a panic, find a way to capitalize on the situation. It is in this way that the analysis can help you.",
-                            "A SWOT analysis can help you see your business from different perspectives. If you can see every angle of your business, you will find that your business is more than what meets in the eye. You will discover your strengths and weaknesses. Also, doors for opportunities will open, but these will be accompanied by possible threats."
-                        ]
-                    }
-                ]
-            },
-            {
-                title: 'SWOT analysis definition',
-                navigationTitle: '',
-                containerKey: '',
-                type: FormPageContainerType.TEXT,
-                value: [
-                    {
-                        description: [
+                            "A SWOT analysis can help you see your business from different perspectives. If you can see every angle of your business, you will find that your business is more than what meets in the eye. You will discover your strengths and weaknesses. Also, doors for opportunities will open, but these will be accompanied by possible threats.",
                             "To put it simply, the SWOT is a brainstorming process that can help entrepreneurs and business leaders create a solid business strategy to maximize company growth. The word is an acronym for strengths, weaknesses, opportunities, and threats."
                         ],
                         innerList: [
@@ -9003,10 +8992,10 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                                 innerList: [
                                     {
                                         description: [
-                                            "Strengths are seen internally. These are the positive attributes of your company that you have control over. Advantages usually refer to your employee skills, resources, brand, and capabilities. Discover your strengths and use them to your advantage.",
-                                            "Weaknesses are the opposite of your strengths. These are internal characteristics that give a negative attribute that hinder your strengths. By identifying your gaps, you can find ways to improve and instead back your strengths up.",
-                                            "Opportunities are usually external factors in your organization that have a high probability of bringing success. This can be new technological improvements, a business venture, or possible company expansion.",
-                                            "When there are opportunities, it will always be accompanied by threats. These are impeding factors that you have no control over. The only way to counter this is todevise a solid contingency plan to deal with them when they occur."
+                                            "<b>Strengths</b> are seen internally. These are the positive attributes of your company that you have control over. Advantages usually refer to your employee skills, resources, brand, and capabilities. Discover your strengths and use them to your advantage.",
+                                            "<b>Weaknesses</b> are the opposite of your strengths. These are internal characteristics that give a negative attribute that hinder your strengths. By identifying your gaps, you can find ways to improve and instead back your strengths up.",
+                                            "<b>Opportunities</b> are usually external factors in your organization that have a high probability of bringing success. This can be new technological improvements, a business venture, or possible company expansion.",
+                                            "<b>Threats</b> When there are opportunities, it will always be accompanied by threats. These are impeding factors that you have no control over. The only way to counter this is todevise a solid contingency plan to deal with them when they occur."
                                         ]
                                     }
                                 ]
@@ -9172,21 +9161,6 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                             {
                                 title: "What trends can become a significant threat to your business?"
                             }
-                        ]
-                    }
-                ]
-            },
-            {
-                title: 'From SWOT Analysis to Actionable Strategies',
-                navigationTitle: '',
-                containerKey: '',
-                type: FormPageContainerType.TEXT,
-                value: [
-                    {
-                        description: [
-                            "SWOT analysis should not merely sit on papers. Once you’ve seen the results of the data gathering, take actionable strategies to leverage viability, eliminate drawbacks, grab favorable circumstances, and manage possible risks.",
-                            "If one of your viable strategies is to employ an affordable offshore software development team,Full Scale is your best choice.",
-                            "Full Scale has been operating for some time, bringing software development success to startups. Our CEOs Matt DeCoursey and Matt Watson understand the struggles of small businesses in scaling their companies. As experts, they can see the potential for businesses to grow and guide them in taking the first step to success."
                         ]
                     }
                 ]

@@ -71,8 +71,8 @@
                 {{ item.title }}
             </div>
             <ng-container *ngIf="item?.description?.length">
-                <div class="text-details-description-container" *ngFor="let description of item.description">
-                    {{ description }}
+                <div class="text-details-description-container" *ngFor="let description of item.description" [innerHTML]="description">
+                    <!-- {{ description }} -->
                 </div>
             </ng-container>
             <ng-container *ngIf="item?.innerList?.length">
