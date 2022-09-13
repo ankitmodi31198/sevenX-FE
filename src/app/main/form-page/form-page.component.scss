@@ -1,6 +1,9 @@
 @import '../../../custom-theme.scss';
 
 .form-page-main-container {
+  .form-page-banner-full-height {
+    height: 100% !important;
+  }
   .form-page-navigation-bar-wrapper-container {
     position: sticky;
     top: 0;
@@ -158,6 +161,15 @@
         font-size: 20px;
         // color: rgba(144, 146, 163, 0.7);
         color: $fontSecondaryColor;
+      }
+
+      .banner-left-registration-form-container {
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        box-shadow: $panelBoxShadow;
+        border-radius: $borderRadius;
+        background-color: $backgroundColor;
       }
     }
   

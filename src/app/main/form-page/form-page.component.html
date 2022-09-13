@@ -4,6 +4,9 @@
             <div *ngIf="!selectedServiceScreenData?.hideBannerDetails" class="banner-left">
                 <h2 [innerHTML]="selectedServiceScreenData.title"></h2>
                 <p [innerHTML]="selectedServiceScreenData.description"></p>
+                <div *ngIf="selectedServiceScreenData?.hideBannerForm" class="banner-left-registration-form-container">
+                    <sevenx-startup-registrations-form></sevenx-startup-registrations-form>
+                </div>
             </div>
             <div *ngIf="!selectedServiceScreenData?.hideBannerForm" class="banner-right">
                 <!-- <sevenx-startup-registrations-form [dataToBeAutoPopulate]="dataToBeAutoPopulate">

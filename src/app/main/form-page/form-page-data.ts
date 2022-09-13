@@ -8974,13 +8974,13 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
     },
     STARTUP_IDEA_ANALYSIS: {
         hideNavigationBar: true,
-        // hideBannerForm: true,
-        bannerWrapperStyleClass: 'swot-analysis-banner',
+        hideBannerForm: true,
+        bannerWrapperStyleClass: 'form-page-banner-full-height',
         title: "Startup Idea Anaylysis",
         description: FormPageScreenDescriptionMap['STARTUP_IDEA_ANALYSIS'],
-        // animationOption: {
-        //     path: 'assets/idea_analysis.json'
-        // },
+        animationOption: {
+            path: 'assets/idea_analysis.json'
+        },
         navigationContainers: [
             {
                 title: 'What is a SWOT Analysis?',
@@ -9177,12 +9177,13 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
     },
     FIND_A_CO_FOUNDER: {
         hideNavigationBar: true,
-        // hideBannerForm: true,
+        hideBannerForm: true,
+        bannerWrapperStyleClass: 'form-page-banner-full-height',
         title: FormPageScreenTitleMap['FIND_A_CO_FOUNDER'],
         description: FormPageScreenDescriptionMap['FIND_A_CO_FOUNDER'],
-        // animationOption: {
-        //     path: 'assets/co_founder.json'
-        // },
+        animationOption: {
+            path: 'assets/co_founder.json'
+        },
         navigationContainers: [
             {
                 title: '3 IMPORTANT TIPS BEFORE YOU look out for a co-founder',
@@ -9238,12 +9239,13 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
         ]
     },
     FINANCIAL_MODELLING_AND_VALUATIONS: {
-        // hideBannerForm: true,
+        hideBannerForm: true,
+        bannerWrapperStyleClass: 'form-page-banner-full-height',
         title: FormPageScreenTitleMap['FINANCIAL_MODELLING_AND_VALUATIONS'],
         description: FormPageScreenDescriptionMap['FINANCIAL_MODELLING_AND_VALUATIONS'],
-        // animationOption: {
-        //     path: 'assets/startup_valuation.json'
-        // },
+        animationOption: {
+            path: 'assets/startup_valuation.json'
+        },
         navigationContainers: [
             {
                 title: 'What is a financial model?',
@@ -9672,12 +9674,12 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
         ]
     },
     PITCH_DECKS_AND_FUNDING: {
-        // hideBannerForm: true,
+        hideBannerForm: true,
         title: FormPageScreenTitleMap['PITCH_DECKS_AND_FUNDING'],
         description: FormPageScreenDescriptionMap['PITCH_DECKS_AND_FUNDING'],
-        // animationOption: {
-        //     path: 'assets/funding.json'
-        // },
+        animationOption: {
+            path: 'assets/funding.json'
+        },
         navigationContainers: [
             {
                 title: 'Introduction',
@@ -9905,12 +9907,13 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
     },
     WEBSITE_AND_DIGITAL_MARKETING: {
         hideNavigationBar: true,
-        // hideBannerForm: true,
+        hideBannerForm: true,
+        bannerWrapperStyleClass: 'form-page-banner-full-height',
         title: 'What we can do for you?',
         description: FormPageScreenDescriptionMap['WEBSITE_AND_DIGITAL_MARKETING'],
-        // animationOption: {
-        //     path: 'assets/wesite_development_digital_marketing_1.json'
-        // },
+        animationOption: {
+            path: 'assets/wesite_development_digital_marketing_1.json'
+        },
         navigationContainers: [
             {
                 title: '',
