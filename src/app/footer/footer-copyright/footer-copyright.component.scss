@@ -1,0 +1,11 @@
+@import '../../../custom-theme.scss';
+
+$footerCopyrightBgColor: $textColor;
+
+.footer-copyright-main-container {
+    background-color: $footerCopyrightBgColor;
+    color: $lightTextColor;
+    padding-bottom: 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+}

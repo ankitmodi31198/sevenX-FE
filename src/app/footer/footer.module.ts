@@ -6,10 +6,12 @@ import { RouterModule } from '@angular/router';
 import { FooterSocialMediaHandlesModule } from './footer-social-media-handles/footer-social-media-handles.module';
 import { FooterNavigationModule } from './footer-navigation/footer-navigation.module';
 import { FooterFaqModule } from './footer-faq/footer-faq.module';
+import { FooterCopyrightComponent } from './footer-copyright/footer-copyright.component';
 
 @NgModule({
   declarations: [
-    FooterComponent
+    FooterComponent,
+    FooterCopyrightComponent
   ],
   imports: [
     CommonModule,
