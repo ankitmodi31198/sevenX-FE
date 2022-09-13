@@ -5,6 +5,13 @@
   font-family: $fontFamily;
   // width: 50rem;
   height: auto;
+  .close-contact-us-dialog-button-container {
+    text-align: end;
+    padding-top: 0.5rem;
+    .close-contact-us-dialog-button {
+      margin: 0;
+    }
+  }
 
   header {
     font-size: 3.3rem;

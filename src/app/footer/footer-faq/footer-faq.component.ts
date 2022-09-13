@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
 import { take } from 'rxjs/operators';
 import { ContactUsComponent } from 'src/app/main/contact-us/contact-us.component';
@@ -81,7 +81,14 @@ export class FooterFaqComponent implements OnInit {
   }
 
   contactUsClickHandler() {
-    this.matDialog.open(ContactUsComponent, { panelClass: 'sevenx-contact-us-modal', closeOnNavigation: true, maxWidth: '500px' })
+    const config: MatDialogConfig = {
+      panelClass: 'sevenx-contact-us-modal', 
+      closeOnNavigation: true, 
+      maxWidth: '500px',
+      autoFocus: false,
+      restoreFocus: false
+    }
+    this.matDialog.open(ContactUsComponent, config)
       .afterClosed()
       .pipe(take(1))
       .subscribe();

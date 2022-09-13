@@ -14,7 +14,7 @@ export class ContactUsComponent implements OnInit {
   }
 
   constructor(
-    private dialogRef: MatDialogRef<ContactUsComponent>
+    public dialogRef: MatDialogRef<ContactUsComponent>
   ) { }
 
   ngOnInit(): void {

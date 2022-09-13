@@ -1,4 +1,10 @@
 <div class="contact-container content-width-resolution-wise">
+    <div *ngIf="dialogRef" class="close-contact-us-dialog-button-container">
+        <button class="close-contact-us-dialog-button" mat-icon-button
+            (click)="contactFormSubmissionHandler()">
+            <mat-icon>close</mat-icon>
+        </button>
+    </div>
     <div class="contact-us-container-lottie">
         <ng-lottie [options]="contactUsAnimationOption"></ng-lottie>
     </div>

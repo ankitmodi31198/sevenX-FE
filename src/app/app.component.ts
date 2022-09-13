@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
 import { filter, take } from 'rxjs/operators';
@@ -43,7 +43,14 @@ export class AppComponent {
 
   contactUsClickHandler() {
     // this.router.navigate(['/contact-us']);
-    this.matDialog.open(ContactUsComponent, {panelClass: 'sevenx-contact-us-modal', closeOnNavigation: true, maxWidth: '500px'})
+    const config: MatDialogConfig = {
+      panelClass: 'sevenx-contact-us-modal', 
+      closeOnNavigation: true, 
+      maxWidth: '500px',
+      autoFocus: false,
+      restoreFocus: false
+    }
+    this.matDialog.open(ContactUsComponent, config)
       .afterClosed()
       .pipe(take(1))
       .subscribe();
