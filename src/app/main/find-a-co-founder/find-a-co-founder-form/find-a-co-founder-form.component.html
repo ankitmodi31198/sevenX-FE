@@ -71,30 +71,36 @@
                 </mat-form-field>
             </div>
 
-            <mat-form-field class="form-field-container" appearance="fill">
-                <input matInput #skillInputElement autocomplete="off" [matAutocomplete]="skillAutocomplete"
-                    placeholder="Skill" (keyup)="skillInputChangeHandler(skillInputElement.value)"
-                    formControlName="profileSkills">
-                <mat-icon class="cursor-pointer" matSuffix>keyboard_arrow_down</mat-icon>
-                <mat-autocomplete #skillAutocomplete="matAutocomplete" (opened)="skillInputChangeHandler('')"
-                    (closed)="skillFieldCloseHandler(skillInputElement)">
-                    <mat-option disabled *ngIf="!(skillList && skillList.length)">No Data Found
-                    </mat-option>
-                    <ng-container *ngIf="skillList && skillList.length">
-                        <mat-option *ngFor="let option of skillList" [value]="option">{{option}}
+            <div class="width100">
+                <mat-form-field class="form-field-container" appearance="fill">
+                    <input matInput #skillInputElement autocomplete="off" [matAutocomplete]="skillAutocomplete"
+                        placeholder="Skill" (keyup)="skillInputChangeHandler(skillInputElement.value)"
+                        formControlName="profileSkills">
+                    <mat-icon class="cursor-pointer" matSuffix>keyboard_arrow_down</mat-icon>
+                    <mat-autocomplete #skillAutocomplete="matAutocomplete" (opened)="skillInputChangeHandler('')"
+                        (closed)="skillFieldCloseHandler(skillInputElement)">
+                        <mat-option disabled *ngIf="!(skillList && skillList.length)">No Data Found
                         </mat-option>
-                    </ng-container>
-                </mat-autocomplete>
-            </mat-form-field>
+                        <ng-container *ngIf="skillList && skillList.length">
+                            <mat-option *ngFor="let option of skillList" [value]="option">{{option}}
+                            </mat-option>
+                        </ng-container>
+                    </mat-autocomplete>
+                </mat-form-field>
+            </div>
 
-            <mat-form-field appFormField="Write up of the Startup up Idea" class="form-field-container"
-                appearance="fill">
-                <input matInput formControlName="idea" placeholder="Write up of the Startup up Idea">
-            </mat-form-field>
+            <div class="width100">
+                <mat-form-field appFormField="Write up of the Startup up Idea" class="form-field-container"
+                    appearance="fill">
+                    <input matInput formControlName="idea" placeholder="Write up of the Startup up Idea">
+                </mat-form-field>
+            </div>
 
-            <mat-form-field appFormField="Other Remarks" class="form-field-container" appearance="fill">
-                <input matInput formControlName="remarks" placeholder="Other Remarks">
-            </mat-form-field>
+            <div class="width100">
+                <mat-form-field appFormField="Other Remarks" class="form-field-container" appearance="fill">
+                    <input matInput formControlName="remarks" placeholder="Other Remarks">
+                </mat-form-field>
+            </div>
 
             <div class="width50">
                 <div class="form-field-container mat-form-field">
