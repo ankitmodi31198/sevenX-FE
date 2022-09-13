@@ -99,7 +99,7 @@ export const FormPageScreenDescriptionMap: { [key: string]: string } = {
     COMPANY: 'A Private Company is an entity enjoying a separate identity which requires maintaining its active status through the regular filing with MCA. For every company, it is compulsory to file an annual return and audited financial statements with MCA for every financial year. The RoC filing is mandatory irrespective of the turnover, whether it is zero or in crore.',
     ROC_LLP: 'A Limited Liability Partnership enjoys a separate status. Thus, an organization needs to maintain its active status by regularly filing with the Ministry of Corporate Affairs (MCA). Annual compliance filing is mandatory for any LLP, whether having a business or not.',
     PF: 'Employees’ Provident Fund is a statutory benefit payable to employees working in India. The Employees’ Provident Funds and Miscellaneous Provisions Act, 1952 ("Act") is applicable pan-India. The administration and management of Employees’ Provident Fund (EPF) is carried out by the Central Board of Trustees (CBT) established by the Central Government consisting of representatives of the Government, employers and employees respectively. The Employees’ Provident Fund Organization (EPFO) assists this Board in its activities.',
-    ESIC: 'Applies to all factories and establishments with 10 or more workers except where the establishment is engaged in the Construction Sector.',
+    ESIC: 'Applies to all factories and establishments where 10 or more workers are employed. It protects  employees against sickness, maternity, disablement, and death as a result of a work-related injury, as  well as provides medical care to insured employees and their families. ',
     PROFESSIONAL_TAX: 'Professional Tax is a tax collected by State Governments from the professionally occupied business entities. A person earning income from salary or professions such as Chartered Accountants, Company Secretaries, Lawyers, etc. is required to pay professional tax.',
     CLRA: 'CLRA',
     ALTERNATIVE_INVESTMENT_FUND_REGISTRATION: 'Alternative investment funds mean establishment which is privately pooled investment. AIF collect Funds from investors to provide return.',
@@ -121,8 +121,8 @@ export const FormPageScreenDescriptionMap: { [key: string]: string } = {
     STARTUP_IDEA_ANALYSIS: "Nobody knows your business better than you. But sometimes there are perspectives and angles that you do not see. There will be opportunities and threats that you may overlook. To better understand the potential growth of your business, you need a comprehensive SWOT analysis. How? Read on.",
     // <br><br> COVID-19 pandemic is continuously devastating small to large businesses. Entrepreneurs are stuck in a stubborn muck; some don’t even know how to get away from it. It is time for you to regroup andevaluate your startup success. You need to bring out your SWOT analysis.
     FIND_A_CO_FOUNDER: "Many factors make a startup successful – having the right co-founder is one of them. Though you can start and run the show solo, it helps to have a business partner to share responsibilities and double the odds.",
-    FINANCIAL_MODELLING_AND_VALUATIONS: 'A financial model is the representation of the financial information that goes into a business in areas of expenses, revenues, assets in the form of spreadsheet(s) or an Excel file.<br><br> A startup valuation is what the startup is worth in the market depending on different factors. Startup valuation is a process that each entrepreneur has to do whenever they are raising money or even when they are looking for a cofounder.',
-    PITCH_DECKS_AND_FUNDING: 'We help entrepreneurs prepare their pitch decks. This service is also designed for startups founders who seek funding from angel investors and need to create a pitch deck to attract investors to their startups.',
+    FINANCIAL_MODELLING_AND_VALUATIONS: 'A financial model is the representation of the financial information that goes into a business in areas of expenses, revenues, assets in the form of spreadsheet(s) or an Excel file.<br><br> Startup valuation is what the startup is worth in the market depending on different factors. Startup valuation is a process that each entrepreneur has to do whenever they are raising money or even when they are looking for a cofounder.',
+    PITCH_DECKS_AND_FUNDING: 'We help entrepreneurs prepare their pitch decks. We also help them in making the Funding plans &  raising funds.',
     WEBSITE_AND_DIGITAL_MARKETING: 'We can make your business grow, by developing websites for your business. A website in itself, carry out a lot of different marketing strategies, to help your business nurture. To make you grow, day by day through our most versatile websites, you can have for your businesses. As compare to any other form of advertising, the web has a far broader reach.'
 };
 
@@ -8557,7 +8557,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                 ]
             },
             {
-                title: 'Process - Conversion from Partnership to LLP',
+                title: 'Process - Steps to register a LLP',
                 navigationTitle: 'Steps',
                 containerKey: 'process',
                 type: FormPageContainerType.CARD_LIST,
@@ -8942,8 +8942,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                     {
                         description: [
                             "The Employees' State Insurance Scheme of India (ESIC) is a multi-faceted Social Security Scheme designed to provide socio-economic protection to 'employees' in the organised sector. ESIC Scheme is administered by a statutory corporate body called the Employees' State Insurance Corporation.",
-                              "It protects employees against sickness, maternity, disablement, and death as a result of a work-related injury, as well as provides medical care to insured employees and their families",
-                            "According to official data released in January 2022, almost 10.28 lakh new members joined the ESIC-run social security plan in November 2021, compared to 12.39 lakh the previous month, providing insight into formal sector employment in the country"]
+                              "It protects employees against sickness, maternity, disablement, and death as a result of a work-related injury, as well as provides medical care to insured employees and their families"]
                     }
                 ]
             },
@@ -9222,8 +9221,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                     {
                         title: "3. Look for someone with complementary traits",
                         description: [
-                            "While it is important to have a co-founder who shares your values and vision, it is also crucial to look for someone with complementary skills and personal traits. For instance, if you and your partner both lack communication skills, it becomes difficult to make a pitch to investors, speak to your clients, conduct training sessions for your teams, etc. Co-founders with strengths and traits that support each other make a good match.",
-                            "Connect with a like-minded community of startup entrepreneurs. Be inspired by fellow entrepreneurs. The time to startup is now"
+                            "While it is important to have a co-founder who shares your values and vision, it is also crucial to look for someone with complementary skills and personal traits. For instance, if you and your partner both lack communication skills, it becomes difficult to make a pitch to investors, speak to your clients, conduct training sessions for your teams, etc. Co-founders with strengths and traits that support each other make a good match."
                         ]
                     }
                 ]
@@ -9508,7 +9506,6 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                             "A startup valuation is what the startup is worth in the market depending on different factors. Startup valuation is a process that each entrepreneur has to do whenever they are raising money or even when they are looking for a cofounder (for example, the technical cofounder and the business cofounder programs require valuation).",
                             "Every business, startup or not, needs to have a financial analysis and valuation document created in order to determine the true worth of their company. Too often startups omit this key step and instead try to guesstimate the value of their company based on what they think it could be worth. This can be a dangerous route to go down because there is no guarantee that the market will agree with your assumptions. The Startup valuation methodology is a precise, rigorous and accurate method for valuing startups. It was developed by experienced entrepreneurs and financiers to help aspiring entrepreneurs accurately price their companies and secure the best possible terms from investors. The methodology employs a series of steps to arrive at an accurate valuation of a startup. The first step is to identify the market value of the company based on its current size, stage of development, and potential future growth. After that, analysts use established valuation methods to find an appropriate price for the company. Finally, this number is adjusted for risk factors such as the company's cash flow cushion and its competitive landscape.",
                             "We help entrepreneurs value their startups and we apply different types of startup valuation methods in order to reach a realistic and fair valuation of the startup.",
-                            "One of our unique advantages is that beside applying the standard methods, we have data from the market (either startups that joined our Raise Capital program or other startups) and we use the info to put a good valuation. As everybody knows, valuation of a startup depends on the market trends and investor’s other alternatives. For example, when the NASDAQ 100 and/or S&P 500 are going up then the angel investors expect to generate more income through a risky investment such as a startup. Startup valuations are also affected sometimes but by illogical reasons, for instance startups in AI or blockchain tend to be valued high because angel investors/VCs expect to see huge gain in these domains.",
                             "During the planning phase, we determine the value of the startup based on the startups that raise money recently in our network. We will not be disclosing the name of the startup but we will try to select a startup that is in a similar industry and can raise money. We will also try to have multiple valuations for the startup based on different forecasts and would propose the most appropriate one.",
                             "We also study the data of other startups in the market and the startup's own features to forecast the revenue and cash flow that will help us in valuing the startup. Having a clear valuation of the startup will help us in the negotiation with the angel investors or other funding sources.",
                             "Since the valuation of the startup changes in every funding round and whenever the startup achieves a milestone, we will be helping the entrepreneur in valuing the startup through different rounds and determining the amount of equity that should be given. Usually in the planning phase, we will be preparing several scenarios of funding and in each scenario, we will be highlighting the funding needed, the valuation and the new milestone. Such clear planning will also help the angel investor understand what their gain is if the valuation is correct."
@@ -9539,7 +9536,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                     {
                         description: [
                             "During series A rounds, entrepreneurs might receive different term sheets from investors, which makes it hard to identify the right valuation of the startup. You can value your series A startup using common valuation methods or valuing your startup based on revenues, number of users, product demand, potential market and other factors that show traction and key performance indicators.",
-                            "Through our Raise Capital program, we help series A startups in identifying the right valuation for their series A funding round. We take into account different factors when we value the startup, such as the track record i.e. revenue, achieved millstones and other key performance indicators. We apply different valuation methods. The Venture Capital valuation method is one of the most preferred valuation methods used for valuing series A startups."
+                            "We help series A startups in identifying the right valuation for their series A funding round. We take into account different factors when we value the startup, such as the track record i.e. revenue, achieved milestones and other key performance indicators. We apply different valuation methods. The Venture Capital valuation method is one of the most preferred valuation methods used for valuing series A startups."
                         ]
                     }
                 ]
@@ -9566,7 +9563,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                 value: [
                     {
                         description: [
-                            "There are many online calculators that help founders roughly evaluate their startups like the ones provided by EquityNet, Caycon or EnterpriseMonkey. The main problem with many online calculators is that they have their success based on how often entrepreneurs refer this method of calculation to others, thus they usually tend to overvalue startups just to be more pleasing for entrepreneurs! It is also worth mentioning that many of these online calculators use startups in USA or Silicon Valley as the reference! It might sound illogical to you but the country of the startup plays an important role in the valuation. Some online calculators provide a range and we think it will be better. In general, such online calculators are useful to have a rough estimation but not accurate enough because they do not take all factors into consideration; however, it might be a good starting point to check your startup’s valuation using one of these online calculators and then move forward into more accurate and holistic methods. 7xStartup dedicates a team that will work on valuing your startup and coming back to you with an accurate and fair valuation. In most cases, the valuation will be a range presented through a study."
+                            "There are many online calculators that help founders roughly evaluate their startups. The main problem with many online calculators is that they have their success based on how often entrepreneurs refer this method of calculation to others, thus they usually tend to overvalue startups just to be more pleasing for entrepreneurs! In general, such online calculators are useful to have a rough estimation but not accurate enough because they do not take all factors into consideration; 7xStartup dedicates a team that will work on valuing your startup and coming back to you with an accurate and fair valuation. In most cases, the valuation will be a range presented through a study."
                         ]
                     }
                 ]
@@ -9576,7 +9573,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                 navigationTitle: '',
                 containerKey: 'startupValuationOverview',
                 type: FormPageContainerType.CARD_LIST,
-                description: `Below are some of the methods we use in our Raise Capital program when we are advising entrepreneurs on fair valuation of their startups. There are many methods that founders and investors follow in valuing a startup, and they have evolved and improved over the years.`,
+                description: `Below are some of the methods we use when we are advising entrepreneurs on fair valuation of their startups. There are many methods that founders and investors follow in valuing a startup, and they have evolved and improved over the years.`,
                 value: [
                     {
                         title: "Discounted Cash Flow Method",
@@ -9614,14 +9611,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                         description: [
                             "RFS is also ideal for early-stage startups and for pre-money evaluations.",
                             "It uses a base-value of a comparable startup and then adjusts it with 12 standard risk factors.",
-                            "Pre-money valuation refers to the value of the startup before the startup receives funding from external sources of financing and investment. DCF is one of the valuation methods that"
-                        ]
-                    },
-                    {
-                        title: "Qualitative Valuation Method",
-                        description: [
-                            "There are many ways to quantify value. One way is to look at the dollar amount spent on an object or service. Another way is to consider the quality of the object or service. A third way is to look at how much enjoyment someone gets from using or consuming an object or service.",
-                            "When looking to quantify the value of a business, there are many different methods that can be used. The most common is to look at a company's net worth. However, this measure can be misleading because it doesn't take into account the company's debt or liabilities. Another common measure is market capitalization. This metric looks at the total value of a company's outstanding shares and assumes that they will be sold in an orderly market at prevailing prices. However, stock prices can be highly volatile, which can distort the true value of a company."
+                            "Pre-money valuation refers to the value of the startup before the startup receives funding from external sources of financing and investment."
                         ]
                     }
                 ]
@@ -9635,7 +9625,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                     {
                         description: [
                             "When valuing a web or technology startup, there are several factors to consider. These include the company's unique selling proposition (USP), how well the product or service is marketed and whether it has a large customer base. In addition, it's important to assess how much money the company has raised, how feasible it is to grow the business and whether its key personnel are retained.",
-                            "Through the Raise Capital program, 7xStartup helps entrepreneurs in putting a fair valuation of their web or tech startups. We take into account the demand and the need for the service among customers and other industry related parameters."
+                            "7xStartup helps entrepreneurs in putting a fair valuation of their web or tech startups. We take into account the demand and the need for the service among customers and other industry related parameters."
                         ]
                     }
                 ]
@@ -9689,7 +9679,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                     {
                         description: [
                             "If you are looking for business experts in order to prepare a pitch deck you need, then this service is what you are looking. We help you present your startup to external parties whether partners or investors you need to have in place a concise, accurate, and interesting pitch deck that gives out accurate information about your business and keeps the viewer interest.",
-                            "In addition to that, we help you create a high quality pitch deck before approaching angel investors and help you attract the investing party’s attention which will significantly increase your success rate in attaining the capital successfully. In our Raise Capital program, we can help you prepare and review a good pitch deck to successfully approach angel investors and VCs."
+                            "In addition to that, we help you create a high quality pitch deck before approaching angel investors and help you attract the investing party’s attention which will significantly increase your success rate in attaining the capital successfully. We can help you prepare and review a good pitch deck to successfully approach angel investors and VCs."
                         ]
                     }
                 ]
@@ -9760,7 +9750,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                     {
                         title: "Business Roadmap",
                         description: [
-                            "In the Raise capital program , we help you in defining your business roadmap that should go in your pitch deck with help of a high-potential technical team and business experts. In this slide, we will help you choose a suitable chart and design to explain the activities you are planning to do in the future. Your current stage will be defined and your short-term goals will be clarified."
+                            "We help you in defining your business roadmap that should go in your pitch deck with help of a high-potential technical team and business experts. In this slide, we will help you choose a suitable chart and design to explain the activities you are planning to do in the future. Your current stage will be defined and your short-term goals will be clarified."
                         ]
                     },
                     {
@@ -9805,7 +9795,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                     {
                         description: [
                             "At 7xStartup, we review the pitch deck for entrepreneurs who already have one. Our business expert will refine your pitch deck to meet the investors' and other funding sources' needs.",
-                            "What makes us one of our kind is that we provide this service as part of our all-in-one funding support packages. Join our Raise Capital Program and get your pitch deck done and have full business consultancy from our business experts and internal network of investors."
+                            "What makes us one of our kind is that we provide this service as part of our all-in-one funding support packages. Join us and get your pitch deck done and have full business consultancy from our business experts and internal network of investors."
                         ]
                     }
                 ]
@@ -9864,7 +9854,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                 value: [
                     {
                         description: [
-                            "Through the Raise Capital program, we advise you on how much to raise and how to break the amount down so that we can increase the likelihood of raising the money. We take into account the amount to be raised, how likely it is to raise it and how much it will take to raise it and we base our funding plan on the conclusions.",
+                            "We advise you on how much to raise and how to break the amount down so that we can increase the likelihood of raising the money. We take into account the amount to be raised, how likely it is to raise it and how much it will take to raise it and we base our funding plan on the conclusions.",
                             "Starting with a reasonable amount of money to be raised is a highly important aspect as asking for more than what is needed is not a good approach and it leads to problems in the long term.",
                             "We start first with breaking the amount to be raised into multiple rounds. This will help you in increasing your chances of raising capital and giving up less equity.",
                             "For example, if the founder is looking for raising $2M for 20% for multiple purposes in mind, we try to work on focusing on the essential goals and we recommend breaking the amount and targeting $500K for the first round to give up less equity at such an early stage. This is studied on a case by case basis.",

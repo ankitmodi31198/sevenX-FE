@@ -2964,19 +2964,5 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
                 "• File LLP forms 17, 2, and 3"
             ]
         },
-        {
-            question: "What is the Eligibility required to convert a partnership firm into an LLP?",
-            answer: [
-                "• At least seven partners.",
-                "• Share capital worth at least INR 1 lakh",
-                "• Capital must be divided into either units or shares",
-                "• Object Clause from the partnership firm’s Memorandum of Association",
-                "• DSC and DIN of all the partners",
-                "• Memorandum of Association of the partnership",
-                "• Articles of Association",
-                "• Copy of the application for name approval",
-                "• NOC from the property owner"
-            ]
-        },
     ],
 }

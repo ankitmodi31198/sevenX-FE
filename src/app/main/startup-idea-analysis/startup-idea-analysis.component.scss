@@ -7,6 +7,12 @@
     border-radius: $borderRadius;
     padding: 2rem 1rem 2rem 2rem;
     margin-bottom: 2rem;
+    .startup-idea-analysis-form-heading {
+        font-weight: 700;
+        font-size: 1.2rem;
+        text-align: start;
+        padding-bottom: 1rem;
+    }
     .startup-idea-analysis-form {
         display: flex;
         flex-wrap: wrap;
