@@ -9904,13 +9904,16 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
         // },
         navigationContainers: [
             {
-                title: 'Introduction',
+                title: '',
                 navigationTitle: '',
                 containerKey: '',
                 type: FormPageContainerType.TEXT,
                 value: [
                     {
                         description: [
+                            "As an increasingly large portion of consumers turns to Internet resources to find businesses, more  business owners understand the importance and the advantages of having a robust digital presence.  Being well represented online is necessary for success in most industries. Technology and online options  are moving at such a rapid pace. Having a digital presence comes with many advantages for your  business, and the biggest one is a greater chance at capturing prospects.",
+                            "An online presence is a necessity for any business, big or small, to flourish and thrive in the modern  world.",
+                            "At 7xStartup we can help you achieve your GoDigital dream through our tailor-made affordable services.  You can be known around the world, within in a short span of time.",
                             "We can make your business grow, by developing websites for your business. A website in itself, carry out a lot of different marketing strategies, to help your business nurture. To make you grow, day by day through our most versatile websites, you can have for your businesses. As compare to any other form of advertising, the web has a far broader reach. A website also holds great importance, because it establishes your credibility as a business. While as an individual, it takes enough time to make your business visible. But through our tailor-made affordable websites, you can be known around the world, within in just a short span of time. Once you have your own business website, you can advertise, your business over the web, e.g. via pay-per-click advertising programs, social networking forums & other sites."
                         ],
                         innerList: [
