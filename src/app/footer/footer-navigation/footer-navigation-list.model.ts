@@ -118,7 +118,31 @@ export const footerNavigationList: FooterNavigationInterface[] = [
         label: 'Go Digital',
         items: [
             {
-                label: FormPageScreenTitleMap[FormPageScreenCode.WEBSITE_AND_DIGITAL_MARKETING],
+                label: 'Web Development',
+                screenName: FormPageScreenCode.WEBSITE_AND_DIGITAL_MARKETING,
+                queryParams: { screenCode: FormPageScreenCode.WEBSITE_AND_DIGITAL_MARKETING },
+                routerLink: ['/service']
+            },
+            {
+                label: 'SEO & Digital Marketing',
+                screenName: FormPageScreenCode.WEBSITE_AND_DIGITAL_MARKETING,
+                queryParams: { screenCode: FormPageScreenCode.WEBSITE_AND_DIGITAL_MARKETING },
+                routerLink: ['/service']
+            },
+            {
+                label: 'Logo Designing',
+                screenName: FormPageScreenCode.WEBSITE_AND_DIGITAL_MARKETING,
+                queryParams: { screenCode: FormPageScreenCode.WEBSITE_AND_DIGITAL_MARKETING },
+                routerLink: ['/service']
+            },
+            {
+                label: 'E-Commerce Solutions',
+                screenName: FormPageScreenCode.WEBSITE_AND_DIGITAL_MARKETING,
+                queryParams: { screenCode: FormPageScreenCode.WEBSITE_AND_DIGITAL_MARKETING },
+                routerLink: ['/service']
+            },
+            {
+                label: 'Branding',
                 screenName: FormPageScreenCode.WEBSITE_AND_DIGITAL_MARKETING,
                 queryParams: { screenCode: FormPageScreenCode.WEBSITE_AND_DIGITAL_MARKETING },
                 routerLink: ['/service']
