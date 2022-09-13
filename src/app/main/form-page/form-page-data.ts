@@ -123,7 +123,16 @@ export const FormPageScreenDescriptionMap: { [key: string]: string } = {
     FIND_A_CO_FOUNDER: "Many factors make a startup successful – having the right co-founder is one of them. Though you can start and run the show solo, it helps to have a business partner to share responsibilities and double the odds.",
     FINANCIAL_MODELLING_AND_VALUATIONS: 'A financial model is the representation of the financial information that goes into a business in areas of expenses, revenues, assets in the form of spreadsheet(s) or an Excel file.<br><br> Startup valuation is what the startup is worth in the market depending on different factors. Startup valuation is a process that each entrepreneur has to do whenever they are raising money or even when they are looking for a cofounder.',
     PITCH_DECKS_AND_FUNDING: 'We help entrepreneurs prepare their pitch decks. We also help them in making the Funding plans &  raising funds.',
-    WEBSITE_AND_DIGITAL_MARKETING: 'We can make your business grow, by developing websites for your business. A website in itself, carry out a lot of different marketing strategies, to help your business nurture. To make you grow, day by day through our most versatile websites, you can have for your businesses. As compare to any other form of advertising, the web has a far broader reach.'
+    WEBSITE_AND_DIGITAL_MARKETING: `
+        <ul>
+            <li>Web Development</li>
+            <li>Web Designing</li>
+            <li>Digital Marketing</li>
+            <li>Branding</li>
+            <li>E-Commerce Solution</li>
+            <li>Logo Designing</li>
+        </ul>
+    `
 };
 
 export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataModel } = {
@@ -9897,7 +9906,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
     WEBSITE_AND_DIGITAL_MARKETING: {
         hideNavigationBar: true,
         // hideBannerForm: true,
-        title: FormPageScreenTitleMap['WEBSITE_AND_DIGITAL_MARKETING'],
+        title: 'What we can do for you?',
         description: FormPageScreenDescriptionMap['WEBSITE_AND_DIGITAL_MARKETING'],
         // animationOption: {
         //     path: 'assets/wesite_development_digital_marketing_1.json'
