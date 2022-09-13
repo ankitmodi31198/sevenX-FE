@@ -14,34 +14,34 @@ export class ReviewsComponent implements OnInit {
 
   reviews: any[] = [
     {
+      blockquote: 'Helped me with my startup valuatioin and pitch deck. Team is very much approachable.',
+      img: '../../../../assets/reviews_05.jpeg',
+      author: 'Kshonish Jain',
+      companyName: 'Founder of Hotels Group'
+    },
+    {
       blockquote: 'The 7xStartup platform is super easy to use and will be a reliable backbone of your business! It is fantastic to deal with when it comes to legal compliances.',
       img: '../../../../assets/IMG-0042.JPG',
-      author: 'Ankit Modi',
+      author: 'Parth Inani',
       companyName: 'Government Employee'
     },
     {
       blockquote: 'You helped me with all the way to start a company and documentation for it. And you guys made everything simple and at a very nominal cost.',
       img: '../../../../assets/IMG-0043.jpg',
-      author: 'Hiren Babariya',
+      author: 'Ankit Baser',
       companyName: 'Software Developer'
     },
     {
       blockquote: 'Great people nice experience thanks for your great support, They helped me with to start my startup.',
       img: '../../../../assets/IMG-0044.jpg',
-      author: 'Gunjan Chavda',
+      author: 'Ankit Modi',
       companyName: 'Manager'
     },
     {
       blockquote: 'Never had an issue getting a fast response and solution. Best for getting startup registrations done.',
       img: '../../../../assets/IMG-0045.jpg',
-      author: 'Parth Inani',
+      author: 'Hiren Babariya',
       companyName: 'IAS'
-    },
-    {
-      blockquote: 'Helped me with my startup valuatioin and pitch deck. Team is very much approachable.',
-      img: '../../../../assets/reviews_05.jpeg',
-      author: 'Kshonish Jain',
-      companyName: 'Founder of Hotels Group'
     }
   ]
 
