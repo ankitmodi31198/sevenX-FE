@@ -18,6 +18,9 @@
         flex-wrap: wrap;
         .form-field-container {
             padding-right: 1rem;
+            input {
+                font-weight: 500;
+            }
         }
     }
 }
