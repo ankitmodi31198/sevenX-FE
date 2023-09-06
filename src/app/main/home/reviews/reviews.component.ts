@@ -21,8 +21,8 @@ export class ReviewsComponent implements OnInit {
     },
     {
       blockquote: 'The 7xStartup platform is super easy to use and will be a reliable backbone of your business! It is fantastic to deal with when it comes to legal compliances.',
-      img: '../../../../assets/IMG-0042.JPG',
-      author: 'Parth Inani',
+      img: '../../../../assets/client-avatar.png',
+      author: 'Parth Lathiya',
       companyName: 'Government Employee'
     },
     {
@@ -32,17 +32,17 @@ export class ReviewsComponent implements OnInit {
       companyName: 'Software Developer'
     },
     {
-      blockquote: 'Great people nice experience thanks for your great support, They helped me with to start my startup.',
-      img: '../../../../assets/IMG-0044.jpg',
-      author: 'Ankit Modi',
-      companyName: 'Manager'
-    },
-    {
       blockquote: 'Never had an issue getting a fast response and solution. Best for getting startup registrations done.',
       img: '../../../../assets/IMG-0045.jpg',
       author: 'Hiren Babariya',
       companyName: 'IAS'
-    }
+    },
+    {
+      blockquote: 'Great people nice experience thanks for your great support, They helped me with to start my startup.',
+      img: '../../../../assets/client-avatar.png',
+      author: 'Ronak Modi',
+      companyName: 'Manager'
+    },
   ]
 
 }
